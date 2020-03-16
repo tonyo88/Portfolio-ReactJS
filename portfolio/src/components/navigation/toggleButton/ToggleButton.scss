@@ -1,0 +1,57 @@
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$button-color: #fff;
+
+.toggle-btn {
+    display: none;
+    float: right;
+    width: 25px;
+    margin: 25px 0;
+    cursor: pointer;
+    z-index: 5;
+
+    .line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $button-color;
+        margin: 5px 0;
+        transition: all 300ms ease-in-out;
+
+        &.active-toggle-btn:nth-child(1) {
+            transform-origin: left;
+            transform: rotate(42deg) translateY(0.1px);
+        }
+
+        &.active-toggle-btn:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.active-toggle-btn:nth-child(3) {
+            transform-origin: left;
+            transform: rotate(-42deg) translateY(0.1px);
+        }
+    }
+}
+
+
+//Breakpoint-iPad
+
+@media(max-width: $breakpoint-iPad) {
+
+
+    .toggle-btn {
+        display: block;
+    }
+
+}
+
+//Breakpoint-phone
+
+@media(max-width: $breakpoint-phone) {
+
+    .toggle-btn {
+        margin: 15px 0;
+    }
+
+}

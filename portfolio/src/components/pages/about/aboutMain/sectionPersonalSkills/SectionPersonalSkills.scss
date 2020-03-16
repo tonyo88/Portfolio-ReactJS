@@ -1,0 +1,55 @@
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 940px;
+$breakpoint-phone: 500px;
+
+#personal-skills {
+    width: 100%;
+    background-image: url("../../../../../assets/pages/about/about-main/personal-skills-section/bg-about-section.jpg");
+    padding: 5em 0;
+
+    .personal-skills-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+    }
+}
+
+//Breakpoint-iPad-Pro
+
+@media screen and (max-width: $breakpoint-iPad-Pro) {
+    #personal-skills {
+        padding: 4em 0;
+
+        .personal-skills-container {
+            grid-gap: 10px;
+
+        }
+    }
+}
+
+//Breakpoint-iPad
+
+@media screen and (max-width: $breakpoint-iPad) {
+    #personal-skills {
+        padding: 3em 0;
+
+        .personal-skills-container {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+}
+
+//Breakpoint-phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    #personal-skills {
+        padding: 3.5em 0;
+
+        .personal-skills-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

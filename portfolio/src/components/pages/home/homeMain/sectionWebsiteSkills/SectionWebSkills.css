@@ -1,0 +1,154 @@
+.web-skills-section .spacing {
+  margin: 8em 0 0 0;
+}
+
+.web-skills-section .container-web-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.web-skills-section .responsive-section {
+  background: -webkit-gradient(linear, left top, right top, color-stop(17%, #42edfa), color-stop(45%, #4990a4), color-stop(100%, #102a41), to(#5a34e6));
+  background: linear-gradient(90deg, #42edfa 17%, #4990a4 45%, #102a41 100%, #5a34e6 100%);
+  padding: 3em 0;
+}
+
+.web-skills-section .responsive-section .responsive-design-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.web-skills-section .responsive-section .responsive-design-container .responsive-design-info {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+
+.web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  border-bottom: 2px solid #42edfa;
+  letter-spacing: 1px;
+}
+
+.web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-info {
+  text-align: justify;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.32rem;
+  padding: 0.8em 0 0;
+}
+
+.web-skills-section .responsive-section .responsive-design-container .responsive-design-image {
+  width: 700px;
+  height: 500px;
+}
+
+.web-skills-section .responsive-section .responsive-design-container .responsive-design-image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .web-skills-section .spacing {
+    margin: 4em 0 0 0;
+  }
+  .web-skills-section .responsive-section {
+    padding: 3em 0;
+  }
+  .web-skills-section .responsive-section .responsive-design-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info {
+    top: 25%;
+    left: 10%;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-title {
+    font-size: 2.2rem;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-info {
+    font-size: 1.32rem;
+    padding: 0.8em 1.5em;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-image {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  .web-skills-section .spacing {
+    margin: 2em 0 0 0;
+  }
+  .web-skills-section .container-web-skills {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+  }
+  .web-skills-section .responsive-section {
+    padding: 3em 0;
+  }
+  .web-skills-section .responsive-section .responsive-design-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info {
+    top: 25%;
+    left: 10%;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-title {
+    font-size: 1.2rem;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-info {
+    font-size: 1rem;
+    padding: 0.8em 0 0;
+    text-align: center;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-image {
+    margin: 0 auto;
+    width: 250px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .web-skills-section .spacing {
+    margin: 1.5em 0 0 0;
+  }
+  .web-skills-section .container-web-skills {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
+  .web-skills-section .responsive-section {
+    padding: 1em 0;
+  }
+  .web-skills-section .responsive-section .responsive-design-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info {
+    position: static;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-title {
+    font-size: 1.6rem;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-info .responsive-info {
+    font-size: 1.2rem;
+    padding: 0.8em 0 0;
+    text-align: center;
+  }
+  .web-skills-section .responsive-section .responsive-design-container .responsive-design-image {
+    width: 300px;
+    height: 200px;
+  }
+}
+/*# sourceMappingURL=SectionWebSkills.css.map */

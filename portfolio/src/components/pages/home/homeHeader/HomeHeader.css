@@ -1,0 +1,122 @@
+#home-header {
+  background-image: url("../../../../assets/pages/home/home-header/3d.jpg");
+  width: 100%;
+  height: 100vh;
+}
+
+#home-header .home-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  color: #f2f4f4;
+  text-transform: uppercase;
+  width: 10em;
+  height: 3.5em;
+  line-height: 3.5em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+#home-header .home-btn:hover {
+  color: #262626;
+  background-color: #f2f4f4;
+}
+
+#home-header .home-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#home-header .home-btn:hover:before {
+  top: calc(100% - 2px);
+}
+
+#home-header .home-btn::after {
+  content: "";
+  position: absolute;
+  top: calc(-100% + 2px);
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#home-header .home-btn:hover:after {
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+#home-header .home-btn span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 2px solid #262626;
+  border-right: 2px solid #262626;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#home-header .home-btn:hover span {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#home-header .home-particle {
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  #home-header {
+    width: 100%;
+    height: 80vh;
+  }
+  #home-header .home-particle {
+    display: none;
+  }
+  #home-header .home-btn {
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #home-header .home-btn {
+    width: 8em;
+    height: 2.8em;
+    line-height: 2.8em;
+    font-size: 0.68rem;
+  }
+}
+/*# sourceMappingURL=HomeHeader.css.map */

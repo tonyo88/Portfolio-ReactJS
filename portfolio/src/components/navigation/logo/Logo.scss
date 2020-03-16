@@ -1,0 +1,120 @@
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$text-color: rgb(46, 45, 45);
+$active-scrolled-text-color: #fff;
+
+.logo-link {
+    text-decoration: none;
+
+    .logo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .logo-image {
+            grid-column: auto;
+            grid-row: auto;
+            width: 4em;
+            height: 4em;
+            margin-left: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .logo-name {
+            grid-column: auto;
+            grid-row: auto;
+            color: $text-color;
+
+            .logo-name-container {
+                margin: 10px 0 0;
+
+                h5 {
+                    font-size: 1rem;
+                    letter-spacing: 0.1rem;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    font-family: 'Teko', sans-serif;
+                }
+            }
+
+        }
+
+        .active-fixed-nav-logo {
+            color: $active-scrolled-text-color;
+        }
+    }
+}
+
+
+//Breakpoint iPad
+
+@media screen and (max-width: $breakpoint-iPad) {
+
+    .logo-link {
+
+        .logo-container {
+
+            .logo-image {
+                margin-left: 25px;
+
+            }
+
+            .logo-name {
+                color: $active-scrolled-text-color;
+
+                .logo-name-container {
+
+                    h5 {
+                        font-size: 1.2rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//Breakpoint-phone
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .logo-link {
+
+        .logo-container {
+
+            .logo-image {
+                width: 3.1em;
+                height: 3.1em;
+                margin-left: 0;
+
+            }
+
+            .logo-name {
+                display: none;
+
+                .logo-name-container {
+
+                    h5 {
+                        font-size: 0.9rem;
+                    }
+
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

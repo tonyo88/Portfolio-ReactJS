@@ -1,0 +1,44 @@
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 650px;
+
+#section-certificates {
+    background-image: url("../../../../../assets//pages/about/about-main/certificates/3d-image-bg.jpg");
+    padding: 3em 0;
+
+    .certificates-container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+}
+
+//Breakpoint-iPad
+@media screen and (max-width: $breakpoint-iPad) {
+    #section-certificates {
+        padding: 2em 0;
+
+        .certificates-container {
+            max-width: 900px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+
+        }
+    }
+}
+
+//Breakpoint-phone
+@media screen and (max-width: $breakpoint-phone) {
+    #section-certificates {
+        padding: 3em 0;
+
+        .certificates-container {
+            padding: 0 3em;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1em;
+
+        }
+    }
+}

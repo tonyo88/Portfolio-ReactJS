@@ -1,0 +1,49 @@
+.toggle-btn {
+  display: none;
+  float: right;
+  width: 25px;
+  margin: 25px 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.toggle-btn .line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn .line.active-toggle-btn:nth-child(1) {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(42deg) translateY(0.1px);
+          transform: rotate(42deg) translateY(0.1px);
+}
+
+.toggle-btn .line.active-toggle-btn:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-btn .line.active-toggle-btn:nth-child(3) {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(-42deg) translateY(0.1px);
+          transform: rotate(-42deg) translateY(0.1px);
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 414px) {
+  .toggle-btn {
+    margin: 15px 0;
+  }
+}
+/*# sourceMappingURL=ToggleButton.css.map */

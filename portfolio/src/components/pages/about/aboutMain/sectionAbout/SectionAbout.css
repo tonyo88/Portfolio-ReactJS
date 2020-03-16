@@ -1,0 +1,168 @@
+#section-about {
+  width: 100%;
+}
+
+#section-about .about-section-container {
+  padding: 5em 0;
+  width: 1500px;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+
+#section-about .about-section-container .about-info-container {
+  color: #262626;
+  font-family: 'Oswald', sans-serif;
+  text-align: justify;
+  font-size: 1.2rem;
+  padding: 4em;
+  margin: 10em 0 0;
+}
+
+#section-about .about-section-container .about-info-container .about-title {
+  font-size: 2.5rem;
+  display: inline-block;
+  border-bottom: 2px solid #0aabc5;
+  letter-spacing: 1px;
+  margin: 0 0 1em;
+}
+
+#section-about .about-section-container .about-image-container {
+  position: relative;
+}
+
+#section-about .about-section-container .about-image-container .second-page {
+  position: absolute;
+  top: 0;
+}
+
+#section-about .about-section-container .about-image-container .third-page {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+  #section-about .about-section-container {
+    padding: 3em 0;
+    width: 1200px;
+    max-width: 90%;
+  }
+  #section-about .about-section-container .about-info-container {
+    font-size: 1rem;
+    padding: 2em;
+    margin: 7em 0 0;
+  }
+  #section-about .about-section-container .about-info-container .about-title {
+    font-size: 2em;
+    margin: 0 0 1.5rem;
+  }
+  #section-about .about-section-container .about-image-container .first-page,
+  #section-about .about-section-container .about-image-container .second-page,
+  #section-about .about-section-container .about-image-container .third-page {
+    width: 550px;
+    height: 550px;
+  }
+  #section-about .about-section-container .about-image-container .first-page img,
+  #section-about .about-section-container .about-image-container .second-page img,
+  #section-about .about-section-container .about-image-container .third-page img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #section-about .about-section-container {
+    padding: 0;
+    max-width: 90%;
+  }
+  #section-about .about-section-container .about-info-container {
+    font-size: 0.9rem;
+    padding: 0 1em;
+    margin: 4em 0 0;
+  }
+  #section-about .about-section-container .about-info-container .about-title {
+    font-size: 2.1rem;
+    margin: 0 0 0.5em;
+  }
+  #section-about .about-section-container .about-image-container {
+    margin: 0 auto;
+  }
+  #section-about .about-section-container .about-image-container .first-page,
+  #section-about .about-section-container .about-image-container .second-page,
+  #section-about .about-section-container .about-image-container .third-page {
+    width: 400px;
+    height: 400px;
+  }
+  #section-about .about-section-container .about-image-container .first-page img,
+  #section-about .about-section-container .about-image-container .second-page img,
+  #section-about .about-section-container .about-image-container .third-page img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+  #section-about .about-section-container {
+    padding: 2em 0;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #section-about .about-section-container .about-info-container {
+    font-size: 0.85rem;
+    padding: 3em 5em;
+    margin: 2em 0 0;
+    text-align: center;
+  }
+  #section-about .about-section-container .about-info-container .about-title {
+    font-size: 1.7rem;
+    margin: 0 0 1.2em;
+  }
+  #section-about .about-section-container .about-image-container {
+    margin: 0 auto;
+  }
+  #section-about .about-section-container .about-image-container .first-page,
+  #section-about .about-section-container .about-image-container .second-page,
+  #section-about .about-section-container .about-image-container .third-page {
+    width: 400px;
+    height: 400px;
+  }
+  #section-about .about-section-container .about-image-container .first-page img,
+  #section-about .about-section-container .about-image-container .second-page img,
+  #section-about .about-section-container .about-image-container .third-page img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #section-about .about-section-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding: 2em 0;
+  }
+  #section-about .about-section-container .about-info-container {
+    font-size: 0.75rem;
+    padding: 1em 3em;
+    margin: 3em 0 0;
+    text-align: center;
+  }
+  #section-about .about-section-container .about-info-container .about-title {
+    font-size: 1.5rem;
+    margin: 0 0 1em;
+  }
+  #section-about .about-section-container .about-image-container {
+    margin: 0 auto;
+  }
+  #section-about .about-section-container .about-image-container .first-page,
+  #section-about .about-section-container .about-image-container .second-page,
+  #section-about .about-section-container .about-image-container .third-page {
+    width: 280px;
+    height: 280px;
+  }
+  #section-about .about-section-container .about-image-container .first-page img,
+  #section-about .about-section-container .about-image-container .second-page img,
+  #section-about .about-section-container .about-image-container .third-page img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=SectionAbout.css.map */

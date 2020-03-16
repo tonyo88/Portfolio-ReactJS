@@ -1,0 +1,96 @@
+.project-box {
+    width: 100%;
+    // width: 500px;
+    // height: 272px;
+    // background: linear-gradient(180deg, rgba(66, 237, 250, 1) 17%, rgba(73, 144, 164, 1) 45%, rgba(16, 42, 65, 1) 100%, rgba(90, 52, 230, 1) 100%);
+    // background: rgb(109, 107, 104);
+    background-color: #000;
+    // background: #102a41;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+
+
+    .project-link {
+        text-decoration: none;
+
+        img {
+            width: 100%;
+            opacity: 0.4;
+            transform: rotate3d(0, 0, 1, 8deg);
+            transition: 0.3s;
+        }
+
+        figure {
+            figcaption {
+                .project-title {
+                    position: absolute;
+                    top: 0%;
+                    left: -100%;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    font-size: 1.7rem;
+                    text-transform: uppercase;
+                    font-family: 'Oswald', sans-serif;
+                    transition: 0.3s all ease;
+                    background: rgba(0, 0, 0, 0.7);
+                    display: block;
+                    width: 100%;
+                    padding: 0.2em 0 0.2em 1em;
+
+                }
+
+                .project-info {
+                    color: #fff;
+                    font-size: 1.2rem;
+                    padding: 0.5em 2em;
+                    line-height: 150%;
+                    position: absolute;
+                    bottom: -100%;
+                    right: 0%;
+                    display: block;
+                    text-align: justify;
+                    background: rgba(0, 0, 0, 0.7);
+                    font-family: 'Teko', sans-serif;
+                    transition: 0.3s all ease;
+                    transition-delay: 0.1s;
+
+                    span {
+                        color: red;
+                        position: absolute;
+                        border: 1px solid #fff;
+                        font-size: 1.4rem;
+                        padding: 0.1em 0.5em;
+                        left: 73%;
+                        bottom: -100%;
+                        transition: 0.3s all ease;
+                        transition-delay: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+
+        img {
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+            opacity: 0.95;
+        }
+
+        figure figcaption .project-title {
+            left: 0%;
+        }
+
+        figure figcaption .project-info {
+            bottom: 0;
+
+            span {
+                bottom: 5%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,202 @@
+$border-color: #42edfa;
+$text-color: #fff;
+$background-color: linear-gradient(90deg, rgba(66, 237, 250, 1) 17%, rgba(73, 144, 164, 1) 45%, rgba(16, 42, 65, 1) 100%, rgba(90, 52, 230, 1) 100%);
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 767px;
+$breakpoint-phone: 414px;
+
+
+.web-skills-section {
+
+    .spacing {
+        margin: 8em 0 0 0;
+    }
+
+    .container-web-skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .responsive-section {
+        background: $background-color;
+        padding: 3em 0;
+
+        .responsive-design-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .responsive-design-info {
+                position: absolute;
+                top: 25%;
+                text-align: center;
+                font-family: 'Oswald', sans-serif;
+                color: $text-color;
+
+                .responsive-title {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                    border-bottom: 2px solid $border-color;
+                    letter-spacing: 1px;
+                }
+
+                .responsive-info {
+                    text-align: justify;
+                    font-family: 'Teko', sans-serif;
+                    font-size: 1.32rem;
+                    padding: 0.8em 0 0;
+                }
+
+            }
+
+            .responsive-design-image {
+                width: 700px;
+                height: 500px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+//Breakpoint-iPad-Pro to Breakpoint-iPad
+
+@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-iPad-Pro) {
+    .web-skills-section {
+
+        .spacing {
+            margin: 4em 0 0 0;
+        }
+
+        .responsive-section {
+            padding: 3em 0;
+
+            .responsive-design-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .responsive-design-info {
+                    top: 25%;
+                    left: 10%;
+
+                    .responsive-title {
+
+                        font-size: 2.2rem;
+
+                    }
+
+                    .responsive-info {
+                        font-size: 1.32rem;
+                        padding: 0.8em 1.5em;
+                    }
+
+                }
+
+                .responsive-design-image {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+}
+
+//Breakpoint-iPad to Breakpoint-phone
+
+@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+    .web-skills-section {
+
+        .spacing {
+            margin: 2em 0 0 0;
+        }
+
+        .container-web-skills {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0;
+        }
+
+        .responsive-section {
+            padding: 3em 0;
+
+            .responsive-design-container {
+
+                grid-template-columns: repeat(2, 1fr);
+
+                .responsive-design-info {
+                    top: 25%;
+                    left: 10%;
+
+                    .responsive-title {
+                        font-size: 1.2rem;
+                    }
+
+                    .responsive-info {
+                        font-size: 1rem;
+                        padding: 0.8em 0 0;
+                        text-align: center;
+                    }
+
+                }
+
+                .responsive-design-image {
+                    margin: 0 auto;
+                    width: 250px;
+                    height: 180px;
+
+                }
+            }
+        }
+    }
+
+}
+
+//Breakpoint-phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    .web-skills-section {
+
+        .spacing {
+            margin: 1.5em 0 0 0;
+        }
+
+        .container-web-skills {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0;
+        }
+
+        .responsive-section {
+            padding: 1em 0;
+
+            .responsive-design-container {
+
+                grid-template-columns: repeat(1, 1fr);
+
+                .responsive-design-info {
+                    position: static;
+
+                    .responsive-title {
+                        font-size: 1.6rem;
+                    }
+
+                    .responsive-info {
+                        font-size: 1.2rem;
+                        padding: 0.8em 0 0;
+                        text-align: center;
+                    }
+
+                }
+
+                .responsive-design-image {
+                    width: 300px;
+                    height: 200px;
+
+                }
+            }
+        }
+    }
+
+}

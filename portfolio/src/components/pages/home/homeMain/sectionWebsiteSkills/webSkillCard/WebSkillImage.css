@@ -1,0 +1,12 @@
+.web-skill-image-container {
+  grid-column: auto;
+  grid-row: auto;
+  width: 100%;
+  padding: 50px;
+  background: #000;
+}
+
+.web-skill-image-container .web-skill-img {
+  width: 100%;
+}
+/*# sourceMappingURL=WebSkillImage.css.map */

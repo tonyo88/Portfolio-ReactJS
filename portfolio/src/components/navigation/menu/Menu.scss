@@ -1,0 +1,67 @@
+$breakpoint-iPad-pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$link-color: #fff;
+$link-hover-background: #0aabc5;
+
+.main-nav {
+    float: right;
+    line-height: 5em;
+
+    .main-menu-container {
+        .main-menu {
+            list-style-type: none;
+        }
+
+    }
+
+    .mobile {
+        display: none;
+    }
+
+}
+
+
+//Breakpoint iPad
+
+@media screen and (max-width: $breakpoint-iPad) {
+    .main-nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        z-index: 9999;
+        background-color: #102a41;
+        transition: 0.5s;
+
+        .main-menu-container {
+            margin-top: 10em;
+            width: 100%;
+
+        }
+
+        .mobile {
+            display: block;
+        }
+    }
+
+    .showNav {
+        left: 0;
+    }
+
+}
+
+//Breakpoint phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    .main-nav {
+        top: 3.5em;
+
+        .main-menu-container {
+            margin-top: 5em;
+
+        }
+
+    }
+}

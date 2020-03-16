@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,0BAA0B,CAAC;EACvB,WAAW,EAAE,IAAI;EACjB,QAAQ,EAAE,IAAI;EACd,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EAEb,UAAU,EAAE,IAAI;CAKnB;;AAXD,AAQI,0BARsB,CAQtB,cAAc,CAAC;EACX,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "WebSkillImage.scss"
+    ],
+    "names": [],
+    "file": "WebSkillImage.css"
+}

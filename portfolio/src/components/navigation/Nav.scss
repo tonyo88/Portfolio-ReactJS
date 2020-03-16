@@ -1,0 +1,69 @@
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$button-color: #fff;
+$background-color-nav: rgba(255, 255, 255, 0.4);
+$active-fixed-nav-background: #102a41;
+$active-fixed-nav-border-bottom-color: #306797;
+
+.navigation {
+    width: 100%;
+    height: 5em;
+    background-color: $background-color-nav;
+    position: fixed;
+    transition: 0.35s;
+    z-index: 9999;
+
+    .logo {
+        float: left;
+        margin-top: 8px;
+    }
+
+}
+
+.active-fixed-nav {
+    border-bottom: 2px solid $active-fixed-nav-border-bottom-color;
+    background-color: $active-fixed-nav-background;
+    position: fixed;
+}
+
+
+//Breakpoint-iPad
+
+@media screen and (max-width: $breakpoint-iPad) {
+
+    .navigation {
+
+        background-color: $active-fixed-nav-background;
+        border-bottom: none;
+
+        .toggle-btn {
+            display: block;
+        }
+
+        .logo {
+            margin-top: 8px;
+        }
+
+    }
+
+}
+
+//Breakpoint-phone
+
+@media screen and (max-width: $breakpoint-phone) {
+
+    .navigation {
+        height: 3.5em;
+
+        .toggle-btn {
+            margin: 15px 0;
+        }
+
+        .logo {
+            margin-top: 4px;
+        }
+
+    }
+
+}

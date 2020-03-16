@@ -1,0 +1,178 @@
+#section-video {
+  margin: 8em 0;
+}
+
+#section-video .video-info-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+#section-video .video-info-container .video-content {
+  position: relative;
+  top: 25%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #262626;
+}
+
+#section-video .video-info-container .video-content .video-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  border-bottom: 2px solid #0aabc5;
+  letter-spacing: 1px;
+}
+
+#section-video .video-info-container .video-content .video-info {
+  text-align: justify;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.32rem;
+  padding: 0.8em 0 0;
+}
+
+#section-video .video-info-container .video-container {
+  position: relative;
+}
+
+#section-video .video-info-container .video-container .laptop-container {
+  width: 700px;
+  height: 500px;
+}
+
+#section-video .video-info-container .video-container .laptop-container .laptop {
+  width: 100%;
+}
+
+#section-video .video-info-container .video-container .laptop-container .typing {
+  display: none;
+}
+
+#section-video .video-info-container .video-container #video {
+  position: absolute;
+  width: 530px;
+  left: 84px;
+  bottom: 144px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  #section-video {
+    margin: 5em 0;
+  }
+  #section-video .video-info-container .video-content {
+    position: relative;
+    top: 15%;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #262626;
+  }
+  #section-video .video-info-container .video-content .video-title {
+    font-size: 2rem;
+  }
+  #section-video .video-info-container .video-content .video-info {
+    font-size: 1.32rem;
+    padding: 0.6em 1.5em;
+  }
+  #section-video .video-info-container .video-container .laptop-container {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  #section-video .video-info-container .video-container .laptop-container .laptop {
+    display: none;
+  }
+  #section-video .video-info-container .video-container .laptop-container .typing {
+    display: block;
+    width: 100%;
+  }
+  #section-video .video-info-container .video-container #video {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  #section-video {
+    margin: 3em 0;
+  }
+  #section-video .video-info-container .video-content {
+    top: 0;
+    text-align: center;
+  }
+  #section-video .video-info-container .video-content .video-title {
+    font-size: 1.5rem;
+  }
+  #section-video .video-info-container .video-content .video-info {
+    font-size: 1.02rem;
+    padding: 1em;
+  }
+  #section-video .video-info-container .video-container .laptop-container {
+    margin: 0 auto;
+    width: 250px;
+    height: 180px;
+  }
+  #section-video .video-info-container .video-container .laptop-container .laptop {
+    display: none;
+  }
+  #section-video .video-info-container .video-container .laptop-container .typing {
+    display: block;
+    width: 100%;
+  }
+  #section-video .video-info-container .video-container #video {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #section-video .video-info-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #section-video .video-info-container .video-content {
+    top: 0;
+    text-align: center;
+  }
+  #section-video .video-info-container .video-content .video-title {
+    font-size: 1.5rem;
+  }
+  #section-video .video-info-container .video-content .video-info {
+    font-size: 1.02rem;
+    padding: 1em 5em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #section-video {
+    margin: 2em 0;
+  }
+  #section-video .video-info-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  #section-video .video-info-container .video-content {
+    top: 0;
+  }
+  #section-video .video-info-container .video-content .video-title {
+    font-size: 1.6rem;
+  }
+  #section-video .video-info-container .video-content .video-info {
+    font-size: 1.2rem;
+    padding: 0.8em;
+    text-align: center;
+  }
+  #section-video .video-info-container .video-container .laptop-container {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  #section-video .video-info-container .video-container .laptop-container .laptop {
+    display: none;
+  }
+  #section-video .video-info-container .video-container .laptop-container .typing {
+    display: block;
+    width: 100%;
+  }
+  #section-video .video-info-container .video-container #video {
+    display: none;
+  }
+}
+/*# sourceMappingURL=SectionVideo.css.map */

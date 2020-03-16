@@ -1,0 +1,48 @@
+.footer-list {
+  margin: 1rem 0 0;
+}
+
+.footer-list .footer-link {
+  text-decoration: none;
+  color: #808080;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.15em;
+  padding-bottom: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: -webkit-gradient(linear, left bottom, left top, from(#DCDCDC), to(#fff)) bottom left no-repeat;
+  background: linear-gradient(0deg, #DCDCDC, #fff) bottom left no-repeat;
+  background-size: 0 3px;
+}
+
+.footer-list .footer-link:hover {
+  color: #fff;
+  background-size: 100% 2px;
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  .footer-list {
+    margin: 0.8rem 0 0;
+  }
+  .footer-list .footer-link {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .footer-list {
+    margin: 0 0.6rem 0;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .footer-list {
+    margin: 0 0.8rem 0;
+    display: inline-block;
+  }
+  .footer-list .footer-link {
+    font-size: 0.9em;
+  }
+}
+/*# sourceMappingURL=FooterMenuLink.css.map */

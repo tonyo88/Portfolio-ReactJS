@@ -1,0 +1,30 @@
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Oswald', sans-serif;
+  padding: 0 0 2em;
+  color: #fff;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-title {
+    padding: 0 0 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+    padding: 0 0 1.3em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .section-title {
+    font-size: 2rem;
+    padding: 0 0 1.5em;
+  }
+}
+/*# sourceMappingURL=SectionTitle.css.map */

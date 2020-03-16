@@ -1,0 +1,77 @@
+$breakpoint-iPad: 767px;
+$breakpoint-phone: 414px;
+$text-color: #fff;
+$link-color: #808080;
+
+.footer-contact-container {
+
+    .contact-info {
+        padding: 1rem 0 0;
+        color: $text-color;
+        margin: 0 auto;
+        width: 250px;
+        font-family: 'Six Caps', sans-serif;
+        line-height: 1.7em;
+
+        .footer-title {
+            font-size: 1.1rem;
+        }
+
+        .footer-contact-link {
+            text-decoration: none;
+            color: $link-color;
+            transition: 0.3s;
+
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+
+    .footer-social-container {
+        padding: 0.7em 0;
+    }
+}
+
+
+//Breakpoint-iPad to Breakpoint-phone
+@media screen and (min-width:$breakpoint-phone) and (max-width:$breakpoint-iPad) {
+    .footer-contact-container {
+
+        .contact-info {
+            padding: 0.8em 0.4em;
+            margin: 0 auto;
+            width: 220px;
+            line-height: 1.1em;
+            font-size: 0.8rem;
+
+            .footer-title {
+                font-size: 1rem;
+            }
+
+        }
+
+
+    }
+}
+
+//Breakpoint-phone
+@media screen and (max-width:$breakpoint-phone) {
+    .footer-contact-container {
+
+        .contact-info {
+            padding: 0.8rem;
+            color: $text-color;
+            margin: 0 auto;
+            width: 200px;
+            line-height: 1.1rem;
+            font-size: 0.7em;
+
+            .footer-title {
+                font-size: 0.9em;
+            }
+
+        }
+
+    }
+}

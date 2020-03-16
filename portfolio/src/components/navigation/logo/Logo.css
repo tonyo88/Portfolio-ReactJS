@@ -1,0 +1,80 @@
+.logo-link {
+  text-decoration: none;
+}
+
+.logo-link .logo-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.logo-link .logo-container .logo-image {
+  grid-column: auto;
+  grid-row: auto;
+  width: 4em;
+  height: 4em;
+  margin-left: 20px;
+}
+
+.logo-link .logo-container .logo-image img {
+  width: 100%;
+}
+
+.logo-link .logo-container .logo-name {
+  grid-column: auto;
+  grid-row: auto;
+  color: #2e2d2d;
+}
+
+.logo-link .logo-container .logo-name .logo-name-container {
+  margin: 10px 0 0;
+}
+
+.logo-link .logo-container .logo-name .logo-name-container h5 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.logo-link .logo-container .logo-name .logo-name-container p {
+  font-size: 0.9rem;
+  font-family: 'Teko', sans-serif;
+}
+
+.logo-link .logo-container .active-fixed-nav-logo {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-link .logo-container .logo-image {
+    margin-left: 25px;
+  }
+  .logo-link .logo-container .logo-name {
+    color: #fff;
+  }
+  .logo-link .logo-container .logo-name .logo-name-container h5 {
+    font-size: 1.2rem;
+  }
+  .logo-link .logo-container .logo-name .logo-name-container p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .logo-link .logo-container .logo-image {
+    width: 3.1em;
+    height: 3.1em;
+    margin-left: 0;
+  }
+  .logo-link .logo-container .logo-name {
+    display: none;
+  }
+  .logo-link .logo-container .logo-name .logo-name-container h5 {
+    font-size: 0.9rem;
+  }
+  .logo-link .logo-container .logo-name .logo-name-container p {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=Logo.css.map */

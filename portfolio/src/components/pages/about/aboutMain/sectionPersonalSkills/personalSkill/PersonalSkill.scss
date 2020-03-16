@@ -1,0 +1,215 @@
+$text-color: rgb(165, 165, 165);
+$hover-text-color: #fff;
+$bg-personal-skill-card: linear-gradient(0deg, #102a41, rgb(41, 20, 131), #102a41);
+$half-bg-personal-skill-card: rgba(255, 255, 255, 0.08);
+$personal-skill-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
+$bg-personal-skill-percent: #102a41;
+$circle-outer-color: $text-color;
+$responsible-stroke-color: #00ff43;
+$team-player-stroke-color: #e618b9;
+$reliable-stroke-color: #f1ee1e;
+$fast-learner-stroke-color: #f30b0b;
+$breakpoit-iPad-Pro: 1024px;
+
+.personal-skill-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: 0.5s;
+    background: $bg-personal-skill-card;
+    font-family: 'Oswald', sans-serif;
+    color: $text-color;
+    border-radius: 6px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: $half-bg-personal-skill-card;
+
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: $personal-skill-shadow;
+
+        .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
+            color: $hover-text-color;
+            font-size: 2.1rem;
+        }
+
+        .personal-skill-box .personal-skill-name {
+            color: $hover-text-color;
+        }
+
+        .personal-skill-box .personal-skill-percent svg .circle-outer {
+            stroke: $hover-text-color;
+        }
+
+        .personal-skill-box .personal-skill-percent svg .circle-progress-responsible {
+            animation: progress-personal-skill 1s ease-in-out forwards;
+            stroke: $responsible-stroke-color;
+            stroke-dashoffset: calc(440 - (440 * 100) / 100);
+        }
+
+        .personal-skill-box .personal-skill-percent svg .circle-progress-team-player {
+            animation: progress-personal-skill 1s ease-in-out forwards;
+            stroke: $team-player-stroke-color;
+            stroke-dashoffset: calc(440 - (440 * 100) / 100);
+        }
+
+        .personal-skill-box .personal-skill-percent svg .circle-progress-reliable {
+            animation: progress-personal-skill 1s ease-in-out forwards;
+            stroke: $reliable-stroke-color;
+            stroke-dashoffset: calc(440 - (440 * 100) / 100);
+        }
+
+        .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
+            animation: progress-personal-skill 1s ease-in-out forwards;
+            stroke: $fast-learner-stroke-color;
+            stroke-dashoffset: calc(440 - (440 * 100) / 100);
+        }
+    }
+
+
+    .personal-skill-box {
+        .personal-skill-percent {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 50px #49c5f7;
+            background: $bg-personal-skill-percent;
+            z-index: 2;
+
+            svg {
+                position: relative;
+                width: 150px;
+                height: 150px;
+                z-index: 100;
+
+                circle {
+                    width: 100%;
+                    height: 100%;
+                    fill: none;
+                    stroke-width: 10;
+                    stroke-linecap: round;
+                    transform: translate(5px, 5px);
+                    transition: 0.5s;
+
+                }
+
+                .circle-outer {
+                    stroke: $circle-outer-color;
+                }
+
+                .circle-progress {
+                    stroke-dashoffset: 440;
+                    stroke-dasharray: 440;
+                }
+
+            }
+
+            .personal-skill-value {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+
+                h2 {
+                    font-size: 1.5rem;
+                    transition: 0.5s;
+                    font-weight: 500;
+
+                    span {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .personal-skill-name {
+            position: relative;
+            margin-top: 1.5em;
+            font-size: 1.4rem;
+            transition: 0.5s;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+
+@keyframes progress-personal-skill {
+    from {
+        stroke-dashoffset: 440;
+    }
+}
+
+
+//Breakpoint-iPad-Pro
+
+@media screen and (max-width: $breakpoit-iPad-Pro) {
+
+    .personal-skill-card {
+        width: 200px;
+        height: 280px;
+        color: $hover-text-color;
+        transform: translateY(-10px);
+        box-shadow: $personal-skill-shadow;
+
+        .personal-skill-box {
+            .personal-skill-percent {
+
+
+                svg {
+
+                    .circle-outer {
+                        stroke: $hover-text-color;
+                    }
+
+                    .circle-progress-responsible {
+                        stroke: $responsible-stroke-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+
+                    .circle-progress-team-player {
+                        stroke: $team-player-stroke-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+
+                    .circle-progress-reliable {
+                        stroke: $reliable-stroke-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+
+                    .circle-progress-fast-learner {
+                        stroke: $fast-learner-stroke-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+
+                }
+
+                .personal-skill-value {
+                    h2 {
+                        font-size: 2.1rem;
+
+                    }
+                }
+            }
+        }
+    }
+}

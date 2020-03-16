@@ -1,0 +1,29 @@
+$bg-section: #2f2f2f;
+$titles-color: #CACACA;
+
+.project-section {
+    background-color: $bg-section;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: $titles-color;
+    font-family: 'Russo One', sans-serif;
+
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        border-bottom: 1px solid $titles-color;
+        display: inline-block;
+        padding-bottom: 0.3em;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 0.5em;
+
+    }
+}

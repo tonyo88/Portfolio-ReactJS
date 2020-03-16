@@ -1,0 +1,16 @@
+#portfolio-section {
+
+    // background-image: url("../../../../../assets/pages/portfolio/portfolio-main/background/3d.jpg");
+    background-image: url("../../../../../assets/pages/portfolio/portfolio-main/background/3d-white.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 0;
+
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}

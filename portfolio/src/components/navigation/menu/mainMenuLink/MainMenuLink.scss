@@ -1,0 +1,200 @@
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$link-color: rgb(46, 45, 45);
+$active-scrolled-link-color: #fff;
+$link-hover-background: rgb(46, 45, 45);
+$active-scrolled-hover-background: #0aabc5;
+
+.main-list {
+    display: inline-block;
+
+    .main-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.11rem;
+        font-family: 'Anton', sans-serif;
+        position: relative;
+        width: 120px;
+        height: 40px;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        transition: 0.5s;
+        box-sizing: border-box;
+        color: $link-color;
+
+        span {
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background: $link-hover-background;
+            z-index: -1;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform .5s;
+
+            &:nth-child(1) {
+                left: 0;
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                left: 25%;
+                transition-delay: 0.15s;
+            }
+
+            &:nth-child(3) {
+                left: 50%;
+                transition-delay: 0.30s;
+
+            }
+
+            &:nth-child(4) {
+                left: 75%;
+                transition-delay: 0.45s;
+
+            }
+
+        }
+
+        .active-fixed-nav-link-hover-back-color {
+            background: $active-scrolled-hover-background;
+        }
+
+        &:hover span {
+            transform: scaleY(1);
+            transform-origin: bottom;
+        }
+
+        &:hover {
+            color: $active-scrolled-link-color;
+        }
+
+
+
+    }
+
+    .active-fixed-nav-link-color {
+        color: $active-scrolled-link-color;
+    }
+}
+
+.main-link-active-border {
+    border: 1px solid $link-color;
+    box-shadow: 3px 2px rgb(61, 63, 63);
+}
+
+.active-fixed-nav-main-link-color-border {
+    border: 1px solid $active-scrolled-hover-background;
+    box-shadow: 3px 2px #9DDDE7;
+}
+
+//Breakpoint iPad-Pro
+@media screen and (max-width: $breakpoint-iPad-Pro) {
+
+    .main-list {
+
+        .main-link {
+            color: $link-color;
+
+            span {
+                display: none;
+            }
+
+            &:hover {
+                color: $link-color;
+            }
+
+        }
+
+        .active-fixed-nav-link-color {
+            color: $active-scrolled-link-color;
+
+            &:hover {
+                color: $active-scrolled-link-color;
+            }
+
+        }
+
+    }
+}
+
+//Breakpoint iPad to Breakpoint-phone
+
+@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+
+    .main-list {
+        display: block;
+        border-bottom: 1px solid $active-scrolled-link-color;
+        height: 80px;
+
+        &:nth-child(1) {
+            border-top: 1px solid $active-scrolled-link-color;
+        }
+
+
+        .main-link {
+            height: 100%;
+            line-height: 80px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            color: $active-scrolled-link-color;
+
+
+
+            span {
+                transform-origin: left;
+                transform: scaleX(0);
+                background: $active-scrolled-hover-background;
+
+            }
+
+            &:hover span {
+                transform: scaleX(1);
+                transform-origin: right;
+            }
+
+        }
+    }
+
+    .main-link-active-border {
+        background-color: $active-scrolled-hover-background;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+//Breakpoint phone
+
+@media screen and (max-width: $breakpoint-phone) {
+
+
+    .main-list {
+        display: block;
+        height: 50px;
+        border-bottom: 1px solid $active-scrolled-link-color;
+
+        &:nth-child(1) {
+            border-top: 1px solid $active-scrolled-link-color;
+        }
+
+        .main-link {
+
+            height: 100%;
+            line-height: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: $active-scrolled-link-color;
+
+        }
+    }
+
+    .main-link-active-border {
+        background-color: $active-scrolled-hover-background;
+        border: none;
+        box-shadow: none;
+    }
+}

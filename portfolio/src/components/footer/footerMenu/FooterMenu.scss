@@ -1,0 +1,24 @@
+$breakpoint-iPad-to-phone: 530px;
+$footer-border: #808080;
+
+.footer-menu-container {
+    border-right: 1px solid $footer-border;
+    position: relative;
+
+
+
+    .footer-menu {
+        list-style-type: none;
+        text-align: center;
+
+    }
+}
+
+//Breakpoint-iPad-to-phone
+
+
+@media screen and (max-width: $breakpoint-iPad-to-phone) {
+    .footer-menu-container {
+        border-right: none;
+    }
+}

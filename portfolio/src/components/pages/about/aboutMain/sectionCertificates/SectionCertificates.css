@@ -1,0 +1,39 @@
+#section-certificates {
+  background-image: url("../../../../../assets//pages/about/about-main/certificates/3d-image-bg.jpg");
+  padding: 3em 0;
+}
+
+#section-certificates .certificates-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  #section-certificates {
+    padding: 2em 0;
+  }
+  #section-certificates .certificates-container {
+    max-width: 900px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #section-certificates {
+    padding: 3em 0;
+  }
+  #section-certificates .certificates-container {
+    padding: 0 3em;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+  }
+}
+/*# sourceMappingURL=SectionCertificates.css.map */

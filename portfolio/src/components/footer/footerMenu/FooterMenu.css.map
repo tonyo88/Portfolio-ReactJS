@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,sBAAsB,CAAC;EACnB,YAAY,EAAE,GAAG,CAAC,KAAK,CAHX,OAAO;EAInB,QAAQ,EAAE,QAAQ;CASrB;;AAXD,AAMI,sBANkB,CAMlB,YAAY,CAAC;EACT,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,MAAM;CAErB;;AAML,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,sBAAsB,CAAC;IACnB,YAAY,EAAE,IAAI;GACrB",
+    "sources": [
+        "FooterMenu.scss"
+    ],
+    "names": [],
+    "file": "FooterMenu.css"
+}

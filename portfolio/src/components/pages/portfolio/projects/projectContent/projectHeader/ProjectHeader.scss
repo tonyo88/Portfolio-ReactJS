@@ -1,0 +1,20 @@
+.project-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .project-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        line-height: 120px;
+    }
+
+    .project-logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 0 17em;
+
+        img {
+            width: 100%;
+        }
+    }
+}

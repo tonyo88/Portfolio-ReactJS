@@ -1,0 +1,55 @@
+.footer-contact-container .contact-info {
+  padding: 1rem 0 0;
+  color: #fff;
+  margin: 0 auto;
+  width: 250px;
+  font-family: 'Six Caps', sans-serif;
+  line-height: 1.7em;
+}
+
+.footer-contact-container .contact-info .footer-title {
+  font-size: 1.1rem;
+}
+
+.footer-contact-container .contact-info .footer-contact-link {
+  text-decoration: none;
+  color: #808080;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-contact-container .contact-info .footer-contact-link:hover {
+  color: #fff;
+}
+
+.footer-contact-container .footer-social-container {
+  padding: 0.7em 0;
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  .footer-contact-container .contact-info {
+    padding: 0.8em 0.4em;
+    margin: 0 auto;
+    width: 220px;
+    line-height: 1.1em;
+    font-size: 0.8rem;
+  }
+  .footer-contact-container .contact-info .footer-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .footer-contact-container .contact-info {
+    padding: 0.8rem;
+    color: #fff;
+    margin: 0 auto;
+    width: 200px;
+    line-height: 1.1rem;
+    font-size: 0.7em;
+  }
+  .footer-contact-container .contact-info .footer-title {
+    font-size: 0.9em;
+  }
+}
+/*# sourceMappingURL=FooterContact.css.map */

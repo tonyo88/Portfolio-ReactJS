@@ -1,0 +1,127 @@
+$text-color: #262626;
+$border-color: #0aabc5;
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 767px;
+$breakpoint-phone: 414px;
+
+.web-skill-card-container {
+
+    .web-skill-image-container {
+        grid-column: auto;
+        grid-row: auto;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .web-skill-info-container {
+        color: $text-color;
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
+        padding: 1em 4em;
+
+        .web-skill-title {
+            display: inline-block;
+            font-size: 2em;
+            border-bottom: 2px solid $border-color;
+            letter-spacing: 1px;
+        }
+
+        .web-skill-info {
+            text-align: center;
+            padding: 0.8em 0 0;
+            font-family: 'Teko', sans-serif;
+            font-size: 1.2em;
+        }
+    }
+}
+
+//Breakpoint-iPad-Pro to Breakpoint-iPad
+
+@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-iPad-Pro) {
+    .web-skill-card-container {
+
+        .web-skill-image-container {
+
+            width: 160px;
+            height: 160px;
+
+        }
+
+
+        .web-skill-info-container {
+            padding: 0.5em 0;
+
+            .web-skill-info {
+                padding: 1.2em 1.4em;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+//Breakpoint-iPad to Breakpoint-phone
+
+@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+    .web-skill-card-container {
+
+        .web-skill-image-container {
+
+            width: 150px;
+            height: 150px;
+
+        }
+
+
+        .web-skill-info-container {
+
+            padding: 1em 3em;
+
+            .web-skill-title {
+                display: inline-block;
+                font-size: 1.4rem;
+                border-bottom: 2px solid $border-color;
+                letter-spacing: 1px;
+            }
+
+            .web-skill-info {
+                padding: 0.8em 0 0;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+//Breakpoint-phone
+
+@media(max-width: $breakpoint-phone) {
+    .web-skill-card-container {
+
+        .web-skill-image-container {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .web-skill-info-container {
+
+            padding: 1em 4em;
+
+            .web-skill-title {
+                display: inline-block;
+                font-size: 1.6rem;
+                border-bottom: 2px solid $border-color;
+                letter-spacing: 1px;
+            }
+
+            .web-skill-info {
+                padding: 0.8em 0 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

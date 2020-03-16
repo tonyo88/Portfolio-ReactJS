@@ -1,0 +1,41 @@
+#section-professional-skills {
+  padding: 5em 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  background: -webkit-gradient(linear, left top, right top, color-stop(17%, #42edfa), color-stop(45%, #4990a4), color-stop(100%, #102a41), to(#5a34e6));
+  background: linear-gradient(90deg, #42edfa 17%, #4990a4 45%, #102a41 100%, #5a34e6 100%);
+}
+
+#section-professional-skills .professional-skills-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: rgba(16, 42, 65, 0.6);
+}
+
+@media (max-width: 1024px) {
+  #section-professional-skills {
+    padding: 4em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #section-professional-skills {
+    padding: 3em 0;
+  }
+  #section-professional-skills .professional-skills-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 414px) {
+  #section-professional-skills {
+    padding: 3.5em 0;
+  }
+  #section-professional-skills .professional-skills-container {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=SectionProfessionalSkills.css.map */

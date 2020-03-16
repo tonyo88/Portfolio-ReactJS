@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;CAiBxC;;AAnBD,AAII,eAJW,CAIX,cAAc,CAAC;EACX,SAAS,EAAE,MAAM;EACjB,cAAc,EAAE,GAAG;EACnB,WAAW,EAAE,KAAK;CACrB;;AARL,AAUI,eAVW,CAUX,aAAa,CAAC;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,UAAU;CAKrB;;AAlBL,AAeQ,eAfO,CAUX,aAAa,CAKT,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "ProjectHeader.scss"
+    ],
+    "names": [],
+    "file": "ProjectHeader.css"
+}

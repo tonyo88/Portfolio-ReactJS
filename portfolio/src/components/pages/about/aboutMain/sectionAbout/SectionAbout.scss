@@ -1,0 +1,226 @@
+$breakpoint-Desktop: 1500px;
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+$text-color: #262626;
+$border-color: #0aabc5;
+
+#section-about {
+    width: 100%;
+
+    .about-section-container {
+        padding: 5em 0;
+        width: 1500px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+
+        .about-info-container {
+            color: $text-color;
+            font-family: 'Oswald', sans-serif;
+            text-align: justify;
+            font-size: 1.2rem;
+            padding: 4em;
+            margin: 10em 0 0;
+
+            .about-title {
+                font-size: 2.5rem;
+                display: inline-block;
+                border-bottom: 2px solid $border-color;
+                letter-spacing: 1px;
+                margin: 0 0 1em;
+            }
+
+        }
+
+        .about-image-container {
+            position: relative;
+
+            .second-page {
+                position: absolute;
+                top: 0;
+            }
+
+            .third-page {
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
+
+//Breakpoint-Desktop to //Breakpoint-iPad-Pro
+
+@media screen and (min-width: $breakpoint-iPad-Pro) and (max-width: $breakpoint-Desktop) {
+    #section-about {
+
+        .about-section-container {
+            padding: 3em 0;
+            width: 1200px;
+            max-width: 90%;
+
+            .about-info-container {
+                font-size: 1rem;
+                padding: 2em;
+                margin: 7em 0 0;
+
+                .about-title {
+                    font-size: 2em;
+                    margin: 0 0 1.5rem;
+                }
+
+            }
+
+            .about-image-container {
+
+                .first-page,
+                .second-page,
+                .third-page {
+                    width: 550px;
+                    height: 550px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+//Breakpoint-iPad-Pro to Breakpoint-iPad
+
+@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-iPad-Pro) {
+    #section-about {
+
+        .about-section-container {
+            padding: 0;
+            max-width: 90%;
+
+            .about-info-container {
+                font-size: 0.9rem;
+                padding: 0 1em;
+                margin: 4em 0 0;
+
+                .about-title {
+                    font-size: 2.1rem;
+                    margin: 0 0 0.5em;
+                }
+
+            }
+
+            .about-image-container {
+                margin: 0 auto;
+
+                .first-page,
+                .second-page,
+                .third-page {
+                    width: 400px;
+                    height: 400px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+
+//Breakpoint-iPad to  Breakpoint-phone
+
+@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+    #section-about {
+
+        .about-section-container {
+            padding: 2em 0;
+            grid-template-columns: repeat(1, 1fr);
+
+            .about-info-container {
+                font-size: 0.85rem;
+                padding: 3em 5em;
+                margin: 2em 0 0;
+                text-align: center;
+
+                .about-title {
+                    font-size: 1.7rem;
+                    margin: 0 0 1.2em;
+
+                }
+
+            }
+
+            .about-image-container {
+                margin: 0 auto;
+
+                .first-page,
+                .second-page,
+                .third-page {
+                    width: 400px;
+                    height: 400px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+}
+
+
+//Breakpoint-phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    #section-about {
+
+        .about-section-container {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 2em 0;
+
+            .about-info-container {
+                font-size: 0.75rem;
+                padding: 1em 3em;
+                margin: 3em 0 0;
+                text-align: center;
+
+                .about-title {
+                    font-size: 1.5rem;
+                    margin: 0 0 1em;
+
+                }
+
+            }
+
+            .about-image-container {
+                margin: 0 auto;
+
+                .first-page,
+                .second-page,
+                .third-page {
+                    width: 280px;
+                    height: 280px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+}
