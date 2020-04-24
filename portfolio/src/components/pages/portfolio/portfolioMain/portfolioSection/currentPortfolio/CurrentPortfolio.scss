@@ -1,0 +1,221 @@
+//Colors
+$portfolio-box-bg-color: #494949;
+$text-color: #fff;
+$title-info-bg-color: rgba(0, 0, 0, 0.7);
+$btn-bg: rgba(255, 255, 255, 0.7);
+$btn-color: #000;
+$box-shadow-color: rgba(0, 0, 0, 0.8);
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 539px;
+$breakpoint-phone: 414px;
+
+
+.portfolio-box {
+    width: 100%;
+    background: $portfolio-box-bg-color;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+
+    .portfolio {
+        text-decoration: none;
+
+        img {
+            width: 100%;
+            opacity: 0.8;
+            transform: rotate3d(0, 0, 1, 8deg);
+            transition: 0.3s;
+        }
+
+        figure {
+            figcaption {
+                .portfolio-title {
+                    position: absolute;
+                    top: 0%;
+                    left: -100%;
+                    color: $text-color;
+                    letter-spacing: 1px;
+                    font-size: 1.7rem;
+                    text-transform: uppercase;
+                    font-family: 'Oswald', sans-serif;
+                    transition: 0.3s all ease;
+                    background: $title-info-bg-color;
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0.2em 0 0.2em 1em;
+
+                    .portfolio-btn {
+                        color: $btn-color;
+                        position: absolute;
+                        font-size: 0.9rem;
+                        padding: 0.3em 0.7em;
+                        text-decoration: none;
+                        background-color: $btn-bg;
+                        top: -100%;
+                        right: 10px;
+                        transition: 0.3s all ease;
+                        transition-delay: 0.5s;
+                    }
+                }
+
+                .portfolio-info {
+                    color: $text-color;
+                    font-size: 1.2rem;
+                    padding: 0.5em 2em;
+                    line-height: 150%;
+                    position: absolute;
+                    bottom: -100%;
+                    right: 0%;
+                    display: block;
+                    text-align: justify;
+                    background: $title-info-bg-color;
+                    font-family: 'Teko', sans-serif;
+                    transition: 0.3s all ease;
+                    transition-delay: 0.1s;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 45px $box-shadow-color;
+
+        img {
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+            opacity: 0.95;
+        }
+
+        figure {
+            figcaption {
+                .portfolio-title {
+                    left: 0%;
+
+                    .portfolio-btn {
+                        top: 11px;
+                    }
+                }
+
+                .portfolio-info {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Browser to Middle-Large
+
+@media screen and (min-width: $breakpoint-middle-large) and (max-width: $breakpoint-browser) {
+    .portfolio-box {
+        .portfolio {
+            figure {
+                figcaption {
+                    .portfolio-title {
+                        font-size: 1.6rem;
+
+                        .portfolio-btn {
+                            font-size: 0.85rem;
+                        }
+                    }
+
+                    .portfolio-info {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Breakpoint Middle-Large to iPad
+
+@media screen and(min-width: $breakpoint-iPad) and (max-width: 959px) {
+    .portfolio-box {
+        .portfolio {
+            figure {
+                figcaption {
+                    .portfolio-title {
+                        font-size: 1.5rem;
+
+                        .portfolio-btn {
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    .portfolio-info {
+                        font-size: 1rem;
+                        padding: 0.5em 1em;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+//Breakpoint Middle-Small to Phone 
+
+@media screen and (min-width: 415px) and (max-width: $breakpoint-middle-small) {
+    .portfolio-box {
+        .portfolio {
+            figure {
+                figcaption {
+                    .portfolio-title {
+                        font-size: 1.5rem;
+
+                        .portfolio-btn {
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    .portfolio-info {
+                        font-size: 1rem;
+                        padding: 0.5em 1em;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+//Breakpoint Phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    .portfolio-box {
+        .portfolio {
+            figure {
+                figcaption {
+                    .portfolio-title {
+                        font-size: 1.2rem;
+
+                        .portfolio-btn {
+                            font-size: 0.6rem;
+                        }
+                    }
+
+                    .portfolio-info {
+                        font-size: 0.9rem;
+                        padding: 0.5em 1em;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,KAAK;CACjB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,gBAAgB,CAAC;IACb,OAAO,EAAE,KAAK;GACjB",
+    "sources": [
+        "ProjectSlider.scss"
+    ],
+    "names": [],
+    "file": "ProjectSlider.css"
+}

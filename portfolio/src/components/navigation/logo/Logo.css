@@ -46,7 +46,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 540px) and (max-width: 768px) {
   .logo-link .logo-container .logo-image {
     margin-left: 25px;
   }
@@ -61,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 415px) and (max-width: 539px) {
   .logo-link .logo-container .logo-image {
     width: 3.1em;
     height: 3.1em;
@@ -70,11 +70,16 @@
   .logo-link .logo-container .logo-name {
     display: none;
   }
-  .logo-link .logo-container .logo-name .logo-name-container h5 {
-    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 414px) {
+  .logo-link .logo-container .logo-image {
+    width: 3.1em;
+    height: 3.1em;
+    margin-left: 0;
   }
-  .logo-link .logo-container .logo-name .logo-name-container p {
-    font-size: 0.7rem;
+  .logo-link .logo-container .logo-name {
+    display: none;
   }
 }
 /*# sourceMappingURL=Logo.css.map */

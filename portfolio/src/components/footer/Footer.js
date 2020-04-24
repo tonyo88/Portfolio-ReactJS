@@ -1,15 +1,14 @@
 import "./Footer.css";
 import React from "react";
 import {Link} from "react-router-dom";
-// import SocialMenu from "../socialMenu/SocialMenu";
 import FooterMenu from "./footerMenu/FooterMenu";
 import FooterContact from "./footerContact/FooterContact";
-// import Logo from "../navigation/logo/Logo";
+
 
 const Footer = () => {
 
     return (
-        <footer>
+        <footer id="main-footer">
             <div className="wrapper">
                 <div className="footer-logo ">
                     <Link to="/">

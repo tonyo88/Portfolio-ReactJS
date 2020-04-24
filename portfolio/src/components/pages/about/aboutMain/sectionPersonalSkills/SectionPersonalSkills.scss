@@ -1,10 +1,12 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 940px;
-$breakpoint-phone: 500px;
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 #personal-skills {
     width: 100%;
-    background-image: url("../../../../../assets/pages/about/about-main/personal-skills-section/bg-about-section.jpg");
     padding: 5em 0;
 
     .personal-skills-container {
@@ -12,44 +14,56 @@ $breakpoint-phone: 500px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
-
     }
 }
 
-//Breakpoint-iPad-Pro
+//Breakpoint iPad-Pro
 
-@media screen and (max-width: $breakpoint-iPad-Pro) {
-    #personal-skills {
+@media screen and (max-width: $breakpoint-browser) {
+    #persnal-skills {
         padding: 4em 0;
 
         .personal-skills-container {
             grid-gap: 10px;
-
         }
     }
 }
 
-//Breakpoint-iPad
+//Breakpoint Middle-Large to Middle-Small
 
-@media screen and (max-width: $breakpoint-iPad) {
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-middle-large) {
     #personal-skills {
         padding: 3em 0;
 
         .personal-skills-container {
+            grid-gap: 10px;
             grid-template-columns: repeat(2, 1fr);
-
         }
     }
 }
 
-//Breakpoint-phone
+//Breakpoint Middle-Small to Phone
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+    #personal-skills {
+        padding: 3em 0;
+
+        .personal-skills-container {
+            grid-gap: 10px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+}
 
 @media screen and (max-width: $breakpoint-phone) {
     #personal-skills {
-        padding: 3.5em 0;
+        padding: 3em 0;
 
         .personal-skills-container {
+            grid-gap: 10px;
             grid-template-columns: repeat(1, 1fr);
         }
+
     }
 }

@@ -5,7 +5,7 @@
   position: fixed;
   -webkit-transition: 0.35s;
   transition: 0.35s;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .navigation .logo {
@@ -19,7 +19,7 @@
   position: fixed;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 540px) and (max-width: 768px) {
   .navigation {
     background-color: #102a41;
     border-bottom: none;
@@ -32,8 +32,24 @@
   }
 }
 
+@media screen and (min-width: 415px) and (max-width: 539px) {
+  .navigation {
+    background-color: #102a41;
+    border-bottom: none;
+    height: 3.5em;
+  }
+  .navigation .toggle-btn {
+    margin: 15px 0;
+  }
+  .navigation .logo {
+    margin-top: 4px;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .navigation {
+    background-color: #102a41;
+    border-bottom: none;
     height: 3.5em;
   }
   .navigation .toggle-btn {

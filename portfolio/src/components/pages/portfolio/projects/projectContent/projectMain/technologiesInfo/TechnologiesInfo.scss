@@ -1,0 +1,25 @@
+//Breakpoints 
+$breakpoint-middle-small: 540px;
+
+.technologies-info {
+    margin-top: 4em;
+
+    .skill-techniques {
+        padding: 2em 1em;
+        list-style-type: circle;
+
+        li {
+            margin-bottom: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    .technologies-info {
+        margin-top: 2em;
+
+        .skill-techniques {
+            padding: 1em;
+        }
+    }
+}

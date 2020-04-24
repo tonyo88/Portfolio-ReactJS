@@ -3,21 +3,43 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 1em 0;
 }
 
 .project-header .project-title {
-  font-size: 2.5rem;
   letter-spacing: 1px;
-  line-height: 120px;
+  line-height: 100px;
+  text-align: right;
 }
 
 .project-header .project-logo {
-  width: 120px;
-  height: 120px;
-  margin: 0 0 0 17em;
+  width: 100px;
+  height: 100px;
+  float: left;
 }
 
 .project-header .project-logo img {
   width: 100%;
+}
+
+@media screen and (max-width: 636px) {
+  .project-header .project-title {
+    text-align: center;
+    line-height: 70px;
+  }
+  .project-header .project-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .project-header {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .project-header .project-logo {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=ProjectHeader.css.map */

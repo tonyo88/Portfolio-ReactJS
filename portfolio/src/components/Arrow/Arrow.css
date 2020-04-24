@@ -1,0 +1,113 @@
+.arrow {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: animate 2s infinite;
+          animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .arrow {
+    top: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .arrow {
+    top: 46%;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 767px) {
+  .arrow {
+    top: 50%;
+  }
+  .arrow span {
+    width: 18px;
+    height: 18px;
+    margin: -10px;
+  }
+  .arrow span:nth-child(2) {
+    -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3) {
+    -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .arrow {
+    top: 50%;
+  }
+  .arrow span {
+    width: 10px;
+    height: 10px;
+    margin: -10px;
+  }
+  .arrow span:nth-child(2) {
+    -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3) {
+    -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+  }
+}
+/*# sourceMappingURL=Arrow.css.map */

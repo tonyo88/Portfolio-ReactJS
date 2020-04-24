@@ -1,10 +1,19 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $bg-professional-skill: linear-gradient(rgba(10, 10, 10, 0.5) 0%, rgba(15, 15, 15, 0.5) 10%, rgba(0, 0, 0, 0.5));
 $text-color: #fff;
 $percent-bg: rgba(10, 10, 10, 0.5);
+$border-color: #000;
+$box-shadow-color: $border-color;
 $outer-bg: $text-color;
+
+//Breakpoints
+
+$breakpoint-browser: 1280px;
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 .professional-skill {
     position: relative;
@@ -14,7 +23,7 @@ $outer-bg: $text-color;
     background: $bg-professional-skill;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #000;
+    border: 1px solid $border-color;
     transition: 0.5s;
     font-family: 'Oswald', sans-serif;
     font-size: 0.8rem;
@@ -28,7 +37,7 @@ $outer-bg: $text-color;
         width: 100%;
         height: 50%;
         background: rgba(255, 255, 255, 0.1);
-        z-index: 1000;
+        z-index: 10;
     }
 
     .name {
@@ -42,7 +51,7 @@ $outer-bg: $text-color;
         height: 15px;
         margin: 2px 10px 0;
         background: $percent-bg;
-        box-shadow: inset 0 0 10px #000;
+        box-shadow: inset 0 0 10px $box-shadow-color;
         border-radius: 100px;
         overflow: hidden;
 
@@ -55,7 +64,7 @@ $outer-bg: $text-color;
             height: 100%;
             border-radius: 100px;
             background: $outer-bg;
-            box-shadow: inset 0 0 2px #000;
+            box-shadow: inset 0 0 2px $box-shadow-color;
 
             .inner-progress {
                 height: 100%;
@@ -91,12 +100,10 @@ $outer-bg: $text-color;
 
 #html-outer {
     width: 90%;
-
 }
 
 #css-outer {
     width: 75%;
-
 }
 
 #sass-outer {
@@ -128,7 +135,7 @@ $outer-bg: $text-color;
 }
 
 #git-outer {
-    width: 50%;
+    width: 70%;
 }
 
 #responsive-design-outer {
@@ -144,12 +151,10 @@ $outer-bg: $text-color;
 
 #html-inner {
     background: linear-gradient(45deg, #be640f, #bd370e);
-
 }
 
 #css-inner {
     background: linear-gradient(45deg, #0f8cbe, #2832c5);
-
 }
 
 #sass-inner {
@@ -207,8 +212,11 @@ $outer-bg: $text-color;
 
 //Breakpoint-iPad-Pro
 
-@media screen and(max-width: $breakpoint-iPad-Pro) {
+@media screen and(max-width: $breakpoint-browser) {
     .professional-skill {
+        .name {
+            width: 90px;
+        }
 
         .percent {
 
@@ -221,9 +229,7 @@ $outer-bg: $text-color;
                 .active-inner-progress {
                     animation: none;
                 }
-
             }
-
         }
     }
 }
@@ -239,14 +245,12 @@ $outer-bg: $text-color;
         font-size: 0.6rem;
 
         .name {
-
             width: 70px;
         }
 
         .percent {
             width: calc(100% - 100px);
             margin: 2px 5px 0;
-
         }
 
         .value {
@@ -254,5 +258,4 @@ $outer-bg: $text-color;
             text-align: right;
         }
     }
-
 }

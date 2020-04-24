@@ -1,5 +1,4 @@
-$breakpoint-iPad-Pro: 1024px;
-
+$breakpoint-browser: 1280px;
 
 .wrapper {
     width: 1050px;
@@ -8,13 +7,12 @@ $breakpoint-iPad-Pro: 1024px;
 }
 
 .background-position {
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media screen and (max-width: $breakpoint-iPad-Pro) {
+@media screen and (max-width: $breakpoint-browser) {
     .wrapper {
         max-width: 90%;
     }

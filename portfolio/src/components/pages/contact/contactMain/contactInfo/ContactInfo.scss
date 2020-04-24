@@ -1,0 +1,51 @@
+//Colors
+$title-color: #2f2f2f;
+$text-color: #5e5e5e;
+$link-color: #119ed6;
+
+//Breakpoints
+$breakpoint-from-iPad-to-Phone: 767px;
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+
+    .info {
+        text-align: justify;
+
+        p {
+            color: $text-color;
+            padding: 0 0 0.5em;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+
+
+            strong {
+                color: $title-color;
+                padding: 0.2em 0;
+
+                font-size: 1rem;
+            }
+
+            a {
+                color: $link-color;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+//Breakpoint iPad to Phone
+
+@media screen and (max-width: $breakpoint-from-iPad-to-Phone) {
+    .contact-info {
+        padding: 1.5em 0 0;
+
+        .info {
+            text-align: center;
+        }
+    }
+}

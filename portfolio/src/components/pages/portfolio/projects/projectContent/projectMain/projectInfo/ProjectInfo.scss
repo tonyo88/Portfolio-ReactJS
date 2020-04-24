@@ -1,0 +1,25 @@
+//Colors
+$info-color: #8a8a8a;
+
+//Breakpoints 
+$breakpoint-middle-small: 540px;
+
+.project-info {
+    margin-top: 2em;
+
+    p {
+        margin-top: 1em;
+    }
+}
+
+//Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    .project-info {
+        margin-top: 0;
+
+        p {
+            margin-top: 0.6em;
+        }
+    }
+}

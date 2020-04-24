@@ -1,10 +1,13 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $link-color: rgb(46, 45, 45);
 $active-scrolled-link-color: #fff;
 $link-hover-background: rgb(46, 45, 45);
 $active-scrolled-hover-background: #0aabc5;
+
+//Breakpoints
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
 
 .main-list {
     display: inline-block;
@@ -120,9 +123,9 @@ $active-scrolled-hover-background: #0aabc5;
     }
 }
 
-//Breakpoint iPad to Breakpoint-phone
+//Breakpoint iPad
 
-@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+@media screen and (max-width: $breakpoint-iPad) {
 
     .main-list {
         display: block;
@@ -142,8 +145,6 @@ $active-scrolled-hover-background: #0aabc5;
             font-size: 1.3rem;
             color: $active-scrolled-link-color;
 
-
-
             span {
                 transform-origin: left;
                 transform: scaleX(0);
@@ -156,6 +157,10 @@ $active-scrolled-hover-background: #0aabc5;
                 transform-origin: right;
             }
 
+            &:hover {
+                color: $active-scrolled-link-color;
+            }
+
         }
     }
 
@@ -166,14 +171,12 @@ $active-scrolled-hover-background: #0aabc5;
     }
 }
 
-//Breakpoint phone
+//Breakpoint Phone
 
 @media screen and (max-width: $breakpoint-phone) {
-
-
     .main-list {
         display: block;
-        height: 50px;
+        height: 60px;
         border-bottom: 1px solid $active-scrolled-link-color;
 
         &:nth-child(1) {
@@ -183,11 +186,15 @@ $active-scrolled-hover-background: #0aabc5;
         .main-link {
 
             height: 100%;
-            line-height: 50px;
+            line-height: 60px;
             width: 100%;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 1rem;
             color: $active-scrolled-link-color;
+
+            &:hover {
+                color: $active-scrolled-link-color;
+            }
 
         }
     }

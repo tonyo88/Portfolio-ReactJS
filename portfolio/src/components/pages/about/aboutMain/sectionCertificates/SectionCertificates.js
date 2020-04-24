@@ -12,9 +12,9 @@ import uiUX from "../../../../../assets/pages/about/about-main/certificates/ui-u
 class SectionCertificates extends React.Component {
     render() {
         return(
-            <section id="section-certificates" className="background-position">
+            <section id="section-certificates">
                 <div className="wrapper">
-                    <SectionTitle  titleName={"Certificates"}/>
+                    <SectionTitle  titleName={"Certificates"} titleColor={"#262626"} />
                    <div className="certificates-container">
 
                        <Certificate

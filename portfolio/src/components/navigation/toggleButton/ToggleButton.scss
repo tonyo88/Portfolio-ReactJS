@@ -1,6 +1,9 @@
+//Colors
+$button-color: #fff;
+
+//Breakpoints
 $breakpoint-iPad: 768px;
 $breakpoint-phone: 414px;
-$button-color: #fff;
 
 .toggle-btn {
     display: none;
@@ -38,8 +41,6 @@ $button-color: #fff;
 //Breakpoint-iPad
 
 @media(max-width: $breakpoint-iPad) {
-
-
     .toggle-btn {
         display: block;
     }

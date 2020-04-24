@@ -2,6 +2,12 @@
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 10em;
+  padding: 7em 0 3em;
+}
+
+@media screen and (max-width: 540px) {
+  .project-container {
+    padding: 5em 0 2em;
+  }
 }
 /*# sourceMappingURL=ProjectContent.css.map */

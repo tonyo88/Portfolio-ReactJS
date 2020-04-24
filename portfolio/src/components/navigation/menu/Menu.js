@@ -67,10 +67,10 @@ class Menu extends React.Component  {
 
                     </ul>
 
-            </div>
+                    <div className="mobile-social">
+                      <SocialMenu linksArray={socialLinks} />
+                   </div>
 
-            <div className="mobile">
-                <SocialMenu linksArray={socialLinks} />
             </div>
 
         </nav>

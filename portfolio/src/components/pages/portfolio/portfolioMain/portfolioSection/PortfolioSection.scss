@@ -1,16 +1,40 @@
-#portfolio-section {
+//Breakpoints
+$breakpoint-iPad: 767px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
-    // background-image: url("../../../../../assets/pages/portfolio/portfolio-main/background/3d.jpg");
-    background-image: url("../../../../../assets/pages/portfolio/portfolio-main/background/3d-white.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#portfolio-section {
     padding: 3em 0;
 
     .portfolio-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+    }
+}
+
+//Breakpoint iPad to Phone
+
+@media screen and (min-width: 415px) and (max-width: $breakpoint-iPad) {
+    #portfolio-section {
+        .portfolio-container {
+            max-width: 90%;
+            margin: 0 auto;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+        }
+    }
+}
+
+//Breakpoint Phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    #portfolio-section {
+        .portfolio-container {
+            max-width: 100%;
+            margin: 0 auto;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+        }
     }
 }

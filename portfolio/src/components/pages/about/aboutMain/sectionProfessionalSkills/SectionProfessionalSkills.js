@@ -18,7 +18,7 @@ class SectionProfessionalSkills extends React.Component {
       return(
         <section id="section-professional-skills" onMouseOver={this.mouseMoveOver}>
            <div className="wrapper">
-               <SectionTitle titleName={"Professional Skills"} />
+               <SectionTitle titleName={"Professional Skills"} titleColor={"#f7f7f9"} />
               <div className="professional-skills-container">
 
                     <ProfessionalSkill
@@ -87,7 +87,7 @@ class SectionProfessionalSkills extends React.Component {
 
                     <ProfessionalSkill
                         skillName={"Git"}
-                        skillValue={"50%"}
+                        skillValue={"70%"}
                         outerValue={"git-outer"}
                         bgInner={"git-inner"}
                         innerProgress={this.state.isMouseOver ? "active-inner-progress inner-progress" : "inner-progress"}

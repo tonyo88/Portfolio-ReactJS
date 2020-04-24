@@ -1,11 +1,12 @@
-$breakpoint-iPad-to-phone: 530px;
+//Colors
 $footer-border: #808080;
+
+//Breakpoints
+$breakpoint-middle-small: 619px;
 
 .footer-menu-container {
     border-right: 1px solid $footer-border;
     position: relative;
-
-
 
     .footer-menu {
         list-style-type: none;
@@ -17,7 +18,7 @@ $footer-border: #808080;
 //Breakpoint-iPad-to-phone
 
 
-@media screen and (max-width: $breakpoint-iPad-to-phone) {
+@media screen and (max-width: $breakpoint-middle-small) {
     .footer-menu-container {
         border-right: none;
     }

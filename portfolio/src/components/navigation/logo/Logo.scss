@@ -1,8 +1,11 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $text-color: rgb(46, 45, 45);
 $active-scrolled-text-color: #fff;
+
+//Breakpoints
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 .logo-link {
     text-decoration: none;
@@ -52,9 +55,9 @@ $active-scrolled-text-color: #fff;
 }
 
 
-//Breakpoint iPad
+//Breakpoint iPad to Middle-Small
 
-@media screen and (max-width: $breakpoint-iPad) {
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-iPad) {
 
     .logo-link {
 
@@ -84,7 +87,29 @@ $active-scrolled-text-color: #fff;
     }
 }
 
-//Breakpoint-phone
+//Breakpoint Middle-Small to Phone
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+
+    .logo-link {
+
+        .logo-container {
+
+            .logo-image {
+                width: 3.1em;
+                height: 3.1em;
+                margin-left: 0;
+
+            }
+
+            .logo-name {
+                display: none;
+            }
+        }
+    }
+}
+
+//Breakpoint Phone
 
 @media screen and (max-width: $breakpoint-phone) {
 
@@ -101,18 +126,6 @@ $active-scrolled-text-color: #fff;
 
             .logo-name {
                 display: none;
-
-                .logo-name-container {
-
-                    h5 {
-                        font-size: 0.9rem;
-                    }
-
-                    p {
-                        font-size: 0.7rem;
-                    }
-                }
-
             }
         }
     }

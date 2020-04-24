@@ -7,7 +7,6 @@ class HomeMain extends React.Component {
     render() {
      return(
          <main id="home-main">
-
             <SectionWebSkills />
             <SectionVideo />
          </main>

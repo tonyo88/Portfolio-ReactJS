@@ -1,8 +1,12 @@
+//Colors
 $border-color: #0aabc5;
 $text-color: #262626;
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 767px;
-$breakpoint-iPad-to-phone: 530px;
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
 $breakpoint-phone: 414px;
 
 #section-video {
@@ -12,25 +16,29 @@ $breakpoint-phone: 414px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
-        .video-content {
-            position: relative;
-            top: 25%;
-            text-align: center;
-            font-family: 'Oswald', sans-serif;
-            color: $text-color;
+        .info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            .video-title {
-                display: inline-block;
-                font-size: 2.5rem;
-                border-bottom: 2px solid $border-color;
-                letter-spacing: 1px;
-            }
+            .video-content {
+                text-align: center;
+                font-family: 'Oswald', sans-serif;
+                color: $text-color;
 
-            .video-info {
-                text-align: justify;
-                font-family: 'Teko', sans-serif;
-                font-size: 1.32rem;
-                padding: 0.8em 0 0;
+                .video-title {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                    border-bottom: 2px solid $border-color;
+                    letter-spacing: 1px;
+                }
+
+                .video-info {
+                    text-align: justify;
+                    font-family: 'Teko', sans-serif;
+                    font-size: 1.32rem;
+                    padding: 0.8em 0 0;
+                }
             }
         }
 
@@ -39,7 +47,6 @@ $breakpoint-phone: 414px;
 
             .laptop-container {
                 width: 700px;
-                height: 500px;
 
                 .laptop {
                     width: 100%;
@@ -54,45 +61,34 @@ $breakpoint-phone: 414px;
                 position: absolute;
                 width: 530px;
                 left: 84px;
-                bottom: 144px;
+                bottom: 80px;
             }
         }
     }
 }
 
+//Breakpoint Browser to Middle-Large
 
-//Breakpoint-iPad-Pro to Breakpoint-iPad
-
-@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-iPad-Pro) {
+@media screen and (min-width: $breakpoint-middle-large) and (max-width: $breakpoint-browser) {
     #section-video {
-
         margin: 5em 0;
 
         .video-info-container {
+            .info-container {
+                .video-content {
+                    padding: 0 1.5em;
 
-            .video-content {
-                position: relative;
-                top: 15%;
-                text-align: center;
-                font-family: 'Oswald', sans-serif;
-                color: $text-color;
+                    .video-title {
+                        font-size: 2.2rem;
 
-                .video-title {
-                    font-size: 2rem;
-
-                }
-
-                .video-info {
-                    font-size: 1.32rem;
-                    padding: 0.6em 1.5em;
+                    }
                 }
             }
 
             .video-container {
 
                 .laptop-container {
-                    width: 400px;
-                    height: 300px;
+                    width: 500px;
                     margin: 0 auto;
 
                     .laptop {
@@ -111,40 +107,79 @@ $breakpoint-phone: 414px;
             }
         }
     }
-
 }
 
+//Breakpoint Middle-Large to iPad
 
-//Breakpoint-iPad to Breakpoint-phone
+@media screen and (min-width: $breakpoint-iPad) and (max-width: 959px) {
+    #section-video {
+        margin: 5em 0;
 
-@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+        .video-info-container {
+            .info-container {
+                .video-content {
+                    padding: 0 1.5em;
+
+                    .video-title {
+                        font-size: 2rem;
+
+                    }
+                }
+            }
+
+            .video-container {
+
+                .laptop-container {
+                    width: 350px;
+                    margin: 0 auto;
+
+                    .laptop {
+                        display: none;
+                    }
+
+                    .typing {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                #video {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint  iPad to Middle-Small
+
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: 767px) {
     #section-video {
         margin: 3em 0;
 
         .video-info-container {
+            grid-template-columns: repeat(1, 1fr);
 
-            .video-content {
-                top: 0;
-                text-align: center;
+            .info-container {
+                .video-content {
+                    padding: 0 4.5em 1em;
 
-                .video-title {
-                    font-size: 1.5rem;
+                    .video-title {
+                        font-size: 2.2rem;
 
-                }
+                    }
 
-                .video-info {
-
-                    font-size: 1.02rem;
-                    padding: 1em;
+                    .video-info {
+                        text-align: center;
+                    }
                 }
             }
 
             .video-container {
 
                 .laptop-container {
+                    width: 500px;
                     margin: 0 auto;
-                    width: 250px;
-                    height: 180px;
 
                     .laptop {
                         display: none;
@@ -162,67 +197,85 @@ $breakpoint-phone: 414px;
             }
         }
     }
-
 }
 
+//Breakpoint Middle-Small to Phone
 
-//Breakpoint-iPad-to-Phone
-
-@media screen and (max-width: $breakpoint-iPad-to-phone) {
-
+@media screen and (min-width: 415px) and (max-width: 539px) {
     #section-video {
-
+        margin: 3em 0;
 
         .video-info-container {
             grid-template-columns: repeat(1, 1fr);
 
-            .video-content {
-                top: 0;
-                text-align: center;
+            .info-container {
+                .video-content {
+                    padding: 0 3.5em 1em;
 
-                .video-title {
-                    font-size: 1.5rem;
+                    .video-title {
+                        font-size: 1.9rem;
 
+                    }
+
+                    .video-info {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .video-container {
+
+                .laptop-container {
+                    width: 350px;
+                    margin: 0 auto;
+
+                    .laptop {
+                        display: none;
+                    }
+
+                    .typing {
+                        display: block;
+                        width: 100%;
+                    }
                 }
 
-                .video-info {
-
-                    font-size: 1.02rem;
-                    padding: 1em 5em;
+                #video {
+                    display: none;
                 }
             }
         }
     }
-
 }
 
-//Breakpoint-phone
+//Breakpoint Phone
 
 @media screen and (max-width: $breakpoint-phone) {
     #section-video {
-        margin: 2em 0;
+        margin: 3em 0;
 
         .video-info-container {
             grid-template-columns: repeat(1, 1fr);
 
-            .video-content {
-                top: 0;
+            .info-container {
+                .video-content {
+                    padding: 0 1.5em 1em;
 
-                .video-title {
-                    font-size: 1.6rem;
-                }
+                    .video-title {
+                        font-size: 1.8rem;
 
-                .video-info {
-                    font-size: 1.2rem;
-                    padding: 0.8em;
-                    text-align: center;
+                    }
+
+                    .video-info {
+                        text-align: center;
+                        font-size: 1.1rem;
+                    }
                 }
             }
 
             .video-container {
+
                 .laptop-container {
                     width: 300px;
-                    height: 200px;
                     margin: 0 auto;
 
                     .laptop {
@@ -233,7 +286,6 @@ $breakpoint-phone: 414px;
                         display: block;
                         width: 100%;
                     }
-
                 }
 
                 #video {
@@ -242,5 +294,4 @@ $breakpoint-phone: 414px;
             }
         }
     }
-
 }

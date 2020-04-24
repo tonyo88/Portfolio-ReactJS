@@ -1,10 +1,13 @@
-$breakpoint-iPad: 767px;
-$breakpoint-iPad-to-phone: 530px;
-$breakpoint-phone: 414px;
+//Colors
 $background-color-footer: #102a41;
 $copyright-color: #fff;
 
-footer {
+//Breakpoints
+$breakpoint-iPad: 767px;
+$breakpoint-middle-small: 620px;
+$breakpoint-phone: 414px;
+
+#main-footer {
     width: 100%;
     height: auto;
     background-color: $background-color-footer;
@@ -30,15 +33,18 @@ footer {
         text-align: center;
         color: $copyright-color;
         font-family: 'Oswald', sans-serif;
+        padding: 0 0 0.5em;
     }
 }
 
 
-//Breakpoint-iPad to phone
 
 
-@media screen and (min-width: $breakpoint-phone) and (max-width:$breakpoint-iPad) {
-    footer {
+// //Breakpoint-iPad to Middle-Small
+
+
+@media screen and (min-width: $breakpoint-middle-small) and (max-width:$breakpoint-iPad) {
+    #main-footer {
 
         .footer-logo {
             padding: 0.5rem 0;
@@ -51,11 +57,11 @@ footer {
     }
 }
 
-//Breakpoint-iPad-to-phone
+//Breakpoint Middle-Small to Phone
 
 
-@media screen and (max-width: $breakpoint-iPad-to-phone) {
-    footer {
+@media screen and (min-width: 415px) and (max-width: 619px) {
+    #main-footer {
 
         .footer-logo {
             padding: 0.5rem 0;
@@ -77,9 +83,8 @@ footer {
     }
 }
 
-//Breakpoint-phone
-@media screen and (max-width:$breakpoint-phone) {
-    footer {
+@media screen and (max-width: $breakpoint-phone) {
+    #main-footer {
 
         .footer-logo {
             padding: 0.5rem 0;
