@@ -1,0 +1,34 @@
+//Colors
+$bg-contact-info: #fff;
+
+//Breakpoints
+$breakpoint-from-iPad-to-Phone: 767px;
+
+#contact-main {
+    .contact-form-container {
+        background: $bg-contact-info;
+        width: 100%;
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: auto;
+        grid-gap: 0;
+    }
+}
+
+//Breakpoint iPad to Phone
+
+@media screen and (max-width: $breakpoint-from-iPad-to-Phone) {
+    #contact-main {
+        background: $bg-contact-info;
+
+        .contact-form-container {
+            grid-template-columns: repeat(1, 1fr);
+            top: 0;
+            transform: translate(-50%, 0%);
+        }
+    }
+}

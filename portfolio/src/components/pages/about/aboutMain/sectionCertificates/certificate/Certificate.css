@@ -27,9 +27,6 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 18px 18px 0 0;
 }
 
@@ -41,7 +38,7 @@
 }
 
 .certifcicate-box .certificate-info .date {
-  color: #0aabc5;
+  color: #102a41;
   font-weight: 500;
   font-size: 1.1rem;
 }
@@ -63,7 +60,7 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: btn;
-  background-color: #0aabc5;
+  background-color: #102a41;
   color: #fff;
   font-size: 1.2rem;
   text-decoration: none;
@@ -74,10 +71,10 @@
 }
 
 .certifcicate-box .certificate-btn:hover {
-  background-color: #102a41;
+  background-color: #0aabc5;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 960px) {
   .certifcicate-box {
     -ms-grid-columns: 200px;
         grid-template-columns: 200px;
@@ -114,13 +111,13 @@
   }
 }
 
-@media screen and (min-width: 414px) and (max-width: 768px) {
+@media screen and (min-width: 415px) and (max-width: 767px) {
   .certifcicate-box {
-    -ms-grid-columns: 190px;
-        grid-template-columns: 190px;
+    -ms-grid-columns: 200px;
+        grid-template-columns: 200px;
     margin: 0 auto;
-    -ms-grid-rows: 9em 9em 1.5em;
-        grid-template-rows: 9em 9em 1.5em;
+    -ms-grid-rows: 9em 9em 2em;
+        grid-template-rows: 9em 9em 2em;
   }
   .certifcicate-box .certificate-info {
     -ms-grid-row: 2;
@@ -141,7 +138,7 @@
     font-size: 0.7rem;
   }
   .certifcicate-box .certificate-btn {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 2em;
   }
 }

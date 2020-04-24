@@ -1,6 +1,17 @@
+//Breakpoints 
+$breakpoint-middle-small: 540px;
+
 .project-container {
     width: 800px;
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 10em;
+    padding: 7em 0 3em;
+}
+
+//Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    .project-container {
+        padding: 5em 0 2em;
+    }
 }

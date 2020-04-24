@@ -1,20 +1,20 @@
-footer {
+#main-footer {
   width: 100%;
   height: auto;
   background-color: #102a41;
 }
 
-footer .footer-logo {
+#main-footer .footer-logo {
   text-align: center;
   padding: 1rem 0;
 }
 
-footer .footer-logo img {
+#main-footer .footer-logo img {
   width: 4rem;
   height: 4rem;
 }
 
-footer .footer-grid-container {
+#main-footer .footer-grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -22,54 +22,55 @@ footer .footer-grid-container {
   padding: 0 0 1rem;
 }
 
-footer .copyright {
+#main-footer .copyright {
   text-align: center;
   color: #fff;
   font-family: 'Oswald', sans-serif;
+  padding: 0 0 0.5em;
 }
 
-@media screen and (min-width: 414px) and (max-width: 767px) {
-  footer .footer-logo {
+@media screen and (min-width: 620px) and (max-width: 767px) {
+  #main-footer .footer-logo {
     padding: 0.5rem 0;
   }
-  footer .footer-logo img {
+  #main-footer .footer-logo img {
     width: 3.5rem;
     height: 3.5rem;
   }
 }
 
-@media screen and (max-width: 530px) {
-  footer .footer-logo {
+@media screen and (min-width: 415px) and (max-width: 619px) {
+  #main-footer .footer-logo {
     padding: 0.5rem 0;
   }
-  footer .footer-logo img {
+  #main-footer .footer-logo img {
     width: 3rem;
     height: 3rem;
   }
-  footer .footer-grid-container {
+  #main-footer .footer-grid-container {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     padding: 0;
   }
-  footer .copyright {
+  #main-footer .copyright {
     font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 414px) {
-  footer .footer-logo {
+  #main-footer .footer-logo {
     padding: 0.5rem 0;
   }
-  footer .footer-logo img {
+  #main-footer .footer-logo img {
     width: 3rem;
     height: 3rem;
   }
-  footer .footer-grid-container {
+  #main-footer .footer-grid-container {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     padding: 0;
   }
-  footer .copyright {
+  #main-footer .copyright {
     font-size: 0.8em;
   }
 }

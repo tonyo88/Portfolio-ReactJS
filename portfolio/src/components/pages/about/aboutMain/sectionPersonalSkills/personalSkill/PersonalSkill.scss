@@ -1,15 +1,31 @@
+//Colors
 $text-color: rgb(165, 165, 165);
 $hover-text-color: #fff;
-$bg-personal-skill-card: linear-gradient(0deg, #102a41, rgb(41, 20, 131), #102a41);
+$bg-personal-skill-card: linear-gradient(0deg, #1c4366, #040320, #102a41);
 $half-bg-personal-skill-card: rgba(255, 255, 255, 0.08);
-$personal-skill-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
+$personal-skill-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
 $bg-personal-skill-percent: #102a41;
 $circle-outer-color: $text-color;
-$responsible-stroke-color: #00ff43;
-$team-player-stroke-color: #e618b9;
-$reliable-stroke-color: #f1ee1e;
-$fast-learner-stroke-color: #f30b0b;
-$breakpoit-iPad-Pro: 1024px;
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
+
+//Mixin Personal Progress Skills
+
+@function calc-percent($size) {
+    @return(440 - (440 * $size) / 100);
+}
+
+@mixin progress-personal-skills($progress-size) {
+    animation: progress-personal-skill 1s ease-in-out forwards;
+    stroke: $hover-text-color;
+    stroke-dashoffset: calc-percent($progress-size);
+}
+
 
 .personal-skill-card {
     position: relative;
@@ -42,44 +58,34 @@ $breakpoit-iPad-Pro: 1024px;
         transform: translateY(-10px);
         box-shadow: $personal-skill-shadow;
 
-        .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
-            color: $hover-text-color;
-            font-size: 2.1rem;
-        }
+        .personal-skill-box {
+            .personal-skill-percent {
+                .svg {
+                    .circle-outer {
+                        stroke: $hover-text-color;
+                    }
+                }
 
-        .personal-skill-box .personal-skill-name {
-            color: $hover-text-color;
-        }
+                .circle-progress-responsible,
+                .circle-progress-team-player,
+                .circle-progress-reliable,
+                .circle-progress-fast-learner {
+                    @include progress-personal-skills (100);
+                }
 
-        .personal-skill-box .personal-skill-percent svg .circle-outer {
-            stroke: $hover-text-color;
-        }
+                .personal-skill-value {
+                    h2 {
+                        color: $hover-text-color;
+                        font-size: 2.1rem;
+                    }
+                }
+            }
 
-        .personal-skill-box .personal-skill-percent svg .circle-progress-responsible {
-            animation: progress-personal-skill 1s ease-in-out forwards;
-            stroke: $responsible-stroke-color;
-            stroke-dashoffset: calc(440 - (440 * 100) / 100);
-        }
-
-        .personal-skill-box .personal-skill-percent svg .circle-progress-team-player {
-            animation: progress-personal-skill 1s ease-in-out forwards;
-            stroke: $team-player-stroke-color;
-            stroke-dashoffset: calc(440 - (440 * 100) / 100);
-        }
-
-        .personal-skill-box .personal-skill-percent svg .circle-progress-reliable {
-            animation: progress-personal-skill 1s ease-in-out forwards;
-            stroke: $reliable-stroke-color;
-            stroke-dashoffset: calc(440 - (440 * 100) / 100);
-        }
-
-        .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
-            animation: progress-personal-skill 1s ease-in-out forwards;
-            stroke: $fast-learner-stroke-color;
-            stroke-dashoffset: calc(440 - (440 * 100) / 100);
+            .personal-skill-name {
+                color: $hover-text-color;
+            }
         }
     }
-
 
     .personal-skill-box {
         .personal-skill-percent {
@@ -105,7 +111,6 @@ $breakpoit-iPad-Pro: 1024px;
                     stroke-linecap: round;
                     transform: translate(5px, 5px);
                     transition: 0.5s;
-
                 }
 
                 .circle-outer {
@@ -116,7 +121,6 @@ $breakpoit-iPad-Pro: 1024px;
                     stroke-dashoffset: 440;
                     stroke-dasharray: 440;
                 }
-
             }
 
             .personal-skill-value {
@@ -153,17 +157,19 @@ $breakpoit-iPad-Pro: 1024px;
     }
 }
 
+//Animation
+
 @keyframes progress-personal-skill {
     from {
         stroke-dashoffset: 440;
     }
 }
 
+//Responsive Design
 
-//Breakpoint-iPad-Pro
+//Breakpoint Browser to Middle-Large
 
-@media screen and (max-width: $breakpoit-iPad-Pro) {
-
+@media screen and (min-width: $breakpoint-middle-large) and (max-width: $breakpoint-browser) {
     .personal-skill-card {
         width: 200px;
         height: 280px;
@@ -173,31 +179,53 @@ $breakpoit-iPad-Pro: 1024px;
 
         .personal-skill-box {
             .personal-skill-percent {
-
-
                 svg {
-
                     .circle-outer {
                         stroke: $hover-text-color;
                     }
 
-                    .circle-progress-responsible {
-                        stroke: $responsible-stroke-color;
-                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
-                    }
-
-                    .circle-progress-team-player {
-                        stroke: $team-player-stroke-color;
-                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
-                    }
-
-                    .circle-progress-reliable {
-                        stroke: $reliable-stroke-color;
-                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
-                    }
-
+                    .circle-progress-responsible,
+                    .circle-progress-team-player,
+                    .circle-progress-reliable,
                     .circle-progress-fast-learner {
-                        stroke: $fast-learner-stroke-color;
+                        stroke: $hover-text-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+                }
+
+                .personal-skill-value {
+                    h2 {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//Breakpoint Middle-Large to middle-small
+
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: 959px) {
+    .personal-skill-card {
+        width: 220px;
+        height: 280px;
+        color: $hover-text-color;
+        transform: translateY(-10px);
+        box-shadow: $personal-skill-shadow;
+
+        .personal-skill-box {
+            .personal-skill-percent {
+                svg {
+                    .circle-outer {
+                        stroke: $hover-text-color;
+                    }
+
+                    .circle-progress-responsible,
+                    .circle-progress-team-player,
+                    .circle-progress-reliable,
+                    .circle-progress-fast-learner {
+                        stroke: $hover-text-color;
                         stroke-dashoffset: calc(440 - (440 * 100) / 100);
                     }
 
@@ -206,7 +234,78 @@ $breakpoit-iPad-Pro: 1024px;
                 .personal-skill-value {
                     h2 {
                         font-size: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
+//Breakpoint  Miiddle-small to Phone
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+    .personal-skill-card {
+        width: 220px;
+        height: 280px;
+        color: $hover-text-color;
+        transform: translateY(-10px);
+        box-shadow: $personal-skill-shadow;
+
+        .personal-skill-box {
+            .personal-skill-percent {
+                svg {
+                    .circle-outer {
+                        stroke: $hover-text-color;
+                    }
+
+                    .circle-progress-responsible,
+                    .circle-progress-team-player,
+                    .circle-progress-reliable,
+                    .circle-progress-fast-learner {
+                        stroke: $hover-text-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+                }
+
+                .personal-skill-value {
+                    h2 {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    .personal-skill-card {
+        width: 200px;
+        height: 280px;
+        color: $hover-text-color;
+        transform: translateY(-10px);
+        box-shadow: $personal-skill-shadow;
+
+        .personal-skill-box {
+            .personal-skill-percent {
+                svg {
+                    .circle-outer {
+                        stroke: $hover-text-color;
+                    }
+
+                    .circle-progress-responsible,
+                    .circle-progress-team-player,
+                    .circle-progress-reliable,
+                    .circle-progress-fast-learner {
+                        stroke: $hover-text-color;
+                        stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                    }
+                }
+
+                .personal-skill-value {
+                    h2 {
+                        font-size: 2.1rem;
                     }
                 }
             }

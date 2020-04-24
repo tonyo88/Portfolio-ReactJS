@@ -6,7 +6,7 @@
   text-decoration: none;
   color: #808080;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   padding-bottom: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -20,29 +20,29 @@
   background-size: 100% 2px;
 }
 
-@media screen and (min-width: 414px) and (max-width: 767px) {
+@media screen and (min-width: 620px) and (max-width: 767px) {
   .footer-list {
-    margin: 0.8rem 0 0;
+    margin: 0.8em 0 0;
   }
   .footer-list .footer-link {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (min-width: 415px) and (max-width: 619px) {
   .footer-list {
-    margin: 0 0.6rem 0;
+    margin: 0 0.6em 0;
     display: inline-block;
   }
 }
 
 @media screen and (max-width: 414px) {
   .footer-list {
-    margin: 0 0.8rem 0;
+    margin: 0 0.6em 0;
     display: inline-block;
   }
   .footer-list .footer-link {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 }
 /*# sourceMappingURL=FooterMenuLink.css.map */

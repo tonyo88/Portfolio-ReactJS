@@ -1,11 +1,16 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $button-color : #f2f4f4;
 $button-background: #262626;
 
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+
 #home-header {
     background-image: url('../../../../assets/pages/home/home-header/3d.jpg');
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
 
@@ -93,8 +98,9 @@ $button-background: #262626;
 
 }
 
-// Breakpoin iPad-Pro
-@media screen and (max-width: $breakpoint-iPad-Pro) {
+// Breakpoint Browser to iPad-Pro
+
+@media screen and (min-width: $breakpoint-iPad-Pro) and (max-width: $breakpoint-browser) {
     #home-header {
         width: 100%;
         height: 80vh;
@@ -111,18 +117,66 @@ $button-background: #262626;
 
 }
 
+// Breakpoin iPad-Pro to iPad
+
+@media screen and (min-width: $breakpoint-iPad) and (max-width: 1023px) {
+    #home-header {
+        width: 100%;
+        height: 80vh;
+
+        .home-particle {
+            display: none;
+        }
+
+        .home-btn {
+            top: 40%;
+            width: 10em;
+            height: 3.3em;
+            line-height: 3.3em;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+// Breakpoin iPad to Phone
+
+@media screen and (min-width: 415px) and (max-width: 767px) {
+    #home-header {
+        width: 100%;
+        height: 80vh;
+
+        .home-particle {
+            display: none;
+        }
+
+        .home-btn {
+            top: 40%;
+            width: 9em;
+            height: 3.1em;
+            line-height: 3.1em;
+            font-size: 0.8rem;
+        }
+    }
+}
+
 //Breakpoint phone
 
 @media screen and (max-width: $breakpoint-phone) {
     #home-header {
+        width: 100%;
+        height: 80vh;
+
+        .home-particle {
+            display: none;
+        }
 
         .home-btn {
+            top: 40%;
             width: 8em;
-            height: 2.8em;
-            line-height: 2.8em;
-            font-size: 0.68rem;
-
+            height: 3.0em;
+            line-height: 3.0em;
+            font-size: 0.7rem;
         }
     }
-
 }

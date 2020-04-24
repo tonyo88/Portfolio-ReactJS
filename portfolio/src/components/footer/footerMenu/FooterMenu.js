@@ -10,7 +10,6 @@ const FooterMenu = () => {
              <FooterMenuLink footerLinkUrl={"/pages/about"} footerLinkName={"About"} />
              <FooterMenuLink footerLinkUrl={"/pages/portfolio"} footerLinkName={"Portfolio"} />
              <FooterMenuLink footerLinkUrl={"/pages/contact"} footerLinkName={"Contact"} />
-
          </ul>
        </div>
     );

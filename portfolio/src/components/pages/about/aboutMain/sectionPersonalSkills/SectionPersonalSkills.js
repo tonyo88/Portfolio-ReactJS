@@ -10,9 +10,9 @@ class SectionPersonalSkills extends React.Component{
 
     render() {
       return(
-         <section id="personal-skills" className="background-position">
+         <section id="personal-skills">
            <div className="wrapper">
-            <SectionTitle titleName={"Personal Skills"} />
+            <SectionTitle titleName={"Personal Skills"} titleColor={"#262626"} />
               <div className="personal-skills-container">
 
                 <ScrollAnimation animateIn='fadeIn' duration={1} delay={200} animateOnce={true}>

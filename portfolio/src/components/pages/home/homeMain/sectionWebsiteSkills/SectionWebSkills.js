@@ -30,7 +30,7 @@ class SectionWebSkills extends React.Component {
                          />
 
                         <WebSkillCard   
-                        style = {{backgroundImage: `url(${intuitive})`}}
+                         style = {{backgroundImage: `url(${intuitive})`}}
                          webSkillTittle= {"Intuitive"}
                          webSkillInfo={"Strong preference for easy to use, intuitive UX/UI."}
                          />
@@ -45,11 +45,11 @@ class SectionWebSkills extends React.Component {
 
                     <div className="responsive-design-container">
 
-                        <ScrollAnimation className="responsive-design-image" animateIn='fadeIn' duration={1} animateOnce={true}>     
+                        <ScrollAnimation className="responsive-design-image" animateIn='fadeIn' duration={1}  animateOnce={true}>     
                                 <img src={require("../../../../../assets/pages/home/home-main/section-website-skills/phone.png")} alt="phone.png"></img>
                         </ScrollAnimation>
                         
-                        <ScrollAnimation animateIn='tada' duration={1} animateOnce={true}>
+                        <ScrollAnimation className="responsive-design-info-container" animateIn='fadeIn' duration={1} delay={500} animateOnce={true}>
                             <div className="responsive-design-info">
                                 <h1 className="responsive-title">Responsive</h1>
                                 <p className="responsive-info">My layouts will work on any device, big or small.</p>

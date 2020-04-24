@@ -1,8 +1,12 @@
-$breakpoint-iPad: 767px;
-$breakpoint-iPad-to-phone: 530px;
-$breakpoint-phone: 414px;
+//Colors
 $footer-link-color: #808080;
 $hover-link-color: #fff;
+
+//Breakpoints
+
+$breakpoint-iPad: 767px;
+$breakpoint-middle-small: 620px;
+$breakpoint-phone: 414px;
 
 @mixin hover-footer-menu() {
     background: linear-gradient(0deg, #DCDCDC, #fff) bottom left no-repeat;
@@ -18,7 +22,7 @@ $hover-link-color: #fff;
         text-decoration: none;
         color: $footer-link-color;
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 1.15em;
+        font-size: 1.15rem;
         padding-bottom: 5px;
         transition: 0.3s;
         @include hover-footer-menu();
@@ -32,36 +36,36 @@ $hover-link-color: #fff;
 }
 
 
-//Breakpoint-iPad to Breakpoint-phone
-@media screen and (min-width:$breakpoint-phone) and (max-width:$breakpoint-iPad) {
+//Breakpoint iPad to Middle-Small
+@media screen and (min-width:$breakpoint-middle-small) and (max-width:$breakpoint-iPad) {
     .footer-list {
-        margin: 0.8rem 0 0;
+        margin: 0.8em 0 0;
 
         .footer-link {
-            font-size: 1em;
+            font-size: 1rem;
         }
     }
 }
 
-//Breakpoint-iPad-to-phone
+//Breakpoint Middle-Small to Phone
 
-@media screen and (max-width: $breakpoint-iPad-to-phone) {
+@media screen and (min-width: 415px) and (max-width: 619px) {
     .footer-list {
-        margin: 0 0.6rem 0;
+        margin: 0 0.6em 0;
         display: inline-block;
     }
 
 }
 
 
-//Breakpoint-phone
+//Breakpoint Phone
 @media screen and (max-width:$breakpoint-phone) {
     .footer-list {
-        margin: 0 0.8rem 0;
+        margin: 0 0.6em 0;
         display: inline-block;
 
         .footer-link {
-            font-size: 0.9em;
+            font-size: 0.9rem;
         }
     }
 }

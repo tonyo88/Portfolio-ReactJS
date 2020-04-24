@@ -1,14 +1,20 @@
-$breakpoint-iPad-Pro: 1023px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $bg-color: #fff;
 $title-color: #262626;
 $discipline-color: #565656;
 $info-color: #706969;
-$date-color: #0aabc5;
+$date-color: #102a41;
 $btn-color: $bg-color;
 $bg-color-btn: $date-color;
-$hover-bg-color-btn: #102a41;
+$hover-bg-color-btn: #0aabc5;
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 .certifcicate-box {
     display: grid;
@@ -29,9 +35,6 @@ $hover-bg-color-btn: #102a41;
 
     .certificate-image {
         grid-area: image;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         border-radius: 18px 18px 0 0;
     }
 
@@ -81,7 +84,7 @@ $hover-bg-color-btn: #102a41;
 
 //Breakpoint-iPad-Pro to Breakpoint-iPad
 
-@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-iPad-Pro) {
+@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-middle-large) {
 
     .certifcicate-box {
         grid-template-columns: 200px;
@@ -125,13 +128,13 @@ $hover-bg-color-btn: #102a41;
 
 }
 
-//Breakpoint-iPad to Breakpoint-phone
+//Breakpoint iPad to Phone
 
-@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+@media screen and (min-width: 415px) and (max-width: 767px) {
     .certifcicate-box {
-        grid-template-columns: 190px;
+        grid-template-columns: 200px;
         margin: 0 auto;
-        grid-template-rows: 9em 9em 1.5em;
+        grid-template-rows: 9em 9em 2em;
 
         .certificate-info {
             grid-area: text;
@@ -156,9 +159,8 @@ $hover-bg-color-btn: #102a41;
         }
 
         .certificate-btn {
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 2em;
-
         }
 
     }
@@ -197,7 +199,6 @@ $hover-bg-color-btn: #102a41;
         .certificate-btn {
             font-size: 1rem;
             line-height: 2em;
-
         }
 
     }

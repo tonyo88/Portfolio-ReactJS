@@ -1,10 +1,14 @@
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+//Colors
 $button-color: #fff;
 $background-color-nav: rgba(255, 255, 255, 0.4);
 $active-fixed-nav-background: #102a41;
 $active-fixed-nav-border-bottom-color: #306797;
+
+//Breakpoints
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad: 768px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 .navigation {
     width: 100%;
@@ -12,7 +16,7 @@ $active-fixed-nav-border-bottom-color: #306797;
     background-color: $background-color-nav;
     position: fixed;
     transition: 0.35s;
-    z-index: 9999;
+    z-index: 1000;
 
     .logo {
         float: left;
@@ -28,12 +32,11 @@ $active-fixed-nav-border-bottom-color: #306797;
 }
 
 
-//Breakpoint-iPad
+//Breakpoint iPad to Middle-Small
 
-@media screen and (max-width: $breakpoint-iPad) {
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-iPad) {
 
     .navigation {
-
         background-color: $active-fixed-nav-background;
         border-bottom: none;
 
@@ -49,11 +52,34 @@ $active-fixed-nav-border-bottom-color: #306797;
 
 }
 
-//Breakpoint-phone
+//Breakpoint Middle-Small to Phone
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+
+    .navigation {
+        background-color: $active-fixed-nav-background;
+        border-bottom: none;
+        height: 3.5em;
+
+        .toggle-btn {
+            margin: 15px 0;
+        }
+
+        .logo {
+            margin-top: 4px;
+        }
+
+    }
+
+}
+
+//Breakpoint Phone
 
 @media screen and (max-width: $breakpoint-phone) {
 
     .navigation {
+        background-color: $active-fixed-nav-background;
+        border-bottom: none;
         height: 3.5em;
 
         .toggle-btn {

@@ -5,7 +5,7 @@ const Certificate = (props) =>{
     return(
         <div className="certifcicate-box">
 
-           <div className="certificate-image" style = {props.style}></div>
+           <div className="certificate-image background-position" style = {props.style}></div>
 
            <div className="certificate-info">
                <span className="date">{props.date}</span>

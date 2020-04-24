@@ -1,9 +1,9 @@
-$breakpoint-iPad-Pro: 1024px;
+//Breakpoints
 $breakpoint-iPad: 768px;
-$breakpoint-phone: 650px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
 
 #section-certificates {
-    background-image: url("../../../../../assets//pages/about/about-main/certificates/3d-image-bg.jpg");
     padding: 3em 0;
 
     .certificates-container {
@@ -15,21 +15,33 @@ $breakpoint-phone: 650px;
     }
 }
 
-//Breakpoint-iPad
-@media screen and (max-width: $breakpoint-iPad) {
+//Breakpoint-iPad to Middle-Small
+@media screen and (min-width: $breakpoint-middle-small) and (max-width: 767px) {
     #section-certificates {
         padding: 2em 0;
 
         .certificates-container {
             max-width: 900px;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 20px;
-
         }
     }
 }
 
-//Breakpoint-phone
+//Breakpoint-iPad to Middle-Small
+@media screen and (min-width: 415px) and (max-width: 539px) {
+    #section-certificates {
+        padding: 2em 0;
+
+        .certificates-container {
+            max-width: 900px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+        }
+    }
+}
+
+//Breakpoint Phone
 @media screen and (max-width: $breakpoint-phone) {
     #section-certificates {
         padding: 3em 0;
@@ -38,7 +50,6 @@ $breakpoint-phone: 650px;
             padding: 0 3em;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 1em;
-
         }
     }
 }

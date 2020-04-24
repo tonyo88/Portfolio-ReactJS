@@ -1,39 +1,38 @@
 import "./ProjectContent.css";
+
 import React from "react";
 import ProjectHeader from "./projectHeader/ProjectHeader";
-import ProjectInfo from "./projectInfo/ProjectInfo";
-import TechnologiesInfo from "./technologiesInfo/TechnologiesInfo";
+import ProjectMain from "./projectMain/ProjectMain";
+import ProjectFooter from "./projectFooter/ProjectFooter";
 
-const ProjectContent = (props) =>{
- 
-         const technologieSkills = [{
-            skillName: `${props.technologieSkillName}`
-            },{
-            skillName: `${props.technologieSkillName}`
-            },{
-            skillName: "qQuery"
-            },{
-            skillName: "ADsa"
-         }];
+class ProjectContent extends React.Component {
+  render () {
   
     return(
 
         <div className="wrapper">
           <div className="project-container">
+
              <ProjectHeader 
-                projectTitle={props.projectTitleName}
-                projectLogo={props.projectLogoImg}
-                projectAlt={props.projectLogoImgAlt}
+               projectTitle={this.props.projectTitleName}
+               projectLogo={this.props.projectLogoImg}  
+               projectAlt={this.props.projectLogoImgAlt}
              />
 
-             <ProjectInfo info={props.projectInfo} />
-            
-             <TechnologiesInfo skillsArray={technologieSkills} />
+             <ProjectMain 
+               sliderImagesArray={this.props.imageSlider}
+               projectInfo={this.props.projectContentInfo}
+               projectSkills={this.props.projectContentSkills}
+             />
+
+             <ProjectFooter
+               projectUrl={this.props.projectContentUrl}
+             />            
           </div>
         </div>
         
     );
-
+  };
 };
 
 export default ProjectContent;

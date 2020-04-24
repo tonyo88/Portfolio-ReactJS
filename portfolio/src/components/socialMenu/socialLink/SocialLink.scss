@@ -1,7 +1,8 @@
+//Colors
+
 $link-social-color: #102a41;
 $background-social: #fff;
-$breakpoint-iPad: 767px;
-$breakpoint-phone: 414px;
+
 
 @mixin hover-social() {
     background-image: linear-gradient(to left,
@@ -12,6 +13,9 @@ $breakpoint-phone: 414px;
     background-position: 0 0;
 }
 
+//Breakpoints
+$breakpoint-iPad: 767px;
+$breakpoint-phone: 414px;
 
 .social-list {
     display: inline-block;
@@ -45,13 +49,13 @@ $breakpoint-phone: 414px;
 }
 
 
-// Breakpoint-iPad to phone
+// Breakpoint iPad to Psshone
 
-@media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-iPad) {
+@media screen and (min-width: 415px) and (max-width: $breakpoint-iPad) {
     .social-list {
 
         .social-link {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             width: 1.7em;
             height: 1.7em;
 

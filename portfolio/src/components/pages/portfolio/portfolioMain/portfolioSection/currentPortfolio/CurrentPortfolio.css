@@ -1,0 +1,160 @@
+.portfolio-box {
+  width: 100%;
+  background: #494949;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio-box .portfolio {
+  text-decoration: none;
+}
+
+.portfolio-box .portfolio img {
+  width: 100%;
+  opacity: 0.8;
+  -webkit-transform: rotate3d(0, 0, 1, 8deg);
+          transform: rotate3d(0, 0, 1, 8deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio-box .portfolio figure figcaption .portfolio-title {
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  width: 100%;
+  padding: 0.2em 0 0.2em 1em;
+}
+
+.portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+  color: #000;
+  position: absolute;
+  font-size: 0.9rem;
+  padding: 0.3em 0.7em;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: -100%;
+  right: 10px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.portfolio-box .portfolio figure figcaption .portfolio-info {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5em 2em;
+  line-height: 150%;
+  position: absolute;
+  bottom: -100%;
+  right: 0%;
+  display: block;
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.7);
+  font-family: 'Teko', sans-serif;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.portfolio-box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-box:hover img {
+  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+  opacity: 0.95;
+}
+
+.portfolio-box:hover figure figcaption .portfolio-title {
+  left: 0%;
+}
+
+.portfolio-box:hover figure figcaption .portfolio-title .portfolio-btn {
+  top: 11px;
+}
+
+.portfolio-box:hover figure figcaption .portfolio-info {
+  bottom: 0;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.6rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.85rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.5rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.7rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-info {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
+  .portfolio-box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+  .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.5rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.7rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-info {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
+  .portfolio-box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.2rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.6rem;
+  }
+  .portfolio-box .portfolio figure figcaption .portfolio-info {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+  }
+  .portfolio-box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/*# sourceMappingURL=CurrentPortfolio.css.map */

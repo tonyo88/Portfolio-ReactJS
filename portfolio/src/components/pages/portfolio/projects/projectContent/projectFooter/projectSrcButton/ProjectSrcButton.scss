@@ -1,0 +1,78 @@
+//Colors 
+$text-color: #fff;
+$btn-bg: linear-gradient(to right, rgb(43, 43, 42), rgb(75, 72, 69));
+$border-btn: #3a3a3a;
+$text-box-shadow-btn: rgba(0, 0, 0, 0.2);
+
+//Breakpoints
+$breakpoint-iPad-pro: 1024px;
+$breakpoint-middle-small: 540px;
+
+.box {
+    display: block;
+    text-decoration: none;
+    background: $btn-bg;
+    color: $text-color;
+    --width: 120px;
+    --height: calc(var(--width) / 3);
+    width: var(--width);
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    font-size: calc(var(--height) / 2.5);
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border: 1px solid $border-btn;
+    border-radius: 2em;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px $text-box-shadow-btn;
+    box-shadow: 2px 0 0 5px $text-box-shadow-btn;
+    transition: 0.5s;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, $text-color, transparent);
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        transform: perspective(500px) rotateY(15deg);
+        text-shadow: -6px 3px 2px $text-box-shadow-btn;
+        box-shadow: -2px 0 0 5px $text-box-shadow-btn;
+
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+//Breakpoint iPad-Pro
+
+@media screen and (max-width: $breakpoint-iPad-pro) {
+    .box {
+        &:hover {
+            transform: perspective(500px) rotateY(-15deg);
+            text-shadow: 6px 3px 2px $text-box-shadow-btn;
+            box-shadow: 2px 0 0 5px $text-box-shadow-btn;
+
+            &::before {
+                left: -100%;
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    .box {
+        --width: 80px;
+    }
+}

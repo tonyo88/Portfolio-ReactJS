@@ -15,8 +15,8 @@
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: -webkit-gradient(linear, left bottom, left top, from(#102a41), color-stop(#291483), to(#102a41));
-  background: linear-gradient(0deg, #102a41, #291483, #102a41);
+  background: -webkit-gradient(linear, left bottom, left top, from(#1c4366), color-stop(#040320), to(#102a41));
+  background: linear-gradient(0deg, #1c4366, #040320, #102a41);
   font-family: 'Oswald', sans-serif;
   color: #a5a5a5;
   border-radius: 6px;
@@ -36,8 +36,22 @@
 .personal-skill-card:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  -webkit-box-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
-          box-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
+  -webkit-box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+          box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+}
+
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .svg .circle-outer {
+  stroke: #fff;
+}
+
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-responsible,
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-team-player,
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-reliable,
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-fast-learner {
+  -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
+          animation: progress-personal-skill 1s ease-in-out forwards;
+  stroke: #fff;
+  stroke-dashoffset: 0;
 }
 
 .personal-skill-card:hover .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
@@ -47,38 +61,6 @@
 
 .personal-skill-card:hover .personal-skill-box .personal-skill-name {
   color: #fff;
-}
-
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent svg .circle-outer {
-  stroke: #fff;
-}
-
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent svg .circle-progress-responsible {
-  -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
-          animation: progress-personal-skill 1s ease-in-out forwards;
-  stroke: #00ff43;
-  stroke-dashoffset: calc(440 - (440 * 100) / 100);
-}
-
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent svg .circle-progress-team-player {
-  -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
-          animation: progress-personal-skill 1s ease-in-out forwards;
-  stroke: #e618b9;
-  stroke-dashoffset: calc(440 - (440 * 100) / 100);
-}
-
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent svg .circle-progress-reliable {
-  -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
-          animation: progress-personal-skill 1s ease-in-out forwards;
-  stroke: #f1ee1e;
-  stroke-dashoffset: calc(440 - (440 * 100) / 100);
-}
-
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
-  -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
-          animation: progress-personal-skill 1s ease-in-out forwards;
-  stroke: #f30b0b;
-  stroke-dashoffset: calc(440 - (440 * 100) / 100);
 }
 
 .personal-skill-card .personal-skill-box .personal-skill-percent {
@@ -171,33 +153,99 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 960px) and (max-width: 1280px) {
   .personal-skill-card {
     width: 200px;
     height: 280px;
     color: #fff;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
-    -webkit-box-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
-            box-shadow: 0 15px 35px rgba(241, 238, 238, 0.7);
+    -webkit-box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+            box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
   }
   .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-outer {
     stroke: #fff;
   }
-  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-responsible {
-    stroke: #00ff43;
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-  }
-  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-team-player {
-    stroke: #e618b9;
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-  }
-  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-reliable {
-    stroke: #f1ee1e;
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-responsible,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-team-player,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-reliable,
   .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
-    stroke: #f30b0b;
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 959px) {
+  .personal-skill-card {
+    width: 220px;
+    height: 280px;
+    color: #fff;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+            box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-outer {
+    stroke: #fff;
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-responsible,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-team-player,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-reliable,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 539px) {
+  .personal-skill-card {
+    width: 220px;
+    height: 280px;
+    color: #fff;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+            box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-outer {
+    stroke: #fff;
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-responsible,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-team-player,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-reliable,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent .personal-skill-value h2 {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .personal-skill-card {
+    width: 200px;
+    height: 280px;
+    color: #fff;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+            box-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-outer {
+    stroke: #fff;
+  }
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-responsible,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-team-player,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-reliable,
+  .personal-skill-card .personal-skill-box .personal-skill-percent svg .circle-progress-fast-learner {
+    stroke: #fff;
     stroke-dashoffset: calc(440 - (440 * 100) / 100);
   }
   .personal-skill-card .personal-skill-box .personal-skill-percent .personal-skill-value h2 {

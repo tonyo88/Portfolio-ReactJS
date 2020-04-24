@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,GAAG;CAclB;;AAfD,AAGI,kBAHc,CAGd,iBAAiB,CAAC;EACd,OAAO,EAAE,OAAO;EAChB,eAAe,EAAE,MAAM;CAS1B;;AAdL,AAOQ,kBAPU,CAGd,iBAAiB,CAIb,EAAE,CAAC;EACC,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,OAAO;CAEjB",
-    "sources": [
-        "TechnologiesInfo.scss"
-    ],
-    "names": [],
-    "file": "TechnologiesInfo.css"
-}

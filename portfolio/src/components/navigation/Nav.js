@@ -41,11 +41,6 @@ class Nav extends React.Component {
     };
 
     render(){
-        // let menu;
-
-        // if(this.state.isOpen){
-        //     menu = <Menu />;
-        // }
 
     return(
         <div className={this.state.scrolled ? "navigation active-fixed-nav" : "navigation"}>  
@@ -61,7 +56,6 @@ class Nav extends React.Component {
                      className={this.state.scrolled ? "logo-name active-fixed-nav-logo" : "logo-name"}
                     />
                 </div>
-                {/* {menu} */}
                 <Menu 
                  showNav= {this.state.isOpen ? "main-nav showNav" : "main-nav"}
                  activeFixedNavLinkColor = {this.state.scrolled ? "main-link active-fixed-nav-link-color" : "main-link"}

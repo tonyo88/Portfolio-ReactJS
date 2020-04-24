@@ -1,9 +1,4 @@
 #portfolio-section {
-  background-image: url("../../../../../assets/pages/portfolio/portfolio-main/background/3d-white.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 3em 0;
 }
 
@@ -13,5 +8,25 @@
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+}
+
+@media screen and (min-width: 415px) and (max-width: 767px) {
+  #portfolio-section .portfolio-container {
+    max-width: 90%;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #portfolio-section .portfolio-container {
+    max-width: 100%;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
 }
 /*# sourceMappingURL=PortfolioSection.css.map */
