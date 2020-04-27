@@ -40,7 +40,7 @@ const PortfolioJs = () =>{
           projectLogoImg = {PortfolioJsLogo}
           projectLogoImgAlt = {"logo-portfolio.png"}
           imageSlider = {imagesProjectSlider}
-          projectContentInfo = {"I have created this project to represent myself, experience and current knowledge over the years."}
+          projectContentInfo = {"I have created this project to represent myself, experience and current knowledge over the years. In this project, I demonstrate the communication between HTML, CSS and JavaScript and the creation of dynamic content and DOM manipulations."}
           projectContentSkills = {technologieSkills}
           projectContentUrl = {"https://github.com/tonyo88/Portfolio-JavaScript"}
          />
