@@ -46,7 +46,7 @@ const PortfolioReact = () =>{
             projectLogoImg = {PortfolioReactLogo}
             projectLogoImgAlt = {"logo-portfolio.png"}
             imageSlider = {imagesProjectSlider}
-            projectContentInfo = {"I have created this project to represent myself, experience and current knowledge over the years."}
+            projectContentInfo = {"The project was created entirely with React Framework. The goal of this project is to create a dynamic content that demonstrates skills in working with React.js and its libraries and communication between components."}
             projectContentSkills = {technologieSkills}
             projectContentUrl = {"https://github.com/tonyo88/Portfolio-ReactJS"}
           />
