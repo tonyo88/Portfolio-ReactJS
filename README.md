@@ -51,7 +51,7 @@ https://github.com/tonyo88/Portfolio-ReactJS.git
 
 Overview
 ---
-![portfolio-react-home](https://user-images.githubusercontent.com/45981967/80310598-72d7b100-8790-11ea-9145-bb0dc66699ee.png)
+![portfolio-react-home](https://user-images.githubusercontent.com/45981967/80548113-ee8f5480-896e-11ea-9924-8e8bee9f7a1a.png)
 ![portfolio-react-about](https://user-images.githubusercontent.com/45981967/80310688-e4affa80-8790-11ea-97f5-b83c6e2c844e.png)
 ![portfoloio-react-website-skills](https://user-images.githubusercontent.com/45981967/80310694-ebd70880-8790-11ea-9773-636dab78fd5f.png)
 ![portfolio-react-portfolio](https://user-images.githubusercontent.com/45981967/80310700-f0032600-8790-11ea-8969-44390e9a9a51.png)
