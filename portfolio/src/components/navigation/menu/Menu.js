@@ -12,7 +12,7 @@ class Menu extends React.Component  {
             url: "https://www.facebook.com/",
             icon: "fa fa-facebook"
         },{
-            url: "https://www.linkedin.com/in/tonyo-vanov-850657148/",
+            url: "https://www.linkedin.com/in/vanov-tonyo/",
             icon: "fa fa-linkedin"
         },{
             url: "https://github.com/tonyo88",
