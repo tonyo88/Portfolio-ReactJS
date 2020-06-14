@@ -3,13 +3,39 @@ import React from "react";
 import FooterMenuLink from "./footerMenuLink/FooterMenuLink";
 
 const FooterMenu = () => {
+
+  const footerLinks = [
+    {
+      footerLinkUrl: "/",
+      footerLinkName: "Home"
+    },
+    {
+      footerLinkUrl: "/",
+      footerLinkName: "About"
+    },
+    {
+      footerLinkUrl: "/pages/portfolio",
+      footerLinkName: "Portfolio"
+    },
+    {
+      footerLinkUrl: "/pages/contact",
+      footerLinkName: "Contact"
+    },
+  ];
+  
+
+  const generateFooterLinks = (footerLinksArray) => (
+    footerLinksArray.map((element, index) =>(
+      <FooterMenuLink
+       key = {index}
+       footerLinkUrl = {element.footerLinkUrl}
+       footerLinkName = {element.footerLinkName} 
+       />
+    )));
     return(
        <div className="footer-menu-container">
          <ul className="footer-menu">
-             <FooterMenuLink footerLinkUrl={"/"} footerLinkName={"Home"} />
-             <FooterMenuLink footerLinkUrl={"/pages/about"} footerLinkName={"About"} />
-             <FooterMenuLink footerLinkUrl={"/pages/portfolio"} footerLinkName={"Portfolio"} />
-             <FooterMenuLink footerLinkUrl={"/pages/contact"} footerLinkName={"Contact"} />
+           { generateFooterLinks(footerLinks) }
          </ul>
        </div>
     );

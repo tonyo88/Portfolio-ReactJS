@@ -2,7 +2,7 @@
   padding: 5em 0;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-  background: #306797;
+  background: rgba(48, 103, 151, 0.8);
 }
 
 #section-professional-skills .professional-skills-container {

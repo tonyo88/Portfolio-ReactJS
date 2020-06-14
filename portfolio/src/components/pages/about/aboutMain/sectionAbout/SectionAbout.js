@@ -34,11 +34,11 @@ const SectionAbout = () =>{
                   <img src={require("../../../../../assets/pages/about/about-main/about-section/page-1.png")} alt=" page-1.png"></img>
                   </ScrollAnimation>             
                 
-                  <ScrollAnimation animateIn='fadeIn' duration={1} delay={1000} animateOnce={true} className="second-page">
+                  <ScrollAnimation animateIn='fadeIn' duration={1} delay={800} animateOnce={true} className="second-page">
                   <img src={require("../../../../../assets/pages/about/about-main/about-section/page-2.png")} alt="page-2.png"></img>
                   </ScrollAnimation>
                   
-                  <ScrollAnimation animateIn='fadeIn' duration={1} delay={2000} animateOnce={true} className="third-page" >
+                  <ScrollAnimation animateIn='fadeIn' duration={1} delay={1500} animateOnce={true} className="third-page" >
                   <img src={require("../../../../../assets/pages/about/about-main/about-section/page-3.png")} alt="page-3.png"></img>
                   </ScrollAnimation>                                     
              </div>

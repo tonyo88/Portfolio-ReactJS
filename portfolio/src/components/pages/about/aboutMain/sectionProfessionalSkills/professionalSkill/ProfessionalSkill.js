@@ -7,8 +7,8 @@ const ProfessionalSkill = (props) =>{
      <div className="professional-skill">
           <span className="name">{props.skillName}</span>
           <div className="percent">
-              <div className="outer-progress" id={props.outerValue}>
-                <div className={props.innerProgress} id={props.bgInner}></div>
+              <div className="outer-progress" style={props.outerWidth}>
+                <div className={props.innerProgress}  style={ {background: `linear-gradient(${props.skillbgColor})`} }></div>
               </div>
           </div>
           <span className="value">{props.skillValue}</span>

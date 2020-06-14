@@ -5,17 +5,17 @@ import SocialMenu from "../../socialMenu/SocialMenu";
 const FooterContact = () => {
 
     const socialLinks = [{
-        url: "https://www.facebook.com/",
-        icon: "fa fa-facebook"
+        socialUrl: "https://www.facebook.com/",
+        socialIcon: "fa fa-facebook"
     },{
-        url: "https://www.linkedin.com/in/anthony-vanov/",
-        icon: "fa fa-linkedin"
+        socialUrl: "https://www.linkedin.com/in/anthony-vanov/",
+        socialIcon: "fa fa-linkedin"
     },{
-        url: "https://github.com/tonyo88",
-        icon: "fa fa-github"
+        socialUrl: "https://github.com/tonyo88",
+        socialIcon: "fa fa-github"
     },{
-        url: "https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile",
-        icon: "fa fa-windows"
+        socialUrl: "https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile",
+        socialIcon: "fa fa-windows"
     }];
 
   return(

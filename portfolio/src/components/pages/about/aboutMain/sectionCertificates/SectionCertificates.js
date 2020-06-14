@@ -11,36 +11,53 @@ import uiUX from "../../../../../assets/pages/about/about-main/certificates/ui-u
 
 class SectionCertificates extends React.Component {
     render() {
+
+        const certificates = [
+            {
+                bgImage: {backgroundImage: `url(${microsoft})`},
+                date: "07/2019",
+                titleCertificate: "Microsoft",
+                discipline: "Programming in HTML5 with JavaScript and CSS3",
+                infoCertificate: "HTML5, CSS3, JavaScript, Data Security, Data Validation, Object-based Programing",
+                certificateUrl: "https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile"
+            },
+            {
+                bgImage: {backgroundImage: `url(${frontEnd})`},
+                date: "11/2018",
+                titleCertificate: "Telerik Academy",
+                discipline: "Front End Development",
+                infoCertificate: "HTML5, CSS3, SASS, JavaScript, jQuery, React Js, React Redux, React-Router, Axios, JSON, Ajax, Responsive Design",
+                certificateUrl: "https://www.telerikacademy.com/"
+            },
+            {
+                bgImage: {backgroundImage: `url(${uiUX})`},
+                date: "11/2018",
+                titleCertificate: "Telerik Academy",
+                discipline: "UI / UX Design",
+                infoCertificate: "Adobe-Photoshop, User Interface Design, Typography Design, Responsive Design, Colors, Gradients, Positioning",
+                certificateUrl: "https://www.telerikacademy.com/"
+            }
+        ];
+
+        const generateCertificates = (certificatesArray) => (
+         certificatesArray.map((element, index) =>(
+            <Certificate
+                key = {index}
+                bgImage = {element.bgImage}
+                date = {element.date}
+                titleCertificate = {element.titleCertificate}
+                discipline = {element.discipline}
+                infoCertificate = {element.infoCertificate}
+                certificateUrl = {element.certificateUrl}
+           />
+         )));
         return(
             <section id="section-certificates">
                 <div className="wrapper">
                     <SectionTitle  titleName={"Certificates"} titleColor={"#262626"} />
                    <div className="certificates-container">
 
-                       <Certificate
-                        style = {{backgroundImage: `url(${microsoft})`}}
-                        date={"07/2019"}
-                        titleCertificate={"Microsoft"}
-                        discipline={"Programming in HTML5 with JavaScript and CSS3"}
-                        infoCertificate={"HTML5, CSS3, JavaScript, Data Security, Data Validation, Object-based Programing"}
-                        certificateUrl={"https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile"}
-                       />
-                        <Certificate
-                        style = {{backgroundImage: `url(${frontEnd})`}}
-                        date={"11/2018"}
-                        titleCertificate={"Telerik Academy"}
-                        discipline={"Front End Development"}
-                        infoCertificate={"HTML5, CSS3, SASS, JavaScript, jQuery, React Js, React Redux, React-Router, Axios, JSON, Ajax, Responsive Design "}
-                        certificateUrl={"https://www.telerikacademy.com/"}
-                       />
-                        <Certificate
-                        style = {{backgroundImage: `url(${uiUX})`}}
-                        date={"11/2018"}
-                        titleCertificate={"Telerik Academy"}
-                        discipline={"UI / UX Design"}
-                        infoCertificate={"Adobe-Photoshop, User Interface Design, Typography Design, Responsive Design, Colors, Gradients, Positioning"}
-                        certificateUrl={"https://www.telerikacademy.com/"}
-                       />
+                      { generateCertificates(certificates) }
 
                    </div>
                 </div>

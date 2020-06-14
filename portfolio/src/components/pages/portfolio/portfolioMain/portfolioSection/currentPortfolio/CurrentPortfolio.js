@@ -1,9 +1,11 @@
 import "./CurrentPortfolio.css";
 import React from "react";
 import {Link} from "react-router-dom";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const CurrentPortfolio = (props) => {
    return(
+      <ScrollAnimation animateIn='fadeIn' duration={1} animateOnce={true} delay={props.delay}>
       <div className="portfolio-box">
        <div className="portfolio">
           <img src={props.portfolioImgSrc} alt={props.portfolioImgAlt}></img>
@@ -21,6 +23,7 @@ const CurrentPortfolio = (props) => {
           
        </div>
      </div>
+     </ScrollAnimation>
    );
 }
 

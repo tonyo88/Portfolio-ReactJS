@@ -40,7 +40,7 @@ $breakpoint-phone: 414px;
 
 //Breakpoint-iPad
 
-@media(max-width: $breakpoint-iPad) {
+@media screen and (max-width: $breakpoint-iPad) {
     .toggle-btn {
         display: block;
     }
@@ -49,7 +49,7 @@ $breakpoint-phone: 414px;
 
 //Breakpoint-phone
 
-@media(max-width: $breakpoint-phone) {
+@media screen and (max-width: $breakpoint-phone) {
 
     .toggle-btn {
         margin: 15px 0;

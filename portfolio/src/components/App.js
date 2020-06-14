@@ -1,9 +1,9 @@
 import "./App.css";
 
 import React from "react";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
-import ScrollToTop from "./scrollToTop/ScrollToTop";
+import Routes from "./routes/Routes";
 import PageLoader from "./pageLoader/PageLoader";
 
 import Nav from "./navigation/Nav";
@@ -17,11 +17,70 @@ import PortfolioReact from "./pages/portfolio/projects/portfolioReact/PortfolioR
 import PortfolioJs from "./pages/portfolio/projects/portfolioJS/PortfolioJs";
 import LittleBarber from "./pages/portfolio/projects/littleBarber/LittleBarber";
 import MemoryGame from "./pages/portfolio/projects/memoryGame/MemoryGame";
+import Cosmos from "./pages/portfolio/projects/cosmos/Cosmos";
+import Megz from "./pages/portfolio/projects/megz/Megz";
+import MovieInHand from "./pages/portfolio/projects/movieInHand/MovieInHand";
 
 import Footer from "./footer/Footer";
 
 class App extends React.Component {
     render() {
+
+      const routes = [
+        {
+         path: "/",
+         component: Home
+        },
+        {
+         path: "/pages/about",
+         component: About
+        },
+        {
+         path: "/pages/portfolio",
+         component: Portfolio
+        },
+        {
+         path: "/pages/contact",
+         component: Contact
+        },
+        {
+         path: "/pages/portfolio/portfolio-react",
+         component: PortfolioReact
+        },
+        {
+         path: "/pages/portfolio/portfolio-js",
+         component: PortfolioJs
+        },
+        {
+         path: "/pages/portfolio/little-barber",
+         component: LittleBarber
+        },
+        {
+         path: "/pages/portfolio/memory-game",
+         component: MemoryGame
+        },
+        {
+          path: "/pages/portfolio/cosmos",
+          component: Cosmos
+         },
+         {
+          path: "/pages/portfolio/megz",
+          component: Megz
+         },
+         {
+          path: "/pages/portfolio/movie-in-hand",
+          component: MovieInHand
+         }
+     ];
+
+     const generateRoutes = (routesArray) => (
+      routesArray.map((element, index) => (
+        <Routes
+          key = {index}
+          routePath = {element.path}
+          routeComponent = {element.component}
+        />
+      )));
         return(
           
             <BrowserRouter>
@@ -30,53 +89,8 @@ class App extends React.Component {
                    
                     <Nav />
 
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/" exact component={Home} />
-                        </Switch>
-                    </ScrollToTop>
-                    
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/about" exact component={About} />
-                        </Switch>
-                    </ScrollToTop>
+                    { generateRoutes(routes) }
 
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/portfolio" exact component={Portfolio} />
-                        </Switch>
-                    </ScrollToTop>
-                    
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/contact" exact component={Contact} />
-                        </Switch>
-                    </ScrollToTop>
-
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/portfolio/portfolio-react" exact component={PortfolioReact} /> 
-                        </Switch>
-                    </ScrollToTop>
-
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/portfolio/portfolio-js" exact component={PortfolioJs} /> 
-                        </Switch>
-                    </ScrollToTop>
-
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/portfolio/little-barber" exact component={LittleBarber} /> 
-                        </Switch>
-                    </ScrollToTop>
-                  
-                    <ScrollToTop>
-                        <Switch>
-                          <Route path="/pages/portfolio/memory-game" exact component={MemoryGame} /> 
-                        </Switch>
-                    </ScrollToTop>  
                     <Footer />
               
                     <ScrollUpButton />

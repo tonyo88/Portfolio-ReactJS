@@ -4,21 +4,14 @@ import SocialLink from "./socialLink/SocialLink";
 
 const SocialMenu = ({ linksArray }) =>{
 
-    const generateSocialLinks = () => {
+    const generateSocialLinks = () => (
 
-        let ele = [];
-        let counter = 0;
-
-        linksArray.forEach(element => {
-            ele.push(<SocialLink
-            key={counter++}
-            socialUrl= {element.url}
-            socialIcon= {element.icon}
-            />);
-        });
-
-        return ele;
-    }
+        linksArray.map((element, index) => (
+            <SocialLink 
+            key = {index}
+            socialUrl = {element.socialUrl}
+            socialIcon = {element.socialIcon}
+            />)));
 
     return(
              <ul className="social-menu">
