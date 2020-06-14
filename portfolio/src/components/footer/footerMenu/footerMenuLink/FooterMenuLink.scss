@@ -9,7 +9,7 @@ $breakpoint-middle-small: 620px;
 $breakpoint-phone: 414px;
 
 @mixin hover-footer-menu() {
-    background: linear-gradient(0deg, #DCDCDC, #fff) bottom left no-repeat;
+    background: linear-gradient(90deg, #DCDCDC, #fff) bottom left no-repeat;
     background-size: 0 3px;
 }
 

@@ -7,14 +7,13 @@ const MainMenuLink = (props) => {
 
     return(
         <li onClick={props.closeMenu} className= "main-list">
-
-             <NavLink
+            <NavLink
                 exact
                 to={props.mainLinkUrl}
                 className={props.activeFixedNavLinkColor}
                 activeClassName= {props.activeFixedNavMainLinkColorBorder}
                  >
-                  {props.linkName}
+                  {props.mainLinkName}
                   <span className={props.activeFixedNavHoverBackColor}></span>
                   <span className={props.activeFixedNavHoverBackColor}></span>
                   <span className={props.activeFixedNavHoverBackColor}></span>

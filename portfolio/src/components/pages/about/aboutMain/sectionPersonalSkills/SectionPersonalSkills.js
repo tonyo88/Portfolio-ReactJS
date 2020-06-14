@@ -3,49 +3,58 @@ import "./SectionPersonalSkills.css";
 import React from "react";
 import SectionTitle from "../../../../sectionTitle/SectionTitle";
 import PersonalSkill from "./personalSkill/PersonalSkill";
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
+// import ScrollAnimation from 'react-animate-on-scroll';
+
 
 class SectionPersonalSkills extends React.Component{
 
     render() {
+
+      const personalSkills = [
+        {
+          delay: 200,
+          personalSkillValue: "100",
+          personalSkillName: "Responsible",
+          responsibleProgress: "responsible"
+        },
+        {
+          delay: 300,
+          personalSkillValue: "100",
+          personalSkillName: "Team Player",
+          responsibleProgress: "team-player"
+        },
+        {
+          delay: 400,
+          personalSkillValue: "100",
+          personalSkillName: "Reliable",
+          responsibleProgress: "reliable"
+        },
+        {
+          delay: 500,
+          personalSkillValue: "100",
+          personalSkillName: "Fast Learner",
+          responsibleProgress: "fast-learner"
+        }
+      ]; 
+      
+      const generatePersonalSkills = (personalSkillsArray) => (
+        personalSkillsArray.map((element, index) => (
+          <PersonalSkill
+          key = {index}
+          delay = {element.delay}
+          personalSkillValue={element.personalSkillValue}
+          personalSkillName={element.personalSkillName}
+          responsibleProgress={element.responsibleProgress}
+        />
+        ))
+      );
       return(
          <section id="personal-skills">
            <div className="wrapper">
             <SectionTitle titleName={"Personal Skills"} titleColor={"#262626"} />
               <div className="personal-skills-container">
 
-                <ScrollAnimation animateIn='fadeIn' duration={1} delay={200} animateOnce={true}>
-                  <PersonalSkill
-                    personalSkillValue={"100"}
-                    personalSkillName={"Responsible"}
-                    responsibleProgress="responsible"
-                  />
-                </ScrollAnimation>
-      
-                 <ScrollAnimation animateIn='fadeIn' duration={1} delay={300} animateOnce={true}>
-                   <PersonalSkill
-                  personalSkillValue={"100"}
-                  personalSkillName={"Team Player"}
-                  responsibleProgress="team-player"
-                   />
-                </ScrollAnimation>
-       
-                <ScrollAnimation animateIn='fadeIn' duration={1} delay={400} animateOnce={true}>
-                  <PersonalSkill
-                  personalSkillValue={"100"}
-                  personalSkillName={"Reliable"}
-                  responsibleProgress="reliable"
-                  />
-                </ScrollAnimation>
-       
-                <ScrollAnimation animateIn='fadeIn' duration={1} delay={500} animateOnce={true}>
-                  <PersonalSkill
-                  personalSkillValue={"100"}
-                  personalSkillName={"Fast Learner"}
-                  responsibleProgress="fast-learner"
-                  />
-                </ScrollAnimation>          
+                { generatePersonalSkills(personalSkills) }
           
               </div>
            </div>

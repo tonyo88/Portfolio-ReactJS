@@ -10,8 +10,8 @@
   padding-bottom: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: -webkit-gradient(linear, left bottom, left top, from(#DCDCDC), to(#fff)) bottom left no-repeat;
-  background: linear-gradient(0deg, #DCDCDC, #fff) bottom left no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#DCDCDC), to(#fff)) bottom left no-repeat;
+  background: linear-gradient(90deg, #DCDCDC, #fff) bottom left no-repeat;
   background-size: 0 3px;
 }
 

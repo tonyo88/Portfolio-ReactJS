@@ -15,11 +15,18 @@ $breakpoint-middle-small: 540px;
 
     .project-logo {
         width: 100px;
-        height: 100px;
-        float: left;
+        // height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // height: 100px;
+        // float: left;
+        // line-height: 100px;
+
 
         img {
             width: 100%;
+            // line-height: 100px;
         }
     }
 }
