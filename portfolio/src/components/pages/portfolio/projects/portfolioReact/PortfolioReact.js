@@ -1,8 +1,5 @@
-import "../ProjectStyle.css";
-
 import React from "react";
 import ProjectContent from "../projectContent/ProjectContent";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import PortfolioReactLogo from "../../../../../assets/logo/logo-portfolio.png";
 import prHome from "../../../../../assets/pages/projects/portfolio-react/image-slider/portfolio-react-home.png";
@@ -38,20 +35,17 @@ const PortfolioReact = () =>{
     {skillName: "Adobe Photoshop"}
   ];
   
-    return(
-      <ScrollAnimation animateIn='fadeInLeft' duration={1.2} animateOnce={true}>
-        <section id="portfolio-react" className="project-section">
-          <ProjectContent
-            projectTitleName = {"Portfolio - ReactJS"}
-            projectLogoImg = {PortfolioReactLogo}
-            projectLogoImgAlt = {"logo-portfolio.png"}
-            imageSlider = {imagesProjectSlider}
-            projectContentInfo = {"The project was created entirely with React Framework. The goal of this project is to create a dynamic content that demonstrates skills in working with React.js and its libraries and communication between components."}
-            projectContentSkills = {technologieSkills}
-            projectContentUrl = {"https://github.com/tonyo88/Portfolio-ReactJS"}
-          />
-        </section>
-       </ScrollAnimation>
+    return(        
+            <ProjectContent
+              id = {"portfolio-react"}
+              projectTitleName = {"Portfolio - ReactJS"}
+              projectLogoImg = {PortfolioReactLogo}
+              projectLogoImgAlt = {"logo-portfolio.png"}
+              imageSlider = {imagesProjectSlider}
+              projectContentInfo = {"The project was created entirely with React Framework. The goal of this project is to create a dynamic content that demonstrates skills in working with React.js and its libraries and communication between components."}
+              projectContentSkills = {technologieSkills}
+              projectContentUrl = {"https://github.com/tonyo88/Portfolio-ReactJS"}
+            />       
     );
 };
 

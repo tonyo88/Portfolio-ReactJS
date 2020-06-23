@@ -1,32 +1,25 @@
 //Breakpoints
 $breakpoint-middle-large: 636px;
-$breakpoint-middle-small: 540px;
 
-.project-header {
+#project-header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1em 0;
 
-    .project-title {
+    #project-title {
         letter-spacing: 1px;
-        line-height: 100px;
+        line-height: 120px;
         text-align: right;
     }
 
-    .project-logo {
-        width: 100px;
-        // height: 100px;
+    #project-logo {
+        width: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
-        // height: 100px;
-        // float: left;
-        // line-height: 100px;
-
 
         img {
             width: 100%;
-            // line-height: 100px;
         }
     }
 }
@@ -34,27 +27,13 @@ $breakpoint-middle-small: 540px;
 //Breakpoint Middle-Large
 
 @media screen and(max-width: $breakpoint-middle-large) {
-    .project-header {
-        .project-title {
-            text-align: center;
-            line-height: 70px;
+    #project-header {
+        #project-title {
+            line-height: 80px;
         }
 
-        .project-logo {
-            width: 70px;
-            height: 70px;
-        }
-    }
-}
-
-//Breakpoint Middle-SMall
-
-@media screen and (max-width: $breakpoint-middle-small) {
-    .project-header {
-        grid-template-columns: repeat(1, 1fr);
-
-        .project-logo {
-            margin: 0 auto;
+        #project-logo {
+            width: 80px;
         }
     }
 }

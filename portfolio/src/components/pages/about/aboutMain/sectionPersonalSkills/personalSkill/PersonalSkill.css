@@ -46,7 +46,7 @@
 
 .personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-responsible,
 .personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-team-player,
-.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-reliable,
+.personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-organized,
 .personal-skill-card:hover .personal-skill-box .personal-skill-percent .circle-progress-fast-learner {
   -webkit-animation: progress-personal-skill 1s ease-in-out forwards;
           animation: progress-personal-skill 1s ease-in-out forwards;

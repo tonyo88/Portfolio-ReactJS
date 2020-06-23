@@ -1,8 +1,5 @@
-import "../ProjectStyle.css";
-
 import React from "react";
 import ProjectContent from "../projectContent/ProjectContent";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import MemoryGameLogo from "../../../../../assets/pages/projects/memory-game/logo/main-spider.png";
 import mgStart from "../../../../../assets/pages/projects/memory-game/image-slider/memory-game-start.png";
@@ -33,19 +30,16 @@ const MemoryGame = () =>{
     ];
   
     return(
-      <ScrollAnimation animateIn='fadeInLeft' duration={1.2} animateOnce={true}>
-        <section id="memory-game" className="project-section">
-         <ProjectContent
-          projectTitleName = {"Memory Game"}
-          projectLogoImg = {MemoryGameLogo}
-          projectLogoImgAlt = {"main-spider.png"}
-          imageSlider = {imagesProjectSlider}
-          projectContentInfo = {"Mix-Or-Match Memory Game! Concentration, also known as Match Match, Match Up, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards."}
-          projectContentSkills = {technologieSkills}
-          projectContentUrl = {"https://github.com/tonyo88/MemoryGame"}
-         />
-       </section>
-       </ScrollAnimation>
+          <ProjectContent
+            id = {"memory-game"}
+            projectTitleName = {"Memory Game"}
+            projectLogoImg = {MemoryGameLogo}
+            projectLogoImgAlt = {"main-spider.png"}
+            imageSlider = {imagesProjectSlider}
+            projectContentInfo = {"Mix-Or-Match Memory Game! Concentration, also known as Match Match, Match Up, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards."}
+            projectContentSkills = {technologieSkills}
+            projectContentUrl = {"https://github.com/tonyo88/MemoryGame"}
+          />
     );
 };
 

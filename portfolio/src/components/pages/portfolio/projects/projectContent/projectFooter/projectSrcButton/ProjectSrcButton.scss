@@ -1,5 +1,5 @@
 //Colors 
-$text-color: #fff;
+$btn-color: #fff;
 $btn-bg: linear-gradient(to right, rgb(43, 43, 42), rgb(75, 72, 69));
 $border-btn: #3a3a3a;
 $text-box-shadow-btn: rgba(0, 0, 0, 0.2);
@@ -8,18 +8,18 @@ $text-box-shadow-btn: rgba(0, 0, 0, 0.2);
 $breakpoint-iPad-pro: 1024px;
 $breakpoint-middle-small: 540px;
 
-.box {
+.project-btn {
     display: block;
-    text-decoration: none;
     background: $btn-bg;
-    color: $text-color;
+    color: $btn-color;
     --width: 120px;
     --height: calc(var(--width) / 3);
-    width: var(--width);
     height: var(--height);
+    width: var(--width);
     text-align: center;
     line-height: var(--height);
     font-size: calc(var(--height) / 2.5);
+    text-transform: uppercase;
     font-family: sans-serif;
     letter-spacing: 0.2em;
     border: 1px solid $border-btn;
@@ -32,14 +32,14 @@ $breakpoint-middle-small: 540px;
     right: 0;
     overflow: hidden;
 
-    &::before {
+    &:before {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right, transparent, $text-color, transparent);
         left: -100%;
         transition: 0.5s;
+        background: linear-gradient(to right, transparent, $btn-color, transparent);
     }
 
     &:hover {
@@ -56,7 +56,7 @@ $breakpoint-middle-small: 540px;
 //Breakpoint iPad-Pro
 
 @media screen and (max-width: $breakpoint-iPad-pro) {
-    .box {
+    .project-btn {
         &:hover {
             transform: perspective(500px) rotateY(-15deg);
             text-shadow: 6px 3px 2px $text-box-shadow-btn;
@@ -72,7 +72,7 @@ $breakpoint-middle-small: 540px;
 //Breakpoint Middle-Small
 
 @media screen and (max-width: $breakpoint-middle-small) {
-    .box {
+    .project-btn {
         --width: 80px;
     }
 }

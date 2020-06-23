@@ -1,5 +1,3 @@
-import "./App.css";
-
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";

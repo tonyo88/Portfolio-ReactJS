@@ -3,7 +3,6 @@
 }
 
 .main-list .main-link {
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.11rem;
   font-family: 'Anton', sans-serif;
@@ -20,7 +19,7 @@
   color: #2e2d2d;
 }
 
-.main-list .main-link span {
+.main-list .main-link .main-link-hover {
   position: absolute;
   width: 25%;
   height: 100%;
@@ -36,56 +35,56 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.main-list .main-link span:nth-child(1) {
+.main-list .main-link .main-link-hover:nth-child(1) {
   left: 0;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.main-list .main-link span:nth-child(2) {
+.main-list .main-link .main-link-hover:nth-child(2) {
   left: 25%;
   -webkit-transition-delay: 0.15s;
           transition-delay: 0.15s;
 }
 
-.main-list .main-link span:nth-child(3) {
+.main-list .main-link .main-link-hover:nth-child(3) {
   left: 50%;
   -webkit-transition-delay: 0.30s;
           transition-delay: 0.30s;
 }
 
-.main-list .main-link span:nth-child(4) {
+.main-list .main-link .main-link-hover:nth-child(4) {
   left: 75%;
   -webkit-transition-delay: 0.45s;
           transition-delay: 0.45s;
 }
 
-.main-list .main-link .active-fixed-nav-link-hover-back-color {
+.main-list .main-link .fixed-main-link-hover {
   background: #0aabc5;
-}
-
-.main-list .main-link:hover span {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
 }
 
 .main-list .main-link:hover {
   color: #fff;
 }
 
-.main-list .active-fixed-nav-link-color {
+.main-list .main-link:hover .main-link-hover {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.main-list .fixed-main-link-color {
   color: #fff;
 }
 
-.main-link-active-border {
+.active-main-link {
   border: 1px solid #2e2d2d;
   -webkit-box-shadow: 3px 2px #3d3f3f;
           box-shadow: 3px 2px #3d3f3f;
 }
 
-.active-fixed-nav-main-link-color-border {
+.fixed-active-main-link {
   border: 1px solid #0aabc5;
   -webkit-box-shadow: 3px 2px #9DDDE7;
           box-shadow: 3px 2px #9DDDE7;
@@ -95,16 +94,16 @@
   .main-list .main-link {
     color: #2e2d2d;
   }
-  .main-list .main-link span {
+  .main-list .main-link .main-link-hover {
     display: none;
   }
   .main-list .main-link:hover {
     color: #2e2d2d;
   }
-  .main-list .active-fixed-nav-link-color {
+  .main-list .fixed-main-link-color {
     color: #fff;
   }
-  .main-list .active-fixed-nav-link-color:hover {
+  .main-list .fixed-main-link-color:hover {
     color: #fff;
   }
 }
@@ -126,23 +125,23 @@
     font-size: 1.3rem;
     color: #fff;
   }
-  .main-list .main-link span {
+  .main-list .main-link .main-link-hover {
     -webkit-transform-origin: left;
             transform-origin: left;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     background: #0aabc5;
   }
-  .main-list .main-link:hover span {
+  .main-list .main-link:hover {
+    color: #fff;
+  }
+  .main-list .main-link:hover .main-link-hover {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
     -webkit-transform-origin: right;
             transform-origin: right;
   }
-  .main-list .main-link:hover {
-    color: #fff;
-  }
-  .main-link-active-border {
+  .active-main-link {
     background-color: #0aabc5;
     border: none;
     -webkit-box-shadow: none;
@@ -170,7 +169,7 @@
   .main-list .main-link:hover {
     color: #fff;
   }
-  .main-link-active-border {
+  .active-main-link {
     background-color: #0aabc5;
     border: none;
     -webkit-box-shadow: none;

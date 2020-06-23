@@ -1,0 +1,53 @@
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 959px;
+$breakpoint-iPad: 767px;
+$breakpoint-phone: 414px;
+
+
+.about-image-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+//Breakpoint Browser
+
+@media screen and (max-width: $breakpoint-browser) {
+    .about-image-container {
+        .image {
+            max-width: 400px;
+        }
+    }
+}
+
+//Breakpoint iPad
+
+@media screen and (max-width: $breakpoint-iPad) {
+    .about-image-container {
+        height: 350px;
+    }
+}
+
+//Breakpoint Phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    .about-image-container {
+        height: 300px;
+    }
+}

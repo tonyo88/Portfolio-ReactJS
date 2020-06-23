@@ -1,8 +1,5 @@
-import "../ProjectStyle.css";
-
 import React from "react";
 import ProjectContent from "../projectContent/ProjectContent";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import megzLogo from "../../../../../assets/pages/projects/megz/logo/megz-logo.png";
 import megzHome from "../../../../../assets/pages/projects/megz/image-slider/megz-home.png";
@@ -35,19 +32,16 @@ const Megz = () =>{
   ];
   
     return(
-      <ScrollAnimation animateIn='fadeInLeft' duration={1.2} animateOnce={true}>
-       <section id="megz" className="project-section">
-         <ProjectContent
-          projectTitleName = {"Megz"}
-          projectLogoImg = {megzLogo}
-          projectLogoImgAlt = {"megz-logo.png"}
-          imageSlider = {imagesProjectSlider}
-          projectContentInfo = {"Megz is a fashion brand for a luxurious experience with women's clothing at affordable prices. Putting elements of haute couture and street fashion into its clothing over the past five years, Megz pushes the limits of its capabilities with a single goal: To provide you with the latest fashion trends at the lowest possible price. Our philosophy is very simple: Whether it's day or night, you have a special occasion or you're just at work in the office - all eyes must be on you!"}
-          projectContentSkills = {technologieSkills}
-          projectContentUrl = {"https://megz.eu/"}
-         />
-       </section>
-       </ScrollAnimation>
+          <ProjectContent
+            id = "megz"
+            projectTitleName = {"Megz"}
+            projectLogoImg = {megzLogo}
+            projectLogoImgAlt = {"megz-logo.png"}
+            imageSlider = {imagesProjectSlider}
+            projectContentInfo = {"Megz is a fashion brand for a luxurious experience with women's clothing at affordable prices. Putting elements of haute couture and street fashion into its clothing over the past five years, Megz pushes the limits of its capabilities with a single goal: To provide you with the latest fashion trends at the lowest possible price. Our philosophy is very simple: Whether it's day or night, you have a special occasion or you're just at work in the office - all eyes must be on you!"}
+            projectContentSkills = {technologieSkills}
+            projectContentUrl = {"https://megz.eu/"}
+          />
     );
 };
 

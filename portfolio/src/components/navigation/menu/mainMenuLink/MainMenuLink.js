@@ -10,14 +10,14 @@ const MainMenuLink = (props) => {
             <NavLink
                 exact
                 to={props.mainLinkUrl}
-                className={props.activeFixedNavLinkColor}
-                activeClassName= {props.activeFixedNavMainLinkColorBorder}
+                className={props.mainLinkColor}
+                activeClassName= {props.activeClassName}
                  >
                   {props.mainLinkName}
-                  <span className={props.activeFixedNavHoverBackColor}></span>
-                  <span className={props.activeFixedNavHoverBackColor}></span>
-                  <span className={props.activeFixedNavHoverBackColor}></span>
-                  <span className={props.activeFixedNavHoverBackColor}></span>
+                  <span className={props.mainLinkHover}></span>
+                  <span className={props.mainLinkHover}></span>
+                  <span className={props.mainLinkHover}></span>
+                  <span className={props.mainLinkHover}></span>
              </NavLink>
         </li>
     );

@@ -3,6 +3,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import ScrollAnimation from 'react-animate-on-scroll';
 
+const portfolioParrentPath = "/pages/portfolio";
+
 const CurrentPortfolio = (props) => {
    return(
       <ScrollAnimation animateIn='fadeIn' duration={1} animateOnce={true} delay={props.delay}>
@@ -13,7 +15,7 @@ const CurrentPortfolio = (props) => {
              <figcaption>
                 <h2 className="portfolio-title">
                    {props.portfolioTitle}
-                   <Link className="portfolio-btn" to={`/pages/portfolio/${props.portfoliotUrl}`}>view more...</Link>   
+                   <Link className="portfolio-btn" to={`${portfolioParrentPath}/${props.portfoliotUrl}`}>view more...</Link>   
                    </h2>
                 <p className="portfolio-info">
                    {props.portfolioInfo}

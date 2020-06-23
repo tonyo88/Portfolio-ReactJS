@@ -96,9 +96,9 @@ class PortfolioSection extends React.Component{
             <section id="portfolio-section">
               <div className="wrapper">
 
-                 <SectionTitle titleName={"Working Projects"} titleColor={"#262626"} />
+                 <SectionTitle titleName={"Work Projects"} titleColor={"#262626"} />
 
-                  <div className="portfolio-container">
+                  <div className="portfolio-container working-projects">
                     { generatePortfolios(workingProjects) }
                    </div>
                                 

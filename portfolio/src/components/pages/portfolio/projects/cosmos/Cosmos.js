@@ -1,8 +1,5 @@
-import "../ProjectStyle.css";
-
 import React from "react";
 import ProjectContent from "../projectContent/ProjectContent";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import cosmosLogo from "../../../../../assets/pages/projects/cosmos/logo/cosmos-logo.png";
 import cosmosHome from "../../../../../assets/pages/projects/cosmos/image-slider/cosmos-home.png";
@@ -23,7 +20,7 @@ const Cosmos = () =>{
 
   const technologieSkills = [
     {skillName: "HTML5 - semantic"},
-    {skillName: "CSS3 - SASS, Grid Layout, Image Slider"},
+    {skillName: "CSS3 - SASS, Grid Layout, FlexBox, Parallax"},
     {skillName: "JavaScript ES6"},
     {skillName: "jQuery"},
     {skillName: "JavaScript Libraries"},
@@ -34,20 +31,17 @@ const Cosmos = () =>{
     {skillName: "Adobe Photoshop"}
   ];
   
-    return(
-      <ScrollAnimation animateIn='fadeInLeft' duration={1.2} animateOnce={true}>
-       <section id="cosmos" className="project-section">
-         <ProjectContent
-          projectTitleName = {"Cosmos"}
-          projectLogoImg = {cosmosLogo}
-          projectLogoImgAlt = {"cosmos-logo.png"}
-          imageSlider = {imagesProjectSlider}
-          projectContentInfo = {"We create and transform. Flavors. Experiences. Ourselves. Exploring the vast universe of tastes, we create our own version of Bulgarian cuisine. There is a restaurant in the Sofia center where two universes meet and blend their worlds creating a fascinating atmosphere made of cosmic mysteries and earthly riches. It’s a place where all forgotten secrets of traditional Bulgarian cuisine touch the unknown space beyond the usual and get inspired by the cosmic vastness that embraces our home planet Earth."}
-          projectContentSkills = {technologieSkills}
-          projectContentUrl = {"https://cosmosbg.com/en/"}
-         />
-       </section>
-       </ScrollAnimation>
+    return(   
+          <ProjectContent
+            id = {"cosmos"}
+            projectTitleName = {"Cosmos"}
+            projectLogoImg = {cosmosLogo}
+            projectLogoImgAlt = {"cosmos-logo.png"}
+            imageSlider = {imagesProjectSlider}
+            projectContentInfo = {"We create and transform. Flavors. Experiences. Ourselves. Exploring the vast universe of tastes, we create our own version of Bulgarian cuisine. There is a restaurant in the Sofia center where two universes meet and blend their worlds creating a fascinating atmosphere made of cosmic mysteries and earthly riches. It’s a place where all forgotten secrets of traditional Bulgarian cuisine touch the unknown space beyond the usual and get inspired by the cosmic vastness that embraces our home planet Earth."}
+            projectContentSkills = {technologieSkills}
+            projectContentUrl = {"https://cosmosbg.com/en/"}
+          />
     );
 };
 

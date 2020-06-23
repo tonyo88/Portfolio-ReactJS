@@ -4,19 +4,24 @@ import SocialMenu from "../../socialMenu/SocialMenu";
 
 const FooterContact = () => {
 
-    const socialLinks = [{
+    const socialLinks = [
+        {
         socialUrl: "https://www.facebook.com/",
         socialIcon: "fa fa-facebook"
-    },{
-        socialUrl: "https://www.linkedin.com/in/anthony-vanov/",
-        socialIcon: "fa fa-linkedin"
-    },{
-        socialUrl: "https://github.com/tonyo88",
-        socialIcon: "fa fa-github"
-    },{
-        socialUrl: "https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile",
-        socialIcon: "fa fa-windows"
-    }];
+        },
+        {
+            socialUrl: "https://www.linkedin.com/in/anthony-vanov/",
+            socialIcon: "fa fa-linkedin"
+        },
+        {
+            socialUrl: "https://github.com/tonyo88",
+            socialIcon: "fa fa-github"
+        },
+        {
+            socialUrl: "https://www.youracclaim.com/badges/50bed4f8-3ced-4969-ba18-baef88cc05d3/linked_in_profile",
+            socialIcon: "fa fa-windows"
+        }
+    ];
 
   return(
       <div className="footer-contact-container">

@@ -62,6 +62,7 @@
 
 .contact-form .form .contact-form-btn .sending {
   float: right;
+  line-height: 20px;
 }
 
 .contact-form .form .contact-form-btn:hover {

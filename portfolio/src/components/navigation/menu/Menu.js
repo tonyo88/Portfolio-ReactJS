@@ -33,9 +33,9 @@ class Menu extends React.Component  {
               mainLinkUrl = {element.mainLinkUrl}
               mainLinkName = {element.mainLinkName}
               closeMenu = {this.props.closeMenu}
-              activeFixedNavLinkColor = {this.props.activeFixedNavLinkColor}
-              activeFixedNavMainLinkColorBorder = {this.props.activeFixedNavMainLinkColorBorder}
-              activeFixedNavHoverBackColor = {this.props.activeFixedNavHoverBackColor}
+              mainLinkColor = {this.props.mainLinkColor}
+              mainLinkHover = {this.props.mainLinkHover}
+              activeClassName = {this.props.activeClassName}
               />
             )));
 

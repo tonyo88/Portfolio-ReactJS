@@ -11,6 +11,10 @@ $breakpoint-phone: 414px;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
+
+    .working-projects {
+        padding-bottom: 3em;
+    }
 }
 
 //Breakpoint iPad to Phone
