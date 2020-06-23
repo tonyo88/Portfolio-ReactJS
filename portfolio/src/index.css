@@ -15,4 +15,29 @@ body {
   height: auto;
   background: #f7f7f9;
 }
+
+body ul {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.background-position {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    max-width: 90%;
+  }
+}
 /*# sourceMappingURL=index.css.map */

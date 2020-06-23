@@ -10,7 +10,7 @@ const FooterMenu = () => {
       footerLinkName: "Home"
     },
     {
-      footerLinkUrl: "/",
+      footerLinkUrl: "/pages/about",
       footerLinkName: "About"
     },
     {

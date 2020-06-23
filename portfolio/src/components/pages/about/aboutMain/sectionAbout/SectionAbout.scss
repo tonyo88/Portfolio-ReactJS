@@ -1,10 +1,6 @@
-//Colors
-$text-color: #262626;
-$border-color: #0aabc5;
-
 //Breakpoints
 $breakpoint-browser: 1280px;
-$breakpoint-middle-large: 960px;
+$breakpoint-middle-large: 959px;
 $breakpoint-iPad: 768px;
 $breakpoint-phone: 414px;
 
@@ -13,209 +9,51 @@ $breakpoint-phone: 414px;
 
     .about-section-container {
         padding: 5em 0;
-        width: 1500px;
-        max-width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
-
-        .about-info-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .info-container {
-                color: $text-color;
-                font-family: 'Oswald', sans-serif;
-                text-align: justify;
-                font-size: 1.2rem;
-                padding: 4em;
-
-                .about-title {
-                    font-size: 2.5rem;
-                    display: inline-block;
-                    border-bottom: 2px solid $border-color;
-                    letter-spacing: 1px;
-                    margin: 0 0 0.5em;
-                }
-
-            }
-        }
-
-        .about-image-container {
-            position: relative;
-
-            .second-page,
-            .third-page {
-                position: absolute;
-                top: 0;
-            }
-        }
     }
 }
 
-//Breakpoint Browser to Middle-Large
+//Breakpoin Browser
 
-@media screen and (min-width: $breakpoint-middle-large) and (max-width: $breakpoint-browser) {
+@media screen and (max-width: $breakpoint-browser) {
     #section-about {
-
         .about-section-container {
             padding: 3em 0;
-            width: 1050px;
-            max-width: 90%;
-
-            .about-info-container {
-                .info-container {
-                    font-size: 1rem;
-                    padding: 2em;
-
-                    .about-title {
-                        font-size: 2em;
-                    }
-                }
-            }
-
-            .about-image-container {
-
-                .first-page,
-                .second-page,
-                .third-page {
-                    width: 500px;
-                    height: 500px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
         }
     }
 }
+
 
 //Breakpoint Middle-Large to iPad
 
-@media screen and (min-width: $breakpoint-iPad) and (max-width: 959px) {
+@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-middle-large) {
     #section-about {
-
         .about-section-container {
-            padding: 3em 0 0;
-            width: 1050px;
-            max-width: 90%;
-
-            .about-info-container {
-                .info-container {
-                    font-size: 0.8rem;
-                    padding: 2em;
-
-                    .about-title {
-                        font-size: 2em;
-                    }
-                }
-            }
-
-            .about-image-container {
-
-                .first-page,
-                .second-page,
-                .third-page {
-                    width: 350px;
-                    height: 350px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
+            padding: 2em 0;
         }
     }
 }
 
-//Breakpoint iPad to Phone
+// //Breakpoint iPad
 
-@media screen and (min-width: 415px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     #section-about {
-
         .about-section-container {
-            padding: 3em 0 0;
-            width: 1050px;
-            max-width: 90%;
             grid-template-columns: repeat(1, 1fr);
-
-
-            .about-info-container {
-
-                .info-container {
-
-                    font-size: 0.8rem;
-                    padding: 1.5em 4em;
-                    text-align: center;
-
-                    .about-title {
-                        font-size: 2em;
-
-                    }
-                }
-            }
-
-            .about-image-container {
-                margin: 0 auto;
-
-                .first-page,
-                .second-page,
-                .third-page {
-                    width: 380px;
-                    height: 380px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
         }
     }
 }
 
-//Breakpoint Phone
+
+// //Breakpoint Phone
 
 @media screen and (max-width: $breakpoint-phone) {
     #section-about {
 
         .about-section-container {
-            padding: 3em 0 0;
-            width: 1050px;
-            max-width: 90%;
-            grid-template-columns: repeat(1, 1fr);
-
-
-            .about-info-container {
-
-                .info-container {
-
-                    font-size: 0.8rem;
-                    padding: 1.5em 2em;
-                    text-align: center;
-
-                    .about-title {
-                        font-size: 2em;
-
-                    }
-                }
-            }
-
-            .about-image-container {
-                margin: 0 auto;
-
-                .first-page,
-                .second-page,
-                .third-page {
-                    width: 280px;
-                    height: 280px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
+            padding: 1em 0;
         }
     }
 }

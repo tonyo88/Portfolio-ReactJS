@@ -1,0 +1,115 @@
+//Colors
+
+$text-color: #262626;
+$border-color: #0aabc5;
+$resume-btn-bg-color: #119ed6;
+$resume-btn-color: #fff;
+$resume-btn-hover-bg-color:#096489;
+
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 959px;
+$breakpoint-iPad: 768px;
+$breakpoint-phone: 414px;
+
+.about-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .info-container {
+        color: $text-color;
+        font-family: 'Oswald', sans-serif;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 4em;
+        color: $text-color;
+        font-family: 'Oswald', sans-serif;
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 4em;
+
+        .about-title {
+            font-size: 2.3rem;
+            display: inline-block;
+            border-bottom: 2px solid $border-color;
+            letter-spacing: 1px;
+            margin: 0 0 0.5em;
+        }
+
+        .resume-btn {
+            padding: 0.5em 1.5em;
+            color: $resume-btn-color;
+            background: $resume-btn-bg-color;
+            border-radius: 10px;
+            margin: 0.8em 0 0;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            display: inline-block;
+
+            .spinner {
+                width: 20px;
+                height: 20px;
+                float: left;
+            }
+
+            .download {
+                float: right;
+            }
+
+            &:hover {
+                background: $resume-btn-hover-bg-color;
+            }
+        }
+    }
+}
+
+//Breakpoint Browser
+
+@media screen and (max-width: $breakpoint-browser) {
+    .about-info-container {
+        .info-container {
+            font-size: 1rem;
+            padding: 3em;
+
+            .about-title {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large to iPad
+
+@media screen and (max-width: $breakpoint-iPad) and (max-width: $breakpoint-middle-large) {
+    .about-info-container {
+        .info-container {
+            font-size: 0.9rem;
+
+            .about-title {
+                font-size: 1.9em;
+            }
+        }
+    }
+}
+
+//Breakpoint iPad
+
+@media screen and (max-width: 767px) {
+    .about-info-container {
+        .info-container {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 2em;
+
+            .about-title {
+                font-size: 1.8em;
+            }
+
+            .resume-btn {
+                font-size: 0.75;
+            }
+        }
+    }
+}

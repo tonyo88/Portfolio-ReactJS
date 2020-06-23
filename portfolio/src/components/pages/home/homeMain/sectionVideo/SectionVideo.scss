@@ -34,10 +34,9 @@ $breakpoint-phone: 414px;
                 }
 
                 .video-info {
-                    text-align: justify;
                     font-family: 'Teko', sans-serif;
                     font-size: 1.32rem;
-                    padding: 0.8em 0 0;
+                    padding: 0.8em 1em 0;
                 }
             }
         }
@@ -46,7 +45,7 @@ $breakpoint-phone: 414px;
             position: relative;
 
             .laptop-container {
-                width: 700px;
+                max-width: 700px;
 
                 .laptop {
                     width: 100%;
@@ -59,13 +58,39 @@ $breakpoint-phone: 414px;
 
             #video {
                 position: absolute;
-                width: 530px;
-                left: 84px;
-                bottom: 80px;
+                max-width: 400px;
+                left: 63px;
+                bottom: 60px;
             }
         }
     }
 }
+
+//Breakpoint Browser
+
+@media screen and (max-width: $breakpoint-browser) {
+    #section-video {
+        .video-info-container {
+            .video-container {
+                .laptop-container {
+                    .laptop {
+                        display: none;
+                    }
+
+                    .typing {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                #video {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 
 //Breakpoint Browser to Middle-Large
 
@@ -80,29 +105,11 @@ $breakpoint-phone: 414px;
 
                     .video-title {
                         font-size: 2.2rem;
-
-                    }
-                }
-            }
-
-            .video-container {
-
-                .laptop-container {
-                    width: 500px;
-                    margin: 0 auto;
-
-                    .laptop {
-                        display: none;
                     }
 
-                    .typing {
-                        display: block;
-                        width: 100%;
+                    .video-info {
+                        font-size: 1.32rem;
                     }
-                }
-
-                #video {
-                    display: none;
                 }
             }
         }
@@ -121,30 +128,12 @@ $breakpoint-phone: 414px;
                     padding: 0 1.5em;
 
                     .video-title {
-                        font-size: 2rem;
-
-                    }
-                }
-            }
-
-            .video-container {
-
-                .laptop-container {
-                    width: 350px;
-                    margin: 0 auto;
-
-                    .laptop {
-                        display: none;
+                        font-size: 2.1rem;
                     }
 
-                    .typing {
-                        display: block;
-                        width: 100%;
+                    .video-info {
+                        font-size: 1.25rem;
                     }
-                }
-
-                #video {
-                    display: none;
                 }
             }
         }
@@ -165,34 +154,12 @@ $breakpoint-phone: 414px;
                     padding: 0 4.5em 1em;
 
                     .video-title {
-                        font-size: 2.2rem;
-
+                        font-size: 2rem;
                     }
 
                     .video-info {
-                        text-align: center;
+                        font-size: 1.2rem;
                     }
-                }
-            }
-
-            .video-container {
-
-                .laptop-container {
-                    width: 500px;
-                    margin: 0 auto;
-
-                    .laptop {
-                        display: none;
-                    }
-
-                    .typing {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-
-                #video {
-                    display: none;
                 }
             }
         }
@@ -218,29 +185,8 @@ $breakpoint-phone: 414px;
                     }
 
                     .video-info {
-                        text-align: center;
+                        font-size: 1.2rem;
                     }
-                }
-            }
-
-            .video-container {
-
-                .laptop-container {
-                    width: 350px;
-                    margin: 0 auto;
-
-                    .laptop {
-                        display: none;
-                    }
-
-                    .typing {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-
-                #video {
-                    display: none;
                 }
             }
         }
@@ -266,30 +212,8 @@ $breakpoint-phone: 414px;
                     }
 
                     .video-info {
-                        text-align: center;
                         font-size: 1.1rem;
                     }
-                }
-            }
-
-            .video-container {
-
-                .laptop-container {
-                    width: 300px;
-                    margin: 0 auto;
-
-                    .laptop {
-                        display: none;
-                    }
-
-                    .typing {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-
-                #video {
-                    display: none;
                 }
             }
         }

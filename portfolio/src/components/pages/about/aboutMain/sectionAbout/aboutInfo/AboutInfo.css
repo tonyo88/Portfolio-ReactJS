@@ -1,0 +1,92 @@
+.about-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-info-container .info-container {
+  color: #262626;
+  font-family: 'Oswald', sans-serif;
+  text-align: justify;
+  font-size: 1.1rem;
+  padding: 4em;
+  color: #262626;
+  font-family: 'Oswald', sans-serif;
+  text-align: justify;
+  font-size: 1.1rem;
+  padding: 4em;
+}
+
+.about-info-container .info-container .about-title {
+  font-size: 2.3rem;
+  display: inline-block;
+  border-bottom: 2px solid #0aabc5;
+  letter-spacing: 1px;
+  margin: 0 0 0.5em;
+}
+
+.about-info-container .info-container .resume-btn {
+  padding: 0.5em 1.5em;
+  color: #fff;
+  background: #119ed6;
+  border-radius: 10px;
+  margin: 0.8em 0 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.about-info-container .info-container .resume-btn .spinner {
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+.about-info-container .info-container .resume-btn .download {
+  float: right;
+}
+
+.about-info-container .info-container .resume-btn:hover {
+  background: #096489;
+}
+
+@media screen and (max-width: 1280px) {
+  .about-info-container .info-container {
+    font-size: 1rem;
+    padding: 3em;
+  }
+  .about-info-container .info-container .about-title {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 959px) {
+  .about-info-container .info-container {
+    font-size: 0.9rem;
+  }
+  .about-info-container .info-container .about-title {
+    font-size: 1.9em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-info-container .info-container {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2em;
+  }
+  .about-info-container .info-container .about-title {
+    font-size: 1.8em;
+  }
+  .about-info-container .info-container .resume-btn {
+    font-size: 0.75;
+  }
+}
+/*# sourceMappingURL=AboutInfo.css.map */

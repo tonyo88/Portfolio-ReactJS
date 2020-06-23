@@ -35,10 +35,9 @@
 }
 
 #section-video .video-info-container .info-container .video-content .video-info {
-  text-align: justify;
   font-family: 'Teko', sans-serif;
   font-size: 1.32rem;
-  padding: 0.8em 0 0;
+  padding: 0.8em 1em 0;
 }
 
 #section-video .video-info-container .video-container {
@@ -46,7 +45,7 @@
 }
 
 #section-video .video-info-container .video-container .laptop-container {
-  width: 700px;
+  max-width: 700px;
 }
 
 #section-video .video-info-container .video-container .laptop-container .laptop {
@@ -59,9 +58,22 @@
 
 #section-video .video-info-container .video-container #video {
   position: absolute;
-  width: 530px;
-  left: 84px;
-  bottom: 80px;
+  max-width: 400px;
+  left: 63px;
+  bottom: 60px;
+}
+
+@media screen and (max-width: 1280px) {
+  #section-video .video-info-container .video-container .laptop-container .laptop {
+    display: none;
+  }
+  #section-video .video-info-container .video-container .laptop-container .typing {
+    display: block;
+    width: 100%;
+  }
+  #section-video .video-info-container .video-container #video {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
@@ -74,19 +86,8 @@
   #section-video .video-info-container .info-container .video-content .video-title {
     font-size: 2.2rem;
   }
-  #section-video .video-info-container .video-container .laptop-container {
-    width: 500px;
-    margin: 0 auto;
-  }
-  #section-video .video-info-container .video-container .laptop-container .laptop {
-    display: none;
-  }
-  #section-video .video-info-container .video-container .laptop-container .typing {
-    display: block;
-    width: 100%;
-  }
-  #section-video .video-info-container .video-container #video {
-    display: none;
+  #section-video .video-info-container .info-container .video-content .video-info {
+    font-size: 1.32rem;
   }
 }
 
@@ -98,21 +99,10 @@
     padding: 0 1.5em;
   }
   #section-video .video-info-container .info-container .video-content .video-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
-  #section-video .video-info-container .video-container .laptop-container {
-    width: 350px;
-    margin: 0 auto;
-  }
-  #section-video .video-info-container .video-container .laptop-container .laptop {
-    display: none;
-  }
-  #section-video .video-info-container .video-container .laptop-container .typing {
-    display: block;
-    width: 100%;
-  }
-  #section-video .video-info-container .video-container #video {
-    display: none;
+  #section-video .video-info-container .info-container .video-content .video-info {
+    font-size: 1.25rem;
   }
 }
 
@@ -128,24 +118,10 @@
     padding: 0 4.5em 1em;
   }
   #section-video .video-info-container .info-container .video-content .video-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   #section-video .video-info-container .info-container .video-content .video-info {
-    text-align: center;
-  }
-  #section-video .video-info-container .video-container .laptop-container {
-    width: 500px;
-    margin: 0 auto;
-  }
-  #section-video .video-info-container .video-container .laptop-container .laptop {
-    display: none;
-  }
-  #section-video .video-info-container .video-container .laptop-container .typing {
-    display: block;
-    width: 100%;
-  }
-  #section-video .video-info-container .video-container #video {
-    display: none;
+    font-size: 1.2rem;
   }
 }
 
@@ -164,21 +140,7 @@
     font-size: 1.9rem;
   }
   #section-video .video-info-container .info-container .video-content .video-info {
-    text-align: center;
-  }
-  #section-video .video-info-container .video-container .laptop-container {
-    width: 350px;
-    margin: 0 auto;
-  }
-  #section-video .video-info-container .video-container .laptop-container .laptop {
-    display: none;
-  }
-  #section-video .video-info-container .video-container .laptop-container .typing {
-    display: block;
-    width: 100%;
-  }
-  #section-video .video-info-container .video-container #video {
-    display: none;
+    font-size: 1.2rem;
   }
 }
 
@@ -197,22 +159,7 @@
     font-size: 1.8rem;
   }
   #section-video .video-info-container .info-container .video-content .video-info {
-    text-align: center;
     font-size: 1.1rem;
-  }
-  #section-video .video-info-container .video-container .laptop-container {
-    width: 300px;
-    margin: 0 auto;
-  }
-  #section-video .video-info-container .video-container .laptop-container .laptop {
-    display: none;
-  }
-  #section-video .video-info-container .video-container .laptop-container .typing {
-    display: block;
-    width: 100%;
-  }
-  #section-video .video-info-container .video-container #video {
-    display: none;
   }
 }
 /*# sourceMappingURL=SectionVideo.css.map */

@@ -1,7 +1,7 @@
 import "./WebSkillCard.css";
 import React from "react";
 
-const WebSkillImage = (props) => {
+const WebSkillCard = (props) => {
    
     return(
         <div className="web-skill-card-container">
@@ -17,4 +17,4 @@ const WebSkillImage = (props) => {
     );
 };
 
-export default WebSkillImage;
+export default WebSkillCard;

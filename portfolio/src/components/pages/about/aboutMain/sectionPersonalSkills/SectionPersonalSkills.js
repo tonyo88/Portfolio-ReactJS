@@ -26,8 +26,8 @@ class SectionPersonalSkills extends React.Component{
         {
           delay: 400,
           personalSkillValue: "100",
-          personalSkillName: "Reliable",
-          responsibleProgress: "reliable"
+          personalSkillName: "Organized",
+          responsibleProgress: "organized"
         },
         {
           delay: 500,

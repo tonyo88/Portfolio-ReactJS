@@ -1,4 +1,3 @@
-import "./ProjectSlider.css";
 import React from "react";
 import { Zoom } from 'react-slideshow-image';
 

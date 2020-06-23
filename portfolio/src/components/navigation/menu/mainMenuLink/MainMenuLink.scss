@@ -1,8 +1,11 @@
 //Colors
-$link-color: rgb(46, 45, 45);
-$active-scrolled-link-color: #fff;
-$link-hover-background: rgb(46, 45, 45);
-$active-scrolled-hover-background: #0aabc5;
+$main-link-color: #2e2d2d;
+$fixed-main-link-color: #fff;
+$main-link-hover-bg: $main-link-color;
+$fixed-main-link-hover-bg: #0aabc5;
+$active-main-link-color: $main-link-color;
+$active-main-link-shadow: #3d3f3f;
+$fixed-active-main-link-shadow: #9DDDE7;
 
 //Breakpoints
 $breakpoint-iPad-Pro: 1024px;
@@ -13,7 +16,6 @@ $breakpoint-phone: 414px;
     display: inline-block;
 
     .main-link {
-        text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.11rem;
         font-family: 'Anton', sans-serif;
@@ -25,13 +27,13 @@ $breakpoint-phone: 414px;
         line-height: 40px;
         transition: 0.5s;
         box-sizing: border-box;
-        color: $link-color;
+        color: $main-link-color;
 
-        span {
+        .main-link-hover {
             position: absolute;
             width: 25%;
             height: 100%;
-            background: $link-hover-background;
+            background: $main-link-hover-bg;
             z-index: -1;
             transform-origin: top;
             transform: scaleY(0);
@@ -50,47 +52,41 @@ $breakpoint-phone: 414px;
             &:nth-child(3) {
                 left: 50%;
                 transition-delay: 0.30s;
-
             }
 
             &:nth-child(4) {
                 left: 75%;
                 transition-delay: 0.45s;
-
             }
-
         }
 
-        .active-fixed-nav-link-hover-back-color {
-            background: $active-scrolled-hover-background;
-        }
-
-        &:hover span {
-            transform: scaleY(1);
-            transform-origin: bottom;
+        .fixed-main-link-hover {
+            background: $fixed-main-link-hover-bg;
         }
 
         &:hover {
-            color: $active-scrolled-link-color;
+            color: $fixed-main-link-color;
+
+            .main-link-hover {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
         }
-
-
-
     }
 
-    .active-fixed-nav-link-color {
-        color: $active-scrolled-link-color;
+    .fixed-main-link-color {
+        color: $fixed-main-link-color;
     }
 }
 
-.main-link-active-border {
-    border: 1px solid $link-color;
-    box-shadow: 3px 2px rgb(61, 63, 63);
+.active-main-link {
+    border: 1px solid $active-main-link-color;
+    box-shadow: 3px 2px $active-main-link-shadow;
 }
 
-.active-fixed-nav-main-link-color-border {
-    border: 1px solid $active-scrolled-hover-background;
-    box-shadow: 3px 2px #9DDDE7;
+.fixed-active-main-link {
+    border: 1px solid $fixed-main-link-hover-bg;
+    box-shadow: 3px 2px $fixed-active-main-link-shadow;
 }
 
 //Breakpoint iPad-Pro
@@ -99,27 +95,25 @@ $breakpoint-phone: 414px;
     .main-list {
 
         .main-link {
-            color: $link-color;
+            color: $main-link-color;
 
-            span {
+            .main-link-hover {
                 display: none;
             }
 
             &:hover {
-                color: $link-color;
+                color: $main-link-color;
             }
 
         }
 
-        .active-fixed-nav-link-color {
-            color: $active-scrolled-link-color;
+        .fixed-main-link-color {
+            color: $fixed-main-link-color;
 
             &:hover {
-                color: $active-scrolled-link-color;
+                color: $fixed-main-link-color;
             }
-
         }
-
     }
 }
 
@@ -129,13 +123,12 @@ $breakpoint-phone: 414px;
 
     .main-list {
         display: block;
-        border-bottom: 1px solid $active-scrolled-link-color;
+        border-bottom: 1px solid $fixed-main-link-color;
         height: 80px;
 
         &:nth-child(1) {
-            border-top: 1px solid $active-scrolled-link-color;
+            border-top: 1px solid $fixed-main-link-color;
         }
-
 
         .main-link {
             height: 100%;
@@ -143,29 +136,28 @@ $breakpoint-phone: 414px;
             width: 100%;
             text-align: center;
             font-size: 1.3rem;
-            color: $active-scrolled-link-color;
+            color: $fixed-main-link-color;
 
-            span {
+            .main-link-hover {
                 transform-origin: left;
                 transform: scaleX(0);
-                background: $active-scrolled-hover-background;
+                background: $fixed-main-link-hover-bg;
 
-            }
-
-            &:hover span {
-                transform: scaleX(1);
-                transform-origin: right;
             }
 
             &:hover {
-                color: $active-scrolled-link-color;
-            }
+                color: $fixed-main-link-color;
 
+                .main-link-hover {
+                    transform: scaleX(1);
+                    transform-origin: right;
+                }
+            }
         }
     }
 
-    .main-link-active-border {
-        background-color: $active-scrolled-hover-background;
+    .active-main-link {
+        background-color: $fixed-main-link-hover-bg;
         border: none;
         box-shadow: none;
     }
@@ -177,10 +169,10 @@ $breakpoint-phone: 414px;
     .main-list {
         display: block;
         height: 60px;
-        border-bottom: 1px solid $active-scrolled-link-color;
+        border-bottom: 1px solid $fixed-main-link-color;
 
         &:nth-child(1) {
-            border-top: 1px solid $active-scrolled-link-color;
+            border-top: 1px solid $fixed-main-link-color;
         }
 
         .main-link {
@@ -190,17 +182,16 @@ $breakpoint-phone: 414px;
             width: 100%;
             text-align: center;
             font-size: 1rem;
-            color: $active-scrolled-link-color;
+            color: $fixed-main-link-color;
 
             &:hover {
-                color: $active-scrolled-link-color;
+                color: $fixed-main-link-color;
             }
-
         }
     }
 
-    .main-link-active-border {
-        background-color: $active-scrolled-hover-background;
+    .active-main-link {
+        background-color: $fixed-main-link-hover-bg;
         border: none;
         box-shadow: none;
     }
