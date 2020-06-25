@@ -103,7 +103,7 @@ class SectionProfessionalSkills extends React.Component {
            />
          )));
       return(
-        <section id="section-professional-skills" onMouseOver={this.mouseMoveOver}>
+        <section id="section-professional-skills" className="background-position" onMouseOver={this.mouseMoveOver}>
            <div className="wrapper">
                <SectionTitle titleName={"Professional Skills"} titleColor={"#f7f7f9"} />
               <div className="professional-skills-container">
