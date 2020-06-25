@@ -1,7 +1,6 @@
 //Colors
-// $bg-section: #306797;
-$bg-section: rgba(48, 103, 151, 0.8);
-$bg-skills-container: rgba(16, 42, 65, 0.8);
+
+$bg-skills-container: rgba(35, 36, 37, 0.6);
 
 //Breakpoints
 $breakpoint-browser: 1280px;
@@ -12,7 +11,8 @@ $breakpoint-phone: 414px;
 #section-professional-skills {
     padding: 5em 0;
     transition: 0.8s;
-    background: $bg-section;
+    background-image: url("../../../../../assets/pages/about/about-main/professional-skills/professional-skills-bg.jpg");
+    background-attachment: fixed;
 
     .professional-skills-container {
         max-width: 100%;

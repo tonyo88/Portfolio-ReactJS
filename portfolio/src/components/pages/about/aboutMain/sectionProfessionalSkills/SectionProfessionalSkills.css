@@ -2,7 +2,8 @@
   padding: 5em 0;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-  background: rgba(48, 103, 151, 0.8);
+  background-image: url("../../../../../assets/pages/about/about-main/professional-skills/professional-skills-bg.jpg");
+  background-attachment: fixed;
 }
 
 #section-professional-skills .professional-skills-container {
@@ -11,7 +12,7 @@
   padding: 30px;
   -webkit-transition: 1s;
   transition: 1s;
-  background-color: rgba(16, 42, 65, 0.8);
+  background-color: rgba(35, 36, 37, 0.6);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
