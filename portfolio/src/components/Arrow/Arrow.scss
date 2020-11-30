@@ -3,10 +3,7 @@ $arrow-color: #000;
 
 //Breakpoints
 $breakpoint-browser: 1280px;
-$breakpoint-middle-large: 960px;
-$breakpoint-iPad: 768px;
 $breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
 
 .arrow {
     position: absolute;
@@ -54,71 +51,22 @@ $breakpoint-phone: 414px;
     }
 }
 
-//Breakpoint Browser to Middle-Large
+//Breakpoint Browser 
 
-@media screen and (min-width: $breakpoint-middle-large) and (max-width: $breakpoint-browser) {
+@media screen and (max-width: $breakpoint-browser) {
     .arrow {
         top: 50%;
     }
 }
 
 
-//Breakpoint Middle-Large to iPad
+//Breakpoint Middle-Small 
 
-@media screen and (min-width: $breakpoint-iPad) and (max-width: 959px) {
+@media screen and (max-width: $breakpoint-middle-small) {
     .arrow {
-        top: 46%;
-    }
-}
-
-
-//Breakpoint-iPad to Middle-Small
-
-@media screen and (min-width: 415px) and (max-width: 767px) {
-
-    .arrow {
-        top: 50%;
-
         span {
-            width: 18px;
-            height: 18px;
-            margin: -10px;
-
-            &:nth-child(2) {
-                animation-delay: -0.2s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: -0.4s;
-            }
-
-
+            width: 15px;
+            height: 15px;
         }
     }
-
-}
-
-//Breakpoint Phone
-
-@media screen and (max-width: $breakpoint-phone) {
-
-    .arrow {
-        top: 50%;
-
-        span {
-            width: 10px;
-            height: 10px;
-            margin: -10px;
-
-            &:nth-child(2) {
-                animation-delay: -0.2s;
-            }
-
-            &:nth-child(3) {
-                animation-delay: -0.4s;
-            }
-
-        }
-    }
-
 }

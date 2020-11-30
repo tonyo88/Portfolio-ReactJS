@@ -1,14 +1,15 @@
 //Colors
-$text-color: rgb(46, 45, 45);
-$active-scrolled-text-color: #fff;
+$fixed-logo-color: #fff;
 
 //Breakpoints
-$breakpoint-iPad: 768px;
+$breakpoint-middle-large: 960px;
 $breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
 
-.logo-link {
-    .logo-container {
+.logo-container {
+    float: left;
+    margin-top: 8px;
+
+    .logo-link {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
@@ -27,77 +28,63 @@ $breakpoint-phone: 414px;
         .logo-name {
             grid-column: auto;
             grid-row: auto;
-            color: $text-color;
 
             .logo-name-container {
                 margin: 10px 0 0;
 
                 h5 {
-                    font-size: 1rem;
+                    font-size: 0.85rem;
                     letter-spacing: 0.1rem;
-                    font-family: 'Oswald', sans-serif;
                 }
 
                 p {
-                    font-size: 0.9rem;
-                    font-family: 'Teko', sans-serif;
+                    font-size: 0.7rem;
                 }
             }
-
         }
 
-        .active-fixed-nav-logo {
-            color: $active-scrolled-text-color;
+        .fixed-logo {
+            color: $fixed-logo-color;
         }
     }
 }
 
+//Breakpoint Middle-Large
 
-//Breakpoint iPad to Middle-Small
-
-@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-iPad) {
-
-    .logo-link {
-
-        .logo-container {
-
+@media screen and (max-width: $breakpoint-middle-large) {
+    .logo-container {
+        .logo-link {
             .logo-image {
+                width: 3.5em;
+                height: 3.5em;
                 margin-left: 25px;
 
             }
 
             .logo-name {
-                color: $active-scrolled-text-color;
+                color: $fixed-logo-color;
 
                 .logo-name-container {
-
-                    h5 {
-                        font-size: 1.2rem;
-                    }
-
-                    p {
-                        font-size: 1rem;
-                    }
+                    margin: 8px 0 0;
                 }
-
             }
         }
     }
 }
 
-//Breakpoint Middle-Small to Phone
+//Breakpoint Middle-Small
 
-@media screen and (min-width: 415px) and (max-width: 539px) {
+@media screen and (max-width: $breakpoint-middle-small) {
+    .logo-container {
+        margin-top: 4px;
 
-    .logo-link {
-
-        .logo-container {
+        .logo-link {
+            grid-template-columns: repeat(1, 1fr);
 
             .logo-image {
                 width: 3.1em;
                 height: 3.1em;
                 margin-left: 0;
-
             }
 
             .logo-name {
@@ -105,27 +92,4 @@ $breakpoint-phone: 414px;
             }
         }
     }
-}
-
-//Breakpoint Phone
-
-@media screen and (max-width: $breakpoint-phone) {
-
-    .logo-link {
-
-        .logo-container {
-
-            .logo-image {
-                width: 3.1em;
-                height: 3.1em;
-                margin-left: 0;
-
-            }
-
-            .logo-name {
-                display: none;
-            }
-        }
-    }
-
 }

@@ -1,43 +1,44 @@
 //Colors
-$main-link-color: #2e2d2d;
-$fixed-main-link-color: #fff;
-$main-link-hover-bg: $main-link-color;
-$fixed-main-link-hover-bg: #0aabc5;
-$active-main-link-color: $main-link-color;
-$active-main-link-shadow: #3d3f3f;
-$fixed-active-main-link-shadow: #9DDDE7;
+$base-color-dark: #222222;
+$base-color-white: #ffffff;
 
-//Breakpoints
+//Mixin
+
+@mixin activeLinkStyles($border-color, $box-shadow) {
+    border: 1px solid $border-color;
+    box-shadow: 3px 2px $box-shadow;
+}
+
+// //Breakpoints
 $breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+$breakpoint-middle-large: 960px;
 
 .main-list {
     display: inline-block;
+    width: 120px;
+    height: 30px;
 
     .main-link {
         text-transform: uppercase;
         letter-spacing: 0.11rem;
-        font-family: 'Anton', sans-serif;
+        font-weight: 800;
+        font-size: 0.75rem;
         position: relative;
-        width: 120px;
-        height: 40px;
         display: block;
         text-align: center;
-        line-height: 40px;
+        line-height: 30px;
         transition: 0.5s;
         box-sizing: border-box;
-        color: $main-link-color;
 
-        .main-link-hover {
+        .hover-effect {
             position: absolute;
             width: 25%;
             height: 100%;
-            background: $main-link-hover-bg;
+            background: $base-color-dark;
             z-index: -1;
             transform-origin: top;
             transform: scaleY(0);
-            transition: transform .5s;
+            transition: transform 0.5s;
 
             &:nth-child(1) {
                 left: 0;
@@ -51,7 +52,7 @@ $breakpoint-phone: 414px;
 
             &:nth-child(3) {
                 left: 50%;
-                transition-delay: 0.30s;
+                transition-delay: 0.3s;
             }
 
             &:nth-child(4) {
@@ -60,139 +61,90 @@ $breakpoint-phone: 414px;
             }
         }
 
-        .fixed-main-link-hover {
-            background: $fixed-main-link-hover-bg;
-        }
-
         &:hover {
-            color: $fixed-main-link-color;
+            color: $base-color-white;
 
-            .main-link-hover {
+            .hover-effect {
                 transform: scaleY(1);
                 transform-origin: bottom;
             }
         }
+
+        .fixed-hover-effect {
+            background: $base-color-white;
+        }
     }
 
-    .fixed-main-link-color {
-        color: $fixed-main-link-color;
+    .fixed-main-link {
+        color: $base-color-white;
+
+        &:hover {
+            color: $base-color-dark;
+        }
     }
-}
 
-.active-main-link {
-    border: 1px solid $active-main-link-color;
-    box-shadow: 3px 2px $active-main-link-shadow;
-}
+    .active-main-link {
+        @include activeLinkStyles($base-color-dark, rgba(34, 34, 34, 0.5));
+    }
 
-.fixed-active-main-link {
-    border: 1px solid $fixed-main-link-hover-bg;
-    box-shadow: 3px 2px $fixed-active-main-link-shadow;
+    .fixed-active-main-link {
+        @include activeLinkStyles($base-color-white, rgba(255, 255, 255, 0.5));
+    }
 }
 
 //Breakpoint iPad-Pro
 @media screen and (max-width: $breakpoint-iPad-Pro) {
-
     .main-list {
-
         .main-link {
-            color: $main-link-color;
-
-            .main-link-hover {
+            .hover-effect {
                 display: none;
             }
 
             &:hover {
-                color: $main-link-color;
+                color: $base-color-dark;
             }
-
         }
 
-        .fixed-main-link-color {
-            color: $fixed-main-link-color;
+        .fixed-main-link {
+            color: $base-color-white;
 
             &:hover {
-                color: $fixed-main-link-color;
+                color: $base-color-white;
             }
         }
     }
 }
 
-//Breakpoint iPad
+//Breakpoint Middle-Large
 
-@media screen and (max-width: $breakpoint-iPad) {
-
+@media screen and (max-width: $breakpoint-middle-large) {
     .main-list {
         display: block;
-        border-bottom: 1px solid $fixed-main-link-color;
-        height: 80px;
+        border-bottom: 1px solid $base-color-white;
+        width: 100%;
 
         &:nth-child(1) {
-            border-top: 1px solid $fixed-main-link-color;
+            border-top: 1px solid $base-color-white;
         }
 
         .main-link {
-            height: 100%;
-            line-height: 80px;
-            width: 100%;
-            text-align: center;
-            font-size: 1.3rem;
-            color: $fixed-main-link-color;
-
-            .main-link-hover {
-                transform-origin: left;
-                transform: scaleX(0);
-                background: $fixed-main-link-hover-bg;
-
-            }
+            font-weight: 500;
+            color: $base-color-white;
 
             &:hover {
-                color: $fixed-main-link-color;
-
-                .main-link-hover {
-                    transform: scaleX(1);
-                    transform-origin: right;
-                }
+                color: $base-color-white;
             }
         }
-    }
 
-    .active-main-link {
-        background-color: $fixed-main-link-hover-bg;
-        border: none;
-        box-shadow: none;
-    }
-}
-
-//Breakpoint Phone
-
-@media screen and (max-width: $breakpoint-phone) {
-    .main-list {
-        display: block;
-        height: 60px;
-        border-bottom: 1px solid $fixed-main-link-color;
-
-        &:nth-child(1) {
-            border-top: 1px solid $fixed-main-link-color;
-        }
-
-        .main-link {
-
-            height: 100%;
-            line-height: 60px;
-            width: 100%;
-            text-align: center;
-            font-size: 1rem;
-            color: $fixed-main-link-color;
+        .active-main-link {
+            background: $base-color-white;
+            border: none;
+            box-shadow: none;
+            color: $base-color-dark;
 
             &:hover {
-                color: $fixed-main-link-color;
+                color: $base-color-dark;
             }
         }
-    }
-
-    .active-main-link {
-        background-color: $fixed-main-link-hover-bg;
-        border: none;
-        box-shadow: none;
     }
 }

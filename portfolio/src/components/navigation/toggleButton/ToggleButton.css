@@ -35,13 +35,13 @@
           transform: rotate(-42deg) translateY(0.1px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .toggle-btn {
     display: block;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 540px) {
   .toggle-btn {
     margin: 15px 0;
   }

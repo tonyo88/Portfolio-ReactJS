@@ -1,0 +1,78 @@
+//Colors
+$text-color: #fff;
+$link-color: #808080;
+
+//Breakpoints
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-iPad-less: 767px;
+$breakpoint-middle-small-less: 539px;
+
+.footer-contact-container {
+
+    .contact-info {
+        color: $text-color;
+        margin: 0 auto;
+        max-width: 250px;
+
+        .footer-title {
+            font-size: 1rem;
+            letter-spacing: 0.08rem;
+        }
+
+        .footer-contact-link {
+            font-size: 0.9rem;
+            color: $link-color;
+            transition: 0.3s;
+
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+
+    .footer-social-container {
+        padding: 0.7em 0;
+    }
+}
+
+//Breakpoint-iPad-Pro
+
+@media screen and (max-width: $breakpoint-iPad-Pro) {
+    .footer-contact-container {
+        .contact-info {
+            .footer-contact-link {
+                &:hover {
+                    color: $link-color;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small-Less
+
+@media screen and (max-width: $breakpoint-iPad-less) {
+    .footer-contact-container {
+        .contact-info {
+            padding: 0;
+
+            .footer-title {
+                font-size: 0.8rem;
+            }
+
+            .footer-contact-link {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small-Less
+
+@media screen and (max-width: $breakpoint-middle-small-less) {
+    .footer-contact-container {
+        .contact-info {
+            padding: 0.3rem 0 0;
+        }
+    }
+}

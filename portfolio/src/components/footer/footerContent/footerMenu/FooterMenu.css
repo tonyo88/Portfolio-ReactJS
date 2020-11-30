@@ -1,13 +1,13 @@
 .footer-menu-container {
-  border-right: 1px solid #808080;
   position: relative;
+  border-right: 1px solid #fff;
 }
 
 .footer-menu-container .footer-menu {
   text-align: center;
 }
 
-@media screen and (max-width: 619px) {
+@media screen and (max-width: 539px) {
   .footer-menu-container {
     border-right: none;
   }

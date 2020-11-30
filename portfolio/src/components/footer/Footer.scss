@@ -1,107 +1,16 @@
 //Colors
-$background-color-footer: #102a41;
+$footer-bg: #222222;
 $copyright-color: #fff;
 
-//Breakpoints
-$breakpoint-iPad: 767px;
-$breakpoint-middle-small: 620px;
-$breakpoint-phone: 414px;
-
-#main-footer {
+#footer {
     width: 100%;
     height: auto;
-    background-color: $background-color-footer;
-
-
-    .footer-logo {
-        text-align: center;
-        padding: 1rem 0;
-
-        img {
-            width: 4rem;
-            height: 4rem;
-        }
-    }
-
-    .footer-grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 0 1rem;
-    }
+    background: $footer-bg;
 
     .copyright {
         text-align: center;
-        color: $copyright-color;
-        font-family: 'Oswald', sans-serif;
+        font-size: 0.8rem;
         padding: 0 0 0.5em;
-    }
-}
-
-
-
-
-// //Breakpoint-iPad to Middle-Small
-
-
-@media screen and (min-width: $breakpoint-middle-small) and (max-width:$breakpoint-iPad) {
-    #main-footer {
-
-        .footer-logo {
-            padding: 0.5rem 0;
-
-            img {
-                width: 3.5rem;
-                height: 3.5rem;
-            }
-        }
-    }
-}
-
-//Breakpoint Middle-Small to Phone
-
-
-@media screen and (min-width: 415px) and (max-width: 619px) {
-    #main-footer {
-
-        .footer-logo {
-            padding: 0.5rem 0;
-
-            img {
-                width: 3rem;
-                height: 3rem;
-            }
-        }
-
-        .footer-grid-container {
-            grid-template-columns: repeat(1, 1fr);
-            padding: 0;
-        }
-
-        .copyright {
-            font-size: 0.8em;
-        }
-    }
-}
-
-@media screen and (max-width: $breakpoint-phone) {
-    #main-footer {
-
-        .footer-logo {
-            padding: 0.5rem 0;
-
-            img {
-                width: 3rem;
-                height: 3rem;
-            }
-        }
-
-        .footer-grid-container {
-            grid-template-columns: repeat(1, 1fr);
-            padding: 0;
-        }
-
-        .copyright {
-            font-size: 0.8em;
-        }
+        color: $copyright-color;
     }
 }

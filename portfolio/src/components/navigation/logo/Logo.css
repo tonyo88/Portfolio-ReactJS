@@ -1,11 +1,16 @@
-.logo-link .logo-container {
+.logo-container {
+  float: left;
+  margin-top: 8px;
+}
+
+.logo-container .logo-link {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
 
-.logo-link .logo-container .logo-image {
+.logo-container .logo-link .logo-image {
   grid-column: auto;
   grid-row: auto;
   width: 4em;
@@ -13,68 +18,60 @@
   margin-left: 20px;
 }
 
-.logo-link .logo-container .logo-image img {
+.logo-container .logo-link .logo-image img {
   width: 100%;
 }
 
-.logo-link .logo-container .logo-name {
+.logo-container .logo-link .logo-name {
   grid-column: auto;
   grid-row: auto;
-  color: #2e2d2d;
 }
 
-.logo-link .logo-container .logo-name .logo-name-container {
+.logo-container .logo-link .logo-name .logo-name-container {
   margin: 10px 0 0;
 }
 
-.logo-link .logo-container .logo-name .logo-name-container h5 {
-  font-size: 1rem;
+.logo-container .logo-link .logo-name .logo-name-container h5 {
+  font-size: 0.85rem;
   letter-spacing: 0.1rem;
-  font-family: 'Oswald', sans-serif;
 }
 
-.logo-link .logo-container .logo-name .logo-name-container p {
-  font-size: 0.9rem;
-  font-family: 'Teko', sans-serif;
+.logo-container .logo-link .logo-name .logo-name-container p {
+  font-size: 0.7rem;
 }
 
-.logo-link .logo-container .active-fixed-nav-logo {
+.logo-container .logo-link .fixed-logo {
   color: #fff;
 }
 
-@media screen and (min-width: 540px) and (max-width: 768px) {
-  .logo-link .logo-container .logo-image {
+@media screen and (max-width: 960px) {
+  .logo-container .logo-link .logo-image {
+    width: 3.5em;
+    height: 3.5em;
     margin-left: 25px;
   }
-  .logo-link .logo-container .logo-name {
+  .logo-container .logo-link .logo-name {
     color: #fff;
   }
-  .logo-link .logo-container .logo-name .logo-name-container h5 {
-    font-size: 1.2rem;
-  }
-  .logo-link .logo-container .logo-name .logo-name-container p {
-    font-size: 1rem;
+  .logo-container .logo-link .logo-name .logo-name-container {
+    margin: 8px 0 0;
   }
 }
 
-@media screen and (min-width: 415px) and (max-width: 539px) {
-  .logo-link .logo-container .logo-image {
+@media screen and (max-width: 540px) {
+  .logo-container {
+    margin-top: 4px;
+  }
+  .logo-container .logo-link {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .logo-container .logo-link .logo-image {
     width: 3.1em;
     height: 3.1em;
     margin-left: 0;
   }
-  .logo-link .logo-container .logo-name {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .logo-link .logo-container .logo-image {
-    width: 3.1em;
-    height: 3.1em;
-    margin-left: 0;
-  }
-  .logo-link .logo-container .logo-name {
+  .logo-container .logo-link .logo-name {
     display: none;
   }
 }

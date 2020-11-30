@@ -1,49 +1,26 @@
 //Breakpoints
 $breakpoint-middle-large: 960px;
-$breakpoint-iPad: 768px;
 $breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
     padding: 0 0 1.5em;
     letter-spacing: 1px;
 }
 
+//Breakpoint Middle-Large
 
-//Breakpoint iPad-Pro to Middle-Large
-
-@media screen and (min-width: $breakpoint-middle-large) and (max-width: 1023px) {
+@media screen and (max-width: $breakpoint-middle-large) {
     .section-title {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
 }
 
-//Breakpoint Middle-Large to iPad
+//Breakpoint Middle-Small
 
-@media screen and (min-width: $breakpoint-iPad) and (max-width: 959px) {
-    .section-title {
-        font-size: 2.2rem;
-        padding: 0 0 1.3em;
-    }
-}
-
-//Breakpoint Middle-Large to iPad
-
-@media screen and (min-width: 415px) and (max-width: 767px) {
+@media screen and (max-width: $breakpoint-middle-small) {
     .section-title {
         font-size: 2rem;
-        padding: 0 0 1.2em;
-    }
-}
-
-//Breakpoint-phone
-
-@media screen and (max-width: $breakpoint-phone) {
-    .section-title {
-        font-size: 1.8rem;
-        padding: 0 0 1.5em;
     }
 }

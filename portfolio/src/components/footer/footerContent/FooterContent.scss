@@ -1,0 +1,14 @@
+//Breakpoints
+$breakpoint-middle-small-less: 539px;
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0 1rem;
+}
+
+@media screen and (max-width: $breakpoint-middle-small-less) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

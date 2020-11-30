@@ -1,95 +1,40 @@
 //Colors
-$button-color: #fff;
-$background-color-nav: rgba(255, 255, 255, 0.4);
-$active-fixed-nav-background: #102a41;
-$active-fixed-nav-border-bottom-color: #306797;
+$nav-bg: rgba(255, 255, 255, 0.4);
+$fixed-nav-bg: #222222;
+$fixed-nav-border: #e9e9e9;
 
 //Breakpoints
-$breakpoint-iPad-Pro: 1024px;
-$breakpoint-iPad: 768px;
+$breakpoint-middle-large: 960px;
 $breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
+
 
 .navigation {
     width: 100%;
     height: 5em;
-    background-color: $background-color-nav;
+    background: $nav-bg;
     position: fixed;
     transition: 0.35s;
     z-index: 1000;
-
-    .logo {
-        float: left;
-        margin-top: 8px;
-    }
-
 }
 
 .active-fixed-nav {
-    border-bottom: 2px solid $active-fixed-nav-border-bottom-color;
-    background-color: $active-fixed-nav-background;
+    border-bottom: 2px solid $fixed-nav-border;
+    background: $fixed-nav-bg;
     position: fixed;
 }
 
-
 //Breakpoint iPad to Middle-Small
 
-@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-iPad) {
-
+@media screen and (max-width: $breakpoint-middle-large) {
     .navigation {
-        background-color: $active-fixed-nav-background;
+        background: $fixed-nav-bg;
         border-bottom: none;
-
-        .toggle-btn {
-            display: block;
-        }
-
-        .logo {
-            margin-top: 8px;
-        }
-
     }
-
 }
 
-//Breakpoint Middle-Small to Phone
-
-@media screen and (min-width: 415px) and (max-width: 539px) {
-
+//Breakpoint Middle-Small 
+@media screen and (max-width: $breakpoint-middle-small) {
     .navigation {
-        background-color: $active-fixed-nav-background;
-        border-bottom: none;
         height: 3.5em;
-
-        .toggle-btn {
-            margin: 15px 0;
-        }
-
-        .logo {
-            margin-top: 4px;
-        }
-
     }
-
-}
-
-//Breakpoint Phone
-
-@media screen and (max-width: $breakpoint-phone) {
-
-    .navigation {
-        background-color: $active-fixed-nav-background;
-        border-bottom: none;
-        height: 3.5em;
-
-        .toggle-btn {
-            margin: 15px 0;
-        }
-
-        .logo {
-            margin-top: 4px;
-        }
-
-    }
-
 }

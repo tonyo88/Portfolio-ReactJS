@@ -1,58 +1,57 @@
-//Colors
-$button-color: #fff;
+    //Colors
+    $button-color: #fff;
 
-//Breakpoints
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+    //Breakpoints
+    $breakpoint-middle-large: 960px;
+    $breakpoint-middle-small: 540px;
 
-.toggle-btn {
-    display: none;
-    float: right;
-    width: 25px;
-    margin: 25px 0;
-    cursor: pointer;
-    z-index: 5;
-
-    .line {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: $button-color;
-        margin: 5px 0;
-        transition: all 300ms ease-in-out;
-
-        &.active-toggle-btn:nth-child(1) {
-            transform-origin: left;
-            transform: rotate(42deg) translateY(0.1px);
-        }
-
-        &.active-toggle-btn:nth-child(2) {
-            opacity: 0;
-        }
-
-        &.active-toggle-btn:nth-child(3) {
-            transform-origin: left;
-            transform: rotate(-42deg) translateY(0.1px);
-        }
-    }
-}
-
-
-//Breakpoint-iPad
-
-@media screen and (max-width: $breakpoint-iPad) {
-    .toggle-btn {
-        display: block;
-    }
-
-}
-
-//Breakpoint-phone
-
-@media screen and (max-width: $breakpoint-phone) {
 
     .toggle-btn {
-        margin: 15px 0;
+        display: none;
+        float: right;
+        width: 25px;
+        margin: 25px 0;
+        cursor: pointer;
+        z-index: 5;
+
+        .line {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $button-color;
+            margin: 5px 0;
+            transition: all 300ms ease-in-out;
+
+            &.active-toggle-btn:nth-child(1) {
+                transform-origin: left;
+                transform: rotate(42deg) translateY(0.1px);
+            }
+
+            &.active-toggle-btn:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.active-toggle-btn:nth-child(3) {
+                transform-origin: left;
+                transform: rotate(-42deg) translateY(0.1px);
+            }
+        }
     }
 
-}
+
+    //Breakpoint Middle-Large
+
+    @media screen and (max-width: $breakpoint-middle-large) {
+        .toggle-btn {
+            display: block;
+        }
+    }
+
+    //Breakpoint Middle-Small
+
+    @media screen and (max-width: $breakpoint-middle-small) {
+
+        .toggle-btn {
+            margin: 15px 0;
+        }
+    }

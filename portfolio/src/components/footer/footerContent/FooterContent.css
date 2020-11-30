@@ -1,0 +1,15 @@
+.footer-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 0 0 1rem;
+}
+
+@media screen and (max-width: 539px) {
+  .footer-content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=FooterContent.css.map */
