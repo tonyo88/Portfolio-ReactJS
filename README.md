@@ -19,7 +19,7 @@ Technologies
 * Asynchronous Operations
 * Webpack
 * HTML5 - semantic
-* CSS3 - SASS, Grid Layout, SVG
+* CSS3 - SCSS, Grid Layout, SVG
 * UI/UX Architecture
 * UI/UX Animations
 * Responsive Design
@@ -29,6 +29,8 @@ Technologies
 How to run it?
 ---
 ### Installation
+
+https://github.com/tonyo88/Portfolio-ReactJS.git
 
 Portfolio project requires [Node.js](https://nodejs.org/) v12.x to run.
 
@@ -47,8 +49,6 @@ $ cd email-server
 $ npm install
 $ npm run dev
 ```
-https://github.com/tonyo88/Portfolio-ReactJS.git
-
 Overview
 ---
 ![portfolio-react-home](https://user-images.githubusercontent.com/45981967/80548113-ee8f5480-896e-11ea-9924-8e8bee9f7a1a.png)
