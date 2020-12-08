@@ -1,0 +1,41 @@
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-small: 540px;
+$breakpoint-phone: 414px;
+
+#home-main {
+    .spacing {
+        margin: 8em 0 0 0;
+    }
+}
+
+
+//Breakpoint Browser to Middle-Large
+
+@media screen and (max-width: $breakpoint-browser) {
+    #home-main {
+        .spacing {
+            margin: 4em 0 0 0;
+        }
+    }
+}
+
+//Breakpoint Middle-Small to Phone
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    #home-main {
+        .spacing {
+            margin: 3em 0 0 0;
+        }
+    }
+}
+
+//Breakpoint Phone
+
+@media screen and (max-width: $breakpoint-phone) {
+    #home-main {
+        .spacing {
+            margin: 2em 0 0 0;
+        }
+    }
+}

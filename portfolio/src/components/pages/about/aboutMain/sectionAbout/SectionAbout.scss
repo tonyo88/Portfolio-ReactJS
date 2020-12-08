@@ -1,8 +1,15 @@
+//Colors
+$text-color: #262626;
+$border-color: #0aabc5;
+$resume-btn-bg-color: #119ed6;
+$resume-btn-color: #fff;
+$resume-btn-hover-bg-color: #096489;
+
 //Breakpoints
 $breakpoint-browser: 1280px;
-$breakpoint-middle-large: 959px;
-$breakpoint-iPad: 768px;
-$breakpoint-phone: 414px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad-less: 767px;
+$breakpoin-middle-small: 540px;
 
 #section-about {
     width: 100%;
@@ -12,6 +19,64 @@ $breakpoint-phone: 414px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
+
+        .about-info-container {
+
+            .info-container {
+                color: $text-color;
+                text-align: justify;
+                padding: 4em;
+
+                .about-title {
+                    font-size: 2.3rem;
+                    display: inline-block;
+                    border-bottom: 2px solid $border-color;
+                    letter-spacing: 1px;
+                    margin: 0 0 0.5em;
+                }
+
+                .about-info {
+                    font-size: 1.1rem;
+                }
+
+                .resume-btn {
+                    padding: 0.5em 1.5em;
+                    color: $resume-btn-color;
+                    background: $resume-btn-bg-color;
+                    border-radius: 10px;
+                    margin: 0.8em 0 0;
+                    transition: 0.3s;
+                    font-size: 0.9rem;
+                    display: inline-block;
+
+                    .spinner {
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                    }
+
+                    .download {
+                        float: right;
+                    }
+
+                    &:hover {
+                        background: $resume-btn-hover-bg-color;
+                    }
+                }
+            }
+        }
+
+        .about-image-container {
+            position: relative;
+
+            .about-image {
+                position: absolute;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -21,6 +86,26 @@ $breakpoint-phone: 414px;
     #section-about {
         .about-section-container {
             padding: 3em 0;
+
+            .about-info-container {
+                .info-container {
+                    padding: 3em;
+
+                    .about-title {
+                        font-size: 2em;
+                    }
+
+                    .about-info {
+                        font-size: 1rem;
+                    }
+
+                    .resume-btn {
+                        &:hover {
+                            background: $resume-btn-bg-color;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -28,32 +113,71 @@ $breakpoint-phone: 414px;
 
 //Breakpoint Middle-Large to iPad
 
-@media screen and (min-width: $breakpoint-iPad) and (max-width: $breakpoint-middle-large) {
+@media screen and (max-width: $breakpoint-middle-large) {
     #section-about {
         .about-section-container {
             padding: 2em 0;
+
+            .about-info-container {
+                .info-container {
+                    padding: 1em;
+
+                    .about-title {
+                        font-size: 1.8em;
+                    }
+
+                    .about-info {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
         }
     }
 }
 
-// //Breakpoint iPad
+//Breakpoint iPad-Less
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $breakpoint-iPad-less) {
     #section-about {
         .about-section-container {
             grid-template-columns: repeat(1, 1fr);
+
+            .about-image-container {
+                height: 400px;
+
+                .about-image {
+                    max-width: 450px;
+                }
+            }
         }
     }
 }
 
 
-// //Breakpoint Phone
+//Breakpoint Middle-Small
 
-@media screen and (max-width: $breakpoint-phone) {
+@media screen and (max-width: $breakpoin-middle-small) {
     #section-about {
 
         .about-section-container {
-            padding: 1em 0;
+            padding: 1em 0 0;
+
+            .about-info-container {
+                .info-container {
+                    .resume-btn {
+                        padding: 0.4em 1.4em;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .about-image-container {
+                height: 300px;
+
+                .about-image {
+                    max-width: 350px;
+                }
+            }
         }
     }
 }

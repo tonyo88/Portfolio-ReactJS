@@ -6,10 +6,98 @@
   padding: 0 0 1rem;
 }
 
+.footer-content .footer-menu-container {
+  position: relative;
+  border-right: 1px solid #fff;
+}
+
+.footer-content .footer-menu-container .footer-menu {
+  text-align: center;
+}
+
+.footer-content .footer-menu-container .footer-menu .footer-list {
+  margin: 0.5em 0 0;
+}
+
+.footer-content .footer-menu-container .footer-menu .footer-list .footer-link {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-content .footer-menu-container .footer-menu .footer-list .footer-link:hover {
+  color: #808080;
+}
+
+.footer-content .footer-contact-container .contact-info {
+  color: #fff;
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+.footer-content .footer-contact-container .contact-info .footer-title {
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+}
+
+.footer-content .footer-contact-container .contact-info .footer-contact-link {
+  font-size: 0.9rem;
+  color: #808080;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-content .footer-contact-container .contact-info .footer-contact-link:hover {
+  color: #fff;
+}
+
+.footer-content .footer-contact-container .footer-social-container {
+  padding: 0.7em 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-content .footer-menu-container .footer-menu .footer-list .footer-link:hover {
+    color: #fff;
+  }
+  .footer-content .footer-contact-container .contact-info .footer-contact-link:hover {
+    color: #808080;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-content .footer-menu-container .footer-menu .footer-list {
+    margin: 0.3em 0 0;
+  }
+  .footer-content .footer-menu-container .footer-menu .footer-list .footer-link {
+    font-size: 0.8rem;
+  }
+  .footer-content .footer-contact-container .contact-info {
+    padding: 0;
+  }
+  .footer-content .footer-contact-container .contact-info .footer-title {
+    font-size: 0.8rem;
+  }
+  .footer-content .footer-contact-container .contact-info .footer-contact-link {
+    font-size: 0.7rem;
+  }
+}
+
 @media screen and (max-width: 539px) {
   .footer-content {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-content .footer-menu-container {
+    border-right: none;
+  }
+  .footer-content .footer-menu-container .footer-menu .footer-list {
+    margin: 0 0.4rem 0;
+    display: inline-block;
+  }
+  .footer-content .footer-contact-container .contact-info {
+    padding: 0.3rem 0 0;
   }
 }
 /*# sourceMappingURL=FooterContent.css.map */

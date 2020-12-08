@@ -1,55 +1,55 @@
-import "./AboutInfo.css";
 import React from "react";
 
 import resume from "../../../../../../assets/pages/about/about-main/about-section/resume/Anthony-Vanov-Resume.pdf";
 import spinner from "../../../../../../assets/pages/contact/3.gif";
 
-class AboutInfo extends React.Component{
+class AboutInfo extends React.Component {
+  state = {
+    loading: false,
+  };
 
-    state ={
-        loading: false
-      }
-   
-      downloadData = () =>{
-        this.setState({loading: true});
-        setTimeout(() =>{
-         this.setState({loading: false});
-        }, 1000)
-      };
+  downloadData = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000);
+  };
 
-   render() {
-
+  render() {
     const { loading } = this.state;
 
-    return(
-        <div className="about-info-container">
+    return (
+      <div className="about-info-container flex-middle">
         <div className="info-container">
-            <h1 className="about-title">Who am I?</h1>
+          <h1 className="about-title">Who am I?</h1>
 
-            <p>
-              Motivated, quick learning, energetic person with
-              ambition to work and learn from the best in
-              field. Person with great interest in IT world with
-              bright vision in future and motivated to cover
-              different targets.
-            </p>
-            <p>
-              To work for a growing up company that will
-              provide me with the possibility of growing within
-              it and will allow the development my abilities
-              and skills in favor of the company’s mission
-              and my environment.
-            </p>
+          <p className="about-info">
+            Person with 2+ years of IT experience which includes 1+ years of
+            experience as a React Developer with hands-on experience in
+            identifying web-based user interactions along with designing &
+            implementing highly-responsive user interface components by
+            deploying React concepts. Proficient in translating designs &
+            wireframes into high-quality code, and writing application interface
+            code via JavaScript and ReactJS workflows. Adept at monitoring and
+            maintaining frontend performance and troubleshooting & debugging the
+            same to bolster overall performance.
+          </p>
 
-            <a href={resume} download="" className="resume-btn" onClick={this.downloadData} disabled={loading}>
-                {loading && <img className="spinner" src={spinner} alt="3.gif" />}
-                {loading && <p className="download">Download</p>}
-                {!loading && <p>Resume</p>}
-            </a>
+          <a
+            href={resume}
+            download=""
+            className="resume-btn"
+            onClick={this.downloadData}
+            disabled={loading}
+          >
+            {loading && <img className="spinner" src={spinner} alt="3.gif" />}
+            {loading && <p className="download">Download</p>}
+            {!loading && <p>Resume</p>}
+          </a>
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default AboutInfo;

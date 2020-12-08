@@ -1,0 +1,90 @@
+.section-container {
+  width: 100%;
+  padding: 3em 0;
+}
+
+.section-container .info-image-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.section-container .info-image-container .info-container .info-title {
+  text-align: center;
+  color: #262626;
+}
+
+.section-container .info-image-container .info-container .info-title .title {
+  display: inline-block;
+  font-size: 2.2rem;
+  border-bottom: 2px solid #0aabc5;
+  letter-spacing: 1px;
+}
+
+.section-container .info-image-container .info-container .info-title .info {
+  font-size: 1.1rem;
+  padding: 0.8em 0 0;
+}
+
+.section-container .info-image-container .image-container {
+  position: relative;
+}
+
+.section-container .info-image-container .image-container .image-section {
+  width: 100%;
+}
+
+.responsive-section {
+  background: #fff;
+}
+
+.video-section .info-image-container .image-container .typing {
+  display: none;
+}
+
+.video-section .info-image-container .image-container .video {
+  position: absolute;
+  max-width: 441px;
+  left: 67px;
+  bottom: 65px;
+}
+
+@media screen and (max-width: 1280px) {
+  .video-section .info-image-container .image-container .image-section {
+    display: none;
+  }
+  .video-section .info-image-container .image-container .typing {
+    width: 100%;
+    display: block;
+  }
+  .video-section .info-image-container .image-container .video {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .section-container .info-image-container .info-container .info-title .title {
+    font-size: 2rem;
+  }
+  .section-container .info-image-container .info-container .info-title .info {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .section-container {
+    padding: 2em 0;
+  }
+  .section-container .info-image-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .section-container .info-image-container .info-container {
+    padding: 1em 0;
+  }
+  .section-container .info-image-container .info-container .info-title .title {
+    font-size: 1.7rem;
+  }
+}
+/*# sourceMappingURL=SectionContainer.css.map */

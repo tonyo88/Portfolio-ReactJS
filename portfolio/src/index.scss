@@ -51,6 +51,12 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.flex-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: $breakpoint-browser) {
     .wrapper {
         max-width: 90%;

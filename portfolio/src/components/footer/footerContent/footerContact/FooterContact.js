@@ -1,4 +1,3 @@
-import "./FooterContact.css";
 import React from "react";
 import SocialMenu from "../../../socialMenu/SocialMenu";
 

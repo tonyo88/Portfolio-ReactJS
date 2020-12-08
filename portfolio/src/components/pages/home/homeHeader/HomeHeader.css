@@ -6,17 +6,11 @@
 }
 
 #home-header .home-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-family: 'Anton', sans-serif;
   color: #f2f4f4;
   text-transform: uppercase;
   width: 10em;
   height: 3.5em;
   line-height: 3.5em;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -26,7 +20,7 @@
 
 #home-header .home-btn:hover {
   color: #262626;
-  background-color: #f2f4f4;
+  background: #f2f4f4;
 }
 
 #home-header .home-btn::before {
@@ -98,9 +92,8 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   #home-header {
-    width: 100%;
     height: 80vh;
   }
   #home-header .home-particle {
@@ -111,54 +104,21 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  #home-header {
-    width: 100%;
-    height: 80vh;
-  }
-  #home-header .home-particle {
-    display: none;
-  }
+@media screen and (max-width: 960px) {
   #home-header .home-btn {
-    top: 40%;
-    width: 10em;
+    width: 9em;
     height: 3.3em;
     line-height: 3.3em;
     font-size: 0.9rem;
   }
 }
 
-@media screen and (min-width: 415px) and (max-width: 767px) {
-  #home-header {
-    width: 100%;
-    height: 80vh;
-  }
-  #home-header .home-particle {
-    display: none;
-  }
+@media screen and (max-width: 540px) {
   #home-header .home-btn {
-    top: 40%;
-    width: 9em;
-    height: 3.1em;
-    line-height: 3.1em;
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  #home-header {
-    width: 100%;
-    height: 80vh;
-  }
-  #home-header .home-particle {
-    display: none;
-  }
-  #home-header .home-btn {
-    top: 40%;
     width: 8em;
-    height: 3.0em;
-    line-height: 3.0em;
-    font-size: 0.7rem;
+    height: 3em;
+    line-height: 3em;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=HomeHeader.css.map */

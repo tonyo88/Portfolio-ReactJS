@@ -1,0 +1,133 @@
+//Colors
+$border-color: #0aabc5;
+$text-color: #262626;
+$responsive-section-bg: #fff;
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-middle-small: 540px;
+
+.section-container {
+    width: 100%;
+    padding: 3em 0;
+
+    .info-image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .info-container {
+            .info-title {
+                text-align: center;
+                color: $text-color;
+
+                .title {
+                    display: inline-block;
+                    font-size: 2.2rem;
+                    border-bottom: 2px solid $border-color;
+                    letter-spacing: 1px;
+                }
+
+                .info {
+                    font-size: 1.1rem;
+                    padding: 0.8em 0 0;
+                }
+            }
+        }
+
+        .image-container {
+            position: relative;
+
+            .image-section {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.responsive-section {
+    background: $responsive-section-bg;
+}
+
+.video-section {
+    .info-image-container {
+        .image-container {
+            .typing {
+                display: none;
+            }
+
+            .video {
+                position: absolute;
+                max-width: 441px;
+                left: 67px;
+                bottom: 65px;
+            }
+        }
+    }
+}
+
+//Breakpoint Browser
+
+@media screen and (max-width: $breakpoint-browser) {
+    .video-section {
+        .info-image-container {
+            .image-container {
+                .image-section {
+                    display: none;
+                }
+
+                .typing {
+                    width: 100%;
+                    display: block;
+                }
+
+                .video {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large
+
+@media screen and (max-width: $breakpoint-middle-large) {
+    .section-container {
+        .info-image-container {
+            .info-container {
+                .info-title {
+                    .title {
+                        font-size: 2rem;
+                    }
+
+                    .info {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoint-middle-small) {
+
+    .section-container {
+        padding: 2em 0;
+
+        .info-image-container {
+            grid-template-columns: repeat(1, 1fr);
+
+            .info-container {
+                padding: 1em 0;
+
+                .info-title {
+                    .title {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

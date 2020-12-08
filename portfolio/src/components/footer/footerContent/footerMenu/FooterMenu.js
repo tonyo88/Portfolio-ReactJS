@@ -1,4 +1,3 @@
-import "./FooterMenu.css";
 import React from "react";
 import FooterMenuLink from "./footerMenuLink/FooterMenuLink";
 

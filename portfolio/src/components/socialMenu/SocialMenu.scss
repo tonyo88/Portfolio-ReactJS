@@ -1,3 +1,85 @@
+//Colors
+$link-social-color: #222222;
+$social-bg: #fff;
+
+
+@mixin hover-social() {
+    background-image: linear-gradient(to left,
+            transparent,
+            transparent 50%,
+            #474747 50%,
+            #868686);
+    background-position: 0 0;
+}
+
+//Breakpoints
+$breakpoint-iPad-Pro: 1024px;
+$breakpoint-middle-large: 960px;
+
 .social-menu {
     text-align: center;
+
+    .social-list {
+        display: inline-block;
+        margin-right: 10px;
+
+        .social-link {
+            display: block;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            width: 1.8em;
+            height: 1.8em;
+            background-color: $social-bg;
+            z-index: 1;
+            background-position: 100% 0;
+            background-size: 200% 100%;
+            transition: all 0.25s ease-in;
+            color: $link-social-color;
+
+            &:hover {
+                @include hover-social();
+                color: $social-bg;
+            }
+
+            i {
+                line-height: 1.8em;
+                display: block;
+
+            }
+        }
+    }
+}
+
+//Breakpoint iPad-Pro
+
+@media screen and (max-width: $breakpoint-iPad-Pro) {
+    .social-menu {
+        .social-list {
+            .social-link {
+                &:hover {
+                    background-position: 100% 0;
+                    color: $link-social-color;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large
+
+@media screen and (max-width: $breakpoint-middle-large) {
+    .social-menu {
+        .social-list {
+
+            .social-link {
+                font-size: 1rem;
+                width: 1.7em;
+                height: 1.7em;
+
+                i {
+                    line-height: 1.7em;
+                }
+            }
+        }
+    }
 }
