@@ -1,7 +1,15 @@
+//Colors
+$certificate-bg: #fff;
+$certificate-shadow: rgba(0, 0, 0, 0.6);
+$btn-color: #fff;
+$btn-bg: #102a41;
+$btn-hover-bg: #0aabc5;
+
 //Breakpoints
-$breakpoint-iPad: 768px;
-$breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad-less: 767px;
+$breakpoint-middle-small-less: 539px;
 
 #section-certificates {
     padding: 3em 0;
@@ -12,44 +20,161 @@ $breakpoint-phone: 414px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 50px;
+
+        .certificate-box {
+            width: 100%;
+            background: $certificate-bg;
+            border-radius: 18px;
+            transition: 0.3s ease;
+
+            .certificate-image {
+                height: 200px;
+                border-radius: 18px 18px 0 0;
+            }
+
+            .certificate-info-container {
+                padding: 1em 0.5em;
+                height: 200px;
+                text-align: center;
+
+                .date {
+                    display: block;
+                    font-size: 0.85rem;
+                }
+
+                .certificate-title {
+                    font-size: 1.6rem;
+                }
+
+                .certificate-discipline {
+                    font-size: 1rem;
+                }
+
+                .certificate-info {
+                    padding-top: 1em;
+                    font-size: 0.9rem;
+                }
+            }
+
+            .certificate-btn {
+                text-align: center;
+                height: 2.4em;
+                line-height: 2.4em;
+                background: $btn-bg;
+                color: $btn-color;
+                border-radius: 0 0 18px 18px;
+                font-size: 0.9rem;
+                transition: 0.3s ease;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 5px 5px 15px $certificate-shadow;
+
+                .certificate-btn {
+                    background: $btn-hover-bg;
+                }
+            }
+        }
     }
 }
 
-//Breakpoint-iPad to Middle-Small
-@media screen and (min-width: $breakpoint-middle-small) and (max-width: 767px) {
+//Breakpoint Browser 
+
+@media screen and (max-width: $breakpoint-browser) {
+    #section-certificates {
+        .certificates-container {
+            .certificate-box {
+                max-width: 250px;
+                margin: 0 auto;
+
+                .certificate-image {
+                    height: 180px;
+                }
+
+                .certificate-info-container {
+                    height: 180px;
+                    padding: 0.5em;
+                }
+
+                &:hover {
+                    transform: none;
+                    box-shadow: none;
+
+                    .certificate-btn {
+                        background: #102a41;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large
+
+@media screen and (max-width: $breakpoint-middle-large) {
     #section-certificates {
         padding: 2em 0;
 
         .certificates-container {
-            max-width: 900px;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
         }
     }
 }
 
-//Breakpoint-iPad to Middle-Small
-@media screen and (min-width: 415px) and (max-width: 539px) {
-    #section-certificates {
-        padding: 2em 0;
 
+//Breakpoint iPad-Less 
+
+@media screen and (max-width: $breakpoint-iPad-less) {
+    #section-certificates {
         .certificates-container {
-            max-width: 900px;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 20px;
+            .certificate-box {
+                max-width: 200px;
+
+                .certificate-image {
+                    height: 150px;
+                }
+
+                .certificate-info-container {
+                    height: 150px;
+                    padding: 0.3em;
+
+                    .date {
+                        font-size: 0.7rem;
+                    }
+
+                    .certificate-title {
+                        font-size: 1.3rem;
+                    }
+
+                    .certificate-discipline {
+                        font-size: 0.8rem;
+                    }
+
+                    .certificate-info {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .certificate-btn {
+                    height: 2.2em;
+                    line-height: 2.2em;
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
 }
 
-//Breakpoint Phone
-@media screen and (max-width: $breakpoint-phone) {
+//Breakpoint Middle-Small-Less
+
+@media screen and (max-width: $breakpoint-middle-small-less) {
     #section-certificates {
-        padding: 3em 0;
+        padding: 1em 0;
 
         .certificates-container {
-            padding: 0 3em;
             grid-template-columns: repeat(1, 1fr);
-            grid-gap: 1em;
+            grid-gap: 30px;
         }
     }
 }

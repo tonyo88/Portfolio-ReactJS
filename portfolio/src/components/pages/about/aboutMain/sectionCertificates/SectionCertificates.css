@@ -12,39 +12,137 @@
   grid-gap: 50px;
 }
 
-@media screen and (min-width: 540px) and (max-width: 767px) {
+#section-certificates .certificates-container .certificate-box {
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-image {
+  height: 200px;
+  border-radius: 18px 18px 0 0;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-info-container {
+  padding: 1em 0.5em;
+  height: 200px;
+  text-align: center;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-info-container .date {
+  display: block;
+  font-size: 0.85rem;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-title {
+  font-size: 1.6rem;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-discipline {
+  font-size: 1rem;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-info {
+  padding-top: 1em;
+  font-size: 0.9rem;
+}
+
+#section-certificates .certificates-container .certificate-box .certificate-btn {
+  text-align: center;
+  height: 2.4em;
+  line-height: 2.4em;
+  background: #102a41;
+  color: #fff;
+  border-radius: 0 0 18px 18px;
+  font-size: 0.9rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#section-certificates .certificates-container .certificate-box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+#section-certificates .certificates-container .certificate-box:hover .certificate-btn {
+  background: #0aabc5;
+}
+
+@media screen and (max-width: 1280px) {
+  #section-certificates .certificates-container .certificate-box {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-image {
+    height: 180px;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container {
+    height: 180px;
+    padding: 0.5em;
+  }
+  #section-certificates .certificates-container .certificate-box:hover {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #section-certificates .certificates-container .certificate-box:hover .certificate-btn {
+    background: #102a41;
+  }
+}
+
+@media screen and (max-width: 960px) {
   #section-certificates {
     padding: 2em 0;
   }
   #section-certificates .certificates-container {
-    max-width: 900px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
   }
 }
 
-@media screen and (min-width: 415px) and (max-width: 539px) {
-  #section-certificates {
-    padding: 2em 0;
+@media screen and (max-width: 767px) {
+  #section-certificates .certificates-container .certificate-box {
+    max-width: 200px;
   }
-  #section-certificates .certificates-container {
-    max-width: 900px;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+  #section-certificates .certificates-container .certificate-box .certificate-image {
+    height: 150px;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container {
+    height: 150px;
+    padding: 0.3em;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container .date {
+    font-size: 0.7rem;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-title {
+    font-size: 1.3rem;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-discipline {
+    font-size: 0.8rem;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-info-container .certificate-info {
+    font-size: 0.7rem;
+  }
+  #section-certificates .certificates-container .certificate-box .certificate-btn {
+    height: 2.2em;
+    line-height: 2.2em;
+    font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 539px) {
   #section-certificates {
-    padding: 3em 0;
+    padding: 1em 0;
   }
   #section-certificates .certificates-container {
-    padding: 0 3em;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1em;
+    grid-gap: 30px;
   }
 }
 /*# sourceMappingURL=SectionCertificates.css.map */

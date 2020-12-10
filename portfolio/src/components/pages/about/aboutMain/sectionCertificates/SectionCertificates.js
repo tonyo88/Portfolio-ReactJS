@@ -1,5 +1,4 @@
 import "./SectionCertificates.css";
-
 import React from "react";
 import Certificate from "./certificate/Certificate";
 import SectionTitle from "../../../sectionTitle/SectionTitle";
@@ -56,7 +55,7 @@ class SectionCertificates extends React.Component {
     return (
       <section id="section-certificates">
         <div className="wrapper">
-          <SectionTitle titleName={"Certificates"} titleColor={"#262626"} />
+          <SectionTitle titleName={"Certificates"} />
           <div className="certificates-container">
             {generateCertificates(certificates)}
           </div>
