@@ -3,7 +3,6 @@ import "./SectionPersonalSkills.css";
 import React from "react";
 import SectionTitle from "../../../sectionTitle/SectionTitle";
 import PersonalSkill from "./personalSkill/PersonalSkill";
-// import ScrollAnimation from 'react-animate-on-scroll';
 
 class SectionPersonalSkills extends React.Component {
   render() {
