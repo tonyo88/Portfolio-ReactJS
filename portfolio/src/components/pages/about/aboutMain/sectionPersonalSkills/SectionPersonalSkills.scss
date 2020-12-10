@@ -1,9 +1,28 @@
+//Colors
+$text-color: #a5a5a5;
+$hover-text-color: #fff;
+$bg-personal-skill-card: linear-gradient(0deg, #111111, #8b8b91, #000103);
+$half-bg-personal-skill-card: rgba(255, 255, 255, 0.2);
+$personal-skill-shadow: 0 15px 35px rgba(43, 43, 43, 0.8);
+$bg-personal-skill-percent: #272727;
+$circle-outer-color: $text-color;
+
+//Mixins
+
+@function calc-percent($size) {
+    @return(440 - (440 * $size) / 100);
+}
+
+@mixin progress-personal-skills($progress-size) {
+    animation: progress-personal-skill 1s ease-in-out forwards;
+    stroke: $hover-text-color;
+    stroke-dashoffset: calc-percent($progress-size);
+}
+
 //Breakpoints
 $breakpoint-browser: 1280px;
 $breakpoint-middle-large: 960px;
-$breakpoint-iPad: 768px;
-$breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
+$breakpoint-middle-small-less: 539px;
 
 #personal-skills {
     width: 100%;
@@ -14,54 +33,223 @@ $breakpoint-phone: 414px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
-    }
-}
 
-//Breakpoint iPad-Pro
+        .personal-skill-card {
+            position: relative;
+            max-width: 240px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            transition: 0.5s;
+            background: $bg-personal-skill-card;
+            color: $text-color;
+            border-radius: 6px;
 
-@media screen and (max-width: $breakpoint-browser) {
-    #persnal-skills {
-        padding: 4em 0;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -50%;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: $half-bg-personal-skill-card;
 
-        .personal-skills-container {
-            grid-gap: 10px;
+            }
+
+            .personal-skill-box {
+                .personal-skill-percent {
+                    position: relative;
+                    max-width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    box-shadow: inset 0 0 50px #252525;
+                    background: $bg-personal-skill-percent;
+                    z-index: 2;
+
+                    svg {
+                        position: relative;
+                        max-width: 150px;
+                        height: 150px;
+                        z-index: 100;
+
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke-width: 10;
+                            stroke-linecap: round;
+                            transform: translate(5px, 5px);
+                            transition: 0.5s;
+                        }
+
+                        .circle-outer {
+                            stroke: $circle-outer-color;
+                        }
+
+                        .circle-progress {
+                            stroke-dashoffset: 440;
+                            stroke-dasharray: 440;
+                        }
+                    }
+
+                    .personal-skill-value {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+
+                        h2 {
+                            font-size: 1.5rem;
+                            transition: 0.5s;
+                            font-weight: 500;
+
+                            span {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+
+                .personal-skill-name {
+                    position: relative;
+                    margin-top: 1.5em;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.05rem;
+                    transition: 0.5s;
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: $personal-skill-shadow;
+
+                .personal-skill-box {
+                    .personal-skill-percent {
+                        .svg {
+                            .circle-outer {
+                                stroke: $hover-text-color;
+                            }
+                        }
+
+                        .circle-progress-responsible,
+                        .circle-progress-team-player,
+                        .circle-progress-organized,
+                        .circle-progress-fast-learner {
+                            @include progress-personal-skills (100);
+                        }
+
+                        .personal-skill-value {
+                            h2 {
+                                color: $hover-text-color;
+                                font-size: 2.1rem;
+                            }
+                        }
+                    }
+
+                    .personal-skill-name {
+                        color: $hover-text-color;
+                    }
+                }
+            }
         }
     }
 }
 
-//Breakpoint Middle-Large to Middle-Small
+//Animation
 
-@media screen and (min-width: $breakpoint-middle-small) and (max-width: $breakpoint-middle-large) {
+@keyframes progress-personal-skill {
+    from {
+        stroke-dashoffset: 440;
+    }
+}
+
+//Breakpoint Browser
+
+@media screen and (max-width: $breakpoint-browser) {
+    #personal-skills {
+        padding: 4em 0;
+
+        .personal-skills-container {
+            .personal-skill-card {
+                max-width: 200px;
+                height: 260px;
+                color: $hover-text-color;
+                transform: translateY(-10px);
+
+                .personal-skill-box {
+                    .personal-skill-percent {
+                        svg {
+                            .circle-outer {
+                                stroke: $hover-text-color;
+                            }
+
+                            .circle-progress-responsible,
+                            .circle-progress-team-player,
+                            .circle-progress-reliable,
+                            .circle-progress-fast-learner {
+                                stroke: $hover-text-color;
+                                stroke-dashoffset: calc(440 - (440 * 100) / 100);
+                            }
+                        }
+
+                        .personal-skill-value {
+                            h2 {
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+
+                    .personal-skill-name {
+                        margin-top: 1.1em;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: none;
+
+                    .personal-skill-box {
+                        .personal-skill-percent {
+                            .personal-skill-value {
+                                h2 {
+                                    font-size: 1.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large 
+
+@media screen and (max-width: $breakpoint-middle-large) {
     #personal-skills {
         padding: 3em 0;
 
         .personal-skills-container {
-            grid-gap: 10px;
             grid-template-columns: repeat(2, 1fr);
         }
     }
 }
 
-//Breakpoint Middle-Small to Phone
+//Breakpoint Middle-Small-Less
 
-@media screen and (min-width: 415px) and (max-width: 539px) {
+@media screen and (max-width: $breakpoint-middle-small-less) {
     #personal-skills {
-        padding: 3em 0;
+        padding: 2em 0;
 
         .personal-skills-container {
-            grid-gap: 10px;
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-    }
-}
-
-@media screen and (max-width: $breakpoint-phone) {
-    #personal-skills {
-        padding: 3em 0;
-
-        .personal-skills-container {
-            grid-gap: 10px;
             grid-template-columns: repeat(1, 1fr);
         }
 

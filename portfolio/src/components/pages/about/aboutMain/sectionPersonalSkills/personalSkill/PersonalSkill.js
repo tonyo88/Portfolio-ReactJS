@@ -1,4 +1,3 @@
-import "./PersonalSkill.css";
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -10,7 +9,7 @@ const PersonalSkill = (props) => {
       delay={props.delay}
       animateOnce={true}
     >
-      <div className="personal-skill-card">
+      <div className="personal-skill-card flex-middle">
         <div className="personal-skill-box">
           <div className="personal-skill-percent">
             <svg>
