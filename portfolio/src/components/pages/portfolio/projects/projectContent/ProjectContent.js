@@ -7,36 +7,30 @@ import ProjectHeader from "./projectHeader/ProjectHeader";
 import ProjectMain from "./projectMain/ProjectMain";
 import ProjectFooter from "./projectFooter/ProjectFooter";
 
-class ProjectContent extends React.Component {
-  render() {
-    return (
-      <section id={this.props.id} className="project-section">
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          duration={1.2}
-          animateOnce={true}
-        >
-          <div className="wrapper">
-            <div className="project-container">
-              <ProjectHeader
-                projectTitle={this.props.projectTitleName}
-                projectLogo={this.props.projectLogoImg}
-                projectAlt={this.props.projectLogoImgAlt}
-              />
+const ProjectContent = (props) => {
+  return (
+    <section id={props.id} className="project-section">
+      <ScrollAnimation animateIn="fadeInLeft" duration={1.2} animateOnce={true}>
+        <div className="wrapper">
+          <div className="project-container">
+            <ProjectHeader
+              projectTitle={props.projectTitleName}
+              projectLogo={props.projectLogoImg}
+              projectAlt={props.projectLogoImgAlt}
+            />
 
-              <ProjectMain
-                sliderImagesArray={this.props.imageSlider}
-                projectInfo={this.props.projectContentInfo}
-                projectSkills={this.props.projectContentSkills}
-              />
+            <ProjectMain
+              sliderImagesArray={props.imageSlider}
+              projectInfo={props.projectContentInfo}
+              projectSkills={props.projectContentSkills}
+            />
 
-              <ProjectFooter projectUrl={this.props.projectContentUrl} />
-            </div>
+            <ProjectFooter projectUrl={props.projectContentUrl} />
           </div>
-        </ScrollAnimation>
-      </section>
-    );
-  }
-}
+        </div>
+      </ScrollAnimation>
+    </section>
+  );
+};
 
 export default ProjectContent;

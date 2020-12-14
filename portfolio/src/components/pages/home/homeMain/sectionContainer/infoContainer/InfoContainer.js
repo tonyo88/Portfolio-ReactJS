@@ -6,8 +6,8 @@ const InfoConatainer = (props) => {
     <ScrollAnimation
       className="info-container flex-middle"
       animateIn="fadeIn"
-      delay={500}
-      duration={1}
+      delay={300}
+      duration={0.3}
       animateOnce={true}
     >
       <div className="info-title">

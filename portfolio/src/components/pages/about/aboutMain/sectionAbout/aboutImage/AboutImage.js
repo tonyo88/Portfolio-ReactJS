@@ -40,11 +40,7 @@ const AboutImage = () => {
         alt={element.alt}
       />
     ));
-  return (
-    <div className="about-image-container flex-middle">
-      {generateImages(images)}
-    </div>
-  );
+  return <div className="about-image-container">{generateImages(images)}</div>;
 };
 
 export default AboutImage;

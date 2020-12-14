@@ -21,73 +21,71 @@ import MovieInHand from "./pages/portfolio/projects/movieInHand/MovieInHand";
 
 import Footer from "./footer/Footer";
 
-class App extends React.Component {
-  render() {
-    const routes = [
-      {
-        path: "/",
-        component: Home,
-      },
-      {
-        path: "/pages/about",
-        component: About,
-      },
-      {
-        path: "/pages/portfolio",
-        component: Portfolio,
-      },
-      {
-        path: "/pages/contact",
-        component: Contact,
-      },
-      {
-        path: "/pages/portfolio/portfolio-react",
-        component: PortfolioReact,
-      },
-      {
-        path: "/pages/portfolio/portfolio-js",
-        component: PortfolioJs,
-      },
-      {
-        path: "/pages/portfolio/little-barber",
-        component: LittleBarber,
-      },
-      {
-        path: "/pages/portfolio/memory-game",
-        component: MemoryGame,
-      },
-      {
-        path: "/pages/portfolio/cosmos",
-        component: Cosmos,
-      },
-      {
-        path: "/pages/portfolio/megz",
-        component: Megz,
-      },
-      {
-        path: "/pages/portfolio/movie-in-hand",
-        component: MovieInHand,
-      },
-    ];
+const App = () => {
+  const routes = [
+    {
+      path: "/",
+      component: Home,
+    },
+    {
+      path: "/pages/about",
+      component: About,
+    },
+    {
+      path: "/pages/portfolio",
+      component: Portfolio,
+    },
+    {
+      path: "/pages/contact",
+      component: Contact,
+    },
+    {
+      path: "/pages/portfolio/portfolio-react",
+      component: PortfolioReact,
+    },
+    {
+      path: "/pages/portfolio/portfolio-js",
+      component: PortfolioJs,
+    },
+    {
+      path: "/pages/portfolio/little-barber",
+      component: LittleBarber,
+    },
+    {
+      path: "/pages/portfolio/memory-game",
+      component: MemoryGame,
+    },
+    {
+      path: "/pages/portfolio/cosmos",
+      component: Cosmos,
+    },
+    {
+      path: "/pages/portfolio/megz",
+      component: Megz,
+    },
+    {
+      path: "/pages/portfolio/movie-in-hand",
+      component: MovieInHand,
+    },
+  ];
 
-    const generateRoutes = (routesArray) =>
-      routesArray.map((element, index) => (
-        <Routes
-          key={index}
-          routePath={element.path}
-          routeComponent={element.component}
-        />
-      ));
-    return (
-      <BrowserRouter>
-        <PageLoader />
-        <Nav />
-        {generateRoutes(routes)}
-        <Footer />
-        <ScrollUpButton />
-      </BrowserRouter>
-    );
-  }
-}
+  const generateRoutes = (routesArray) =>
+    routesArray.map((element, index) => (
+      <Routes
+        key={index}
+        routePath={element.path}
+        routeComponent={element.component}
+      />
+    ));
+  return (
+    <BrowserRouter>
+      <PageLoader />
+      <Nav />
+      {generateRoutes(routes)}
+      <Footer />
+      <ScrollUpButton />
+    </BrowserRouter>
+  );
+};
 
 export default App;

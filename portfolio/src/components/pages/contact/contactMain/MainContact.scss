@@ -1,5 +1,26 @@
 //Colors
-$bg-contact-info: #fff;
+$base-color-one: #fff;
+$base-color-two: #2f2f2f;
+$base-color-three: #119ed6;
+$bg-contact-info: $base-color-one;
+$title-color: $base-color-two;
+$text-color: #5e5e5e;
+$link-color: $base-color-three;
+$form-border: $base-color-two;
+$text-color: $base-color-two;
+$input-bg: $base-color-one;
+$input-box-shadow: rgba(9, 100, 137, 0.6);
+$btn-color: $base-color-one;
+$btn-bg: $base-color-three;
+$btn-hover: #096489;
+$error-color: #ec0000;
+$error-shadow: rgba(248, 0, 0, 0.6);
+$submit-color: #009100;
+
+//Mixin 
+@mixin inputShadow($shadow-color) {
+    box-shadow: 0 0 10px 4px $shadow-color;
+}
 
 //Breakpoints
 $breakpoint-from-iPad-to-Phone: 767px;
@@ -16,6 +37,114 @@ $breakpoint-from-iPad-to-Phone: 767px;
         grid-template-columns: repeat(2, 1fr);
         grid-row: auto;
         grid-gap: 0;
+
+
+        .contact-info {
+            .info {
+                text-align: justify;
+
+                p {
+                    color: $text-color;
+                    padding: 0 0 0.5em;
+                    letter-spacing: 1px;
+                    font-size: 0.9rem;
+
+
+                    strong {
+                        color: $title-color;
+                        padding: 0.2em 0;
+
+                        font-size: 1rem;
+                    }
+
+                    a {
+                        color: $link-color;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+
+            .form {
+                width: 100%;
+                padding: 2em 2em 2em 0;
+                height: auto;
+
+                .contact-text-form {
+                    display: block;
+                    width: 100%;
+                    border: 1px solid $form-border;
+                    border-radius: 5px;
+                    padding: 1em 1.5em;
+                    color: $text-color;
+                    margin: 1em 0;
+                    background: $input-bg;
+                    outline: none;
+                    transition: 0.5s;
+
+                    &:focus {
+                        @include inputShadow($input-box-shadow);
+                    }
+                }
+
+                .error {
+                    border: 1px solid $error-color;
+
+                    &:focus {
+                        @include inputShadow($error-shadow);
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    height: 120px;
+                }
+
+                .contact-form-btn {
+                    cursor: pointer;
+                    transition: 0.5s;
+                    color: $btn-color;
+                    background: $btn-bg;
+                    padding: 0.5em 2em;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 0.85rem;
+                    transition: 0.5s;
+
+                    .sending-loader {
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                    }
+
+                    .sending {
+                        float: right;
+                        line-height: 20px;
+                    }
+
+                    &:hover {
+                        background: $btn-hover;
+                    }
+
+                }
+
+                .error-message {
+                    color: $error-color;
+                    font-size: 0.85rem;
+                    transition: 0.5s;
+                }
+
+            }
+
+            .success {
+                color: $submit-color;
+                display: block;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
     }
 }
 
@@ -23,12 +152,25 @@ $breakpoint-from-iPad-to-Phone: 767px;
 
 @media screen and (max-width: $breakpoint-from-iPad-to-Phone) {
     #contact-main {
-        background: $bg-contact-info;
-
         .contact-form-container {
             grid-template-columns: repeat(1, 1fr);
             top: 0;
             transform: translate(-50%, 0%);
+
+            .contact-info {
+                padding: 1.5em 0 0;
+
+                .info {
+                    text-align: center;
+                }
+            }
+
+            .contact-form {
+                .form {
+                    padding: 1em;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

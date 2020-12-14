@@ -3,17 +3,14 @@ import ProjectSlider from "./projectSlider/ProjectSlider";
 import ProjectInfo from "./projectInfo/ProjectInfo";
 import TechnologiesInfo from "./technologiesInfo/TechnologiesInfo";
 
-
-class ProjectMain extends React.Component {
-
-    render() {
-     return(
-         <main id="project-main">
-             <ProjectSlider imagesArray={this.props.sliderImagesArray} />
-             <ProjectInfo info={this.props.projectInfo} />
-             <TechnologiesInfo skillsArray={this.props.projectSkills}  />
-         </main>
-      );
-    };
+const ProjectMain = (props) => {
+  return (
+    <main id="project-main">
+      <ProjectSlider imagesArray={props.sliderImagesArray} />
+      <ProjectInfo info={props.projectInfo} />
+      <TechnologiesInfo skillsArray={props.projectSkills} />
+    </main>
+  );
 };
+
 export default ProjectMain;

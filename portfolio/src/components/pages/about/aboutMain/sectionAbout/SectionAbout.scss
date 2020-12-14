@@ -21,7 +21,6 @@ $breakpoin-middle-small: 540px;
         margin: 0 auto;
 
         .about-info-container {
-
             .info-container {
                 color: $text-color;
                 text-align: justify;
@@ -68,6 +67,10 @@ $breakpoin-middle-small: 540px;
 
         .about-image-container {
             position: relative;
+            display: flex;
+            display: -moz-box;
+            justify-content: center;
+            align-items: center;
 
             .about-image {
                 position: absolute;
@@ -80,7 +83,7 @@ $breakpoin-middle-small: 540px;
     }
 }
 
-//Breakpoin Browser
+//Breakpoint Browser
 
 @media screen and (max-width: $breakpoint-browser) {
     #section-about {
@@ -109,7 +112,6 @@ $breakpoin-middle-small: 540px;
         }
     }
 }
-
 
 //Breakpoint Middle-Large to iPad
 
@@ -153,12 +155,10 @@ $breakpoin-middle-small: 540px;
     }
 }
 
-
 //Breakpoint Middle-Small
 
 @media screen and (max-width: $breakpoin-middle-small) {
     #section-about {
-
         .about-section-container {
             padding: 1em 0 0;
 

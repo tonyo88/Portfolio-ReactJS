@@ -22,20 +22,18 @@ const particleOpt = {
   },
 };
 
-class HomeHeader extends React.Component {
-  render() {
-    return (
-      <header id="home-header" className="background-position">
-        <Particles params={particleOpt} className="home-particle" />
-        <div className="wrapper">
-          <Link to="./pages/portfolio" className="home-btn middle-positioning">
-            <span></span>
-            View My Work
-          </Link>
-        </div>
-      </header>
-    );
-  }
-}
+const HomeHeader = () => {
+  return (
+    <header id="home-header" className="background-position">
+      <Particles params={particleOpt} className="home-particle" />
+      <div className="wrapper">
+        <Link to="./pages/portfolio" className="home-btn middle-positioning">
+          <span></span>
+          View My Work
+        </Link>
+      </div>
+    </header>
+  );
+};
 
 export default HomeHeader;

@@ -1,9 +1,8 @@
-import "./ContactInfo.css";
 import React from "react";
 
 const ContactInfo = () => {
   return (
-    <div className="contact-info">
+    <div className="contact-info flex-middle">
       <div className="info">
         <p>
           <strong>Tonyo Vanov</strong>

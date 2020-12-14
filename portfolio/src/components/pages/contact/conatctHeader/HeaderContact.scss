@@ -1,5 +1,5 @@
 //Breakpoints
-$breakpoint-from-iPad-to-Phone: 767px;
+$breakpoint-from-iPad-less: 767px;
 
 #contact-header {
     width: 100%;
@@ -7,14 +7,11 @@ $breakpoint-from-iPad-to-Phone: 767px;
     position: relative;
     background-image: url("../../../../assets/pages/contact/contact-bg.jpg");
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-//Breakpoint iPad to Phone
+//Breakpoint iPad-Less
 
-@media screen and (max-width: $breakpoint-from-iPad-to-Phone) {
+@media screen and (max-width: $breakpoint-from-iPad-less) {
     #contact-header {
         height: 80vh;
     }
