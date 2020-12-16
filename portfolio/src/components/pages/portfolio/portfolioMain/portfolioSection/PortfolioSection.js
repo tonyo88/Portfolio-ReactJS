@@ -98,14 +98,11 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio-section">
       <div className="wrapper">
-        <SectionTitle titleName={"Work Projects"} titleColor={"#262626"} />
-        <div className="portfolio-container working-projects">
+        <SectionTitle titleName={"Work Projects"} />
+        <div className="portfolio-container work-projects">
           {generatePortfolios(workingProjects)}
         </div>
-        <SectionTitle
-          titleName={"Individual Projects"}
-          titleColor={"#262626"}
-        />
+        <SectionTitle titleName={"Individual Projects"} />
         <div className="portfolio-container">
           {generatePortfolios(individualProjects)}
         </div>

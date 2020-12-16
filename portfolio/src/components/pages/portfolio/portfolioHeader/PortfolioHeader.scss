@@ -6,13 +6,6 @@ $breakpoint-browser: 1280px;
     height: 100vh;
     background-image: url("../../../../assets/pages/portfolio/portfolio-header/background/portfolio-bg.jpg");
     background-attachment: fixed;
-
-    .portfolio-header-title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 //Breakpoint Browser

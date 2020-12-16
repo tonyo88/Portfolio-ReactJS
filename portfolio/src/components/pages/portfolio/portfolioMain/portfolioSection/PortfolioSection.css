@@ -10,27 +10,159 @@
   grid-gap: 20px;
 }
 
-#portfolio-section .working-projects {
+#portfolio-section .portfolio-container .portfolio-box {
+  width: 100%;
+  background: #494949;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#portfolio-section .portfolio-container .portfolio-box .portfolio {
+  text-decoration: none;
+}
+
+#portfolio-section .portfolio-container .portfolio-box .portfolio img {
+  width: 100%;
+  opacity: 0.8;
+  -webkit-transform: rotate3d(0, 0, 1, 8deg);
+          transform: rotate3d(0, 0, 1, 8deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title {
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  width: 100%;
+  padding: 0.2em 0 0.2em 1em;
+}
+
+#portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+  color: #000;
+  position: absolute;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.3em 0.7em;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: -100%;
+  right: 10px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+#portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-info {
+  color: #fff;
+  font-size: 1rem;
+  padding: 1em 2em;
+  line-height: 150%;
+  position: absolute;
+  bottom: -100%;
+  right: 0%;
+  display: block;
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#portfolio-section .portfolio-container .portfolio-box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+}
+
+#portfolio-section .portfolio-container .portfolio-box:hover img {
+  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+  opacity: 0.95;
+}
+
+#portfolio-section .portfolio-container .portfolio-box:hover figure figcaption .portfolio-title {
+  left: 0%;
+}
+
+#portfolio-section .portfolio-container .portfolio-box:hover figure figcaption .portfolio-title .portfolio-btn {
+  top: 11px;
+}
+
+#portfolio-section .portfolio-container .portfolio-box:hover figure figcaption .portfolio-info {
+  bottom: 0;
+}
+
+#portfolio-section .work-projects {
   padding-bottom: 3em;
 }
 
-@media screen and (min-width: 415px) and (max-width: 767px) {
-  #portfolio-section .portfolio-container {
-    max-width: 90%;
-    margin: 0 auto;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
+@media screen and (max-width: 1280px) {
+  #portfolio-section .portfolio-container .portfolio-box:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 960px) {
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.4rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.75rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-info {
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
   #portfolio-section .portfolio-container {
     max-width: 100%;
     margin: 0 auto;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.6rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    font-size: 0.85rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-info {
+    padding: 1em 2em;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title {
+    font-size: 1.2rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-title .portfolio-btn {
+    padding: 0.2em 0.4em;
+    font-size: 0.6rem;
+  }
+  #portfolio-section .portfolio-container .portfolio-box .portfolio figure figcaption .portfolio-info {
+    padding: 0.3em 0.8em;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=PortfolioSection.css.map */

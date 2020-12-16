@@ -1,7 +1,17 @@
+//Colors
+$portfolio-box-bg-color: #494949;
+$text-color: #fff;
+$title-info-bg-color: rgba(0, 0, 0, 0.7);
+$btn-bg: rgba(255, 255, 255, 0.7);
+$btn-color: #000;
+$box-shadow-color: rgba(0, 0, 0, 0.8);
+
 //Breakpoints
-$breakpoint-iPad: 767px;
-$breakpoint-middle-small: 540px;
-$breakpoint-phone: 414px;
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad-less: 767px;
+$breakpoint-middle-small-less: 539px;
+
 
 #portfolio-section {
     padding: 3em 0;
@@ -10,35 +20,210 @@ $breakpoint-phone: 414px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+
+        .portfolio-box {
+            width: 100%;
+            background: $portfolio-box-bg-color;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s;
+
+            .portfolio {
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                    opacity: 0.8;
+                    transform: rotate3d(0, 0, 1, 8deg);
+                    transition: 0.3s;
+                }
+
+                figure {
+                    figcaption {
+                        .portfolio-title {
+                            position: absolute;
+                            top: 0%;
+                            left: -100%;
+                            color: $text-color;
+                            letter-spacing: 0.1rem;
+                            font-size: 1.7rem;
+                            text-transform: uppercase;
+                            transition: 0.3s all ease;
+                            background: $title-info-bg-color;
+                            display: inline-block;
+                            width: 100%;
+                            padding: 0.2em 0 0.2em 1em;
+
+                            .portfolio-btn {
+                                color: $btn-color;
+                                position: absolute;
+                                font-size: 0.9rem;
+                                letter-spacing: 0.05rem;
+                                padding: 0.3em 0.7em;
+                                text-decoration: none;
+                                background-color: $btn-bg;
+                                top: -100%;
+                                right: 10px;
+                                transition: 0.3s all ease;
+                                transition-delay: 0.5s;
+                            }
+                        }
+
+                        .portfolio-info {
+                            color: $text-color;
+                            font-size: 1rem;
+                            padding: 1em 2em;
+                            line-height: 150%;
+                            position: absolute;
+                            bottom: -100%;
+                            right: 0%;
+                            display: block;
+                            text-align: justify;
+                            background: $title-info-bg-color;
+                            transition: 0.3s all ease;
+                            transition-delay: 0.1s;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 45px $box-shadow-color;
+
+                img {
+                    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+                    opacity: 0.95;
+                }
+
+                figure {
+                    figcaption {
+                        .portfolio-title {
+                            left: 0%;
+
+                            .portfolio-btn {
+                                top: 11px;
+                            }
+                        }
+
+                        .portfolio-info {
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    .working-projects {
+    .work-projects {
         padding-bottom: 3em;
     }
 }
 
-//Breakpoint iPad to Phone
+//Breakpoint Browser
 
-@media screen and (min-width: 415px) and (max-width: $breakpoint-iPad) {
+@media screen and (max-width: $breakpoint-browser) {
     #portfolio-section {
         .portfolio-container {
-            max-width: 90%;
-            margin: 0 auto;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 10px;
+            .portfolio-box {
+                &:hover {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+            }
         }
     }
 }
 
-//Breakpoint Phone
+//Breakpoint Middle-Large
 
-@media screen and (max-width: $breakpoint-phone) {
+@media screen and (max-width: $breakpoint-middle-large) {
+    #portfolio-section {
+        .portfolio-container {
+            .portfolio-box {
+                .portfolio {
+                    figure {
+                        figcaption {
+                            .portfolio-title {
+                                font-size: 1.4rem;
+
+                                .portfolio-btn {
+                                    font-size: 0.75rem;
+                                }
+                            }
+
+                            .portfolio-info {
+                                padding: 0.5em 1em;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint iPad-Less
+
+@media screen and (max-width: $breakpoint-iPad-less) {
     #portfolio-section {
         .portfolio-container {
             max-width: 100%;
             margin: 0 auto;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 10px;
+
+            .portfolio-box {
+                .portfolio {
+                    figure {
+                        figcaption {
+                            .portfolio-title {
+                                font-size: 1.6rem;
+
+                                .portfolio-btn {
+                                    font-size: 0.85rem;
+                                }
+                            }
+
+                            .portfolio-info {
+                                padding: 1em 2em;
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small-Less
+
+@media screen and (max-width: $breakpoint-middle-small-less) {
+    #portfolio-section {
+        .portfolio-container {
+            .portfolio-box {
+                .portfolio {
+                    figure {
+                        figcaption {
+                            .portfolio-title {
+                                font-size: 1.2rem;
+
+                                .portfolio-btn {
+                                    padding: 0.2em 0.4em;
+                                    font-size: 0.6rem;
+                                }
+                            }
+
+                            .portfolio-info {
+                                padding: 0.3em 0.8em;
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
