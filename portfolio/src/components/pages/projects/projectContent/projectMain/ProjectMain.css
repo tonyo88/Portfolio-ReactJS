@@ -1,0 +1,36 @@
+#project-main .project-info {
+  margin-top: 2em;
+}
+
+#project-main .project-info p {
+  margin-top: 1em;
+}
+
+#project-main .technologies-info {
+  margin-top: 4em;
+}
+
+#project-main .technologies-info .skill-techniques {
+  padding: 2em 1em;
+  list-style-type: circle;
+}
+
+#project-main .technologies-info .skill-techniques li {
+  margin-bottom: 3px;
+}
+
+@media screen and (max-width: 767px) {
+  #project-main .project-info {
+    margin-top: 0;
+  }
+  #project-main .project-info p {
+    margin-top: 0.6em;
+  }
+  #project-main .technologies-info {
+    margin-top: 2em;
+  }
+  #project-main .technologies-info .skill-techniques {
+    padding: 1em;
+  }
+}
+/*# sourceMappingURL=ProjectMain.css.map */

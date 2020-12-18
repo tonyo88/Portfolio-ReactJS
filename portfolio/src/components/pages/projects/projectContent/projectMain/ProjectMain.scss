@@ -1,0 +1,46 @@
+//Breakpoints 
+$breakpoint-iPad-Less: 767px;
+
+#project-main {
+    .project-info {
+        margin-top: 2em;
+
+        p {
+            margin-top: 1em;
+        }
+    }
+
+    .technologies-info {
+        margin-top: 4em;
+
+        .skill-techniques {
+            padding: 2em 1em;
+            list-style-type: circle;
+
+            li {
+                margin-bottom: 3px;
+            }
+        }
+    }
+}
+
+//Breakpoint iPad-Less
+@media screen and (max-width: $breakpoint-iPad-Less) {
+    #project-main {
+        .project-info {
+            margin-top: 0;
+
+            p {
+                margin-top: 0.6em;
+            }
+        }
+
+        .technologies-info {
+            margin-top: 2em;
+
+            .skill-techniques {
+                padding: 1em;
+            }
+        }
+    }
+}

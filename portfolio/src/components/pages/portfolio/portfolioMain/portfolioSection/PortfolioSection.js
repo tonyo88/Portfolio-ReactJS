@@ -1,15 +1,16 @@
 import "./PortfolioSection.css";
-
 import React from "react";
 import CurrentPortfolio from "./currentPortfolio/CurrentPortfolio";
 import SectionTitle from "../../../sectionTitle/SectionTitle";
 
 import portfolioReact from "../../../../../assets/pages/portfolio/portfolio-main/portfolio-react.png";
 import portfolioJS from "../../../../../assets/pages/portfolio/portfolio-main/portfolio-js.png";
+import weatherApp from "../../../../../assets/pages/portfolio/portfolio-main/weather-app.png";
 import littleBarber from "../../../../../assets/pages/portfolio/portfolio-main/little-barber.png";
 import memoryGame from "../../../../../assets/pages/portfolio/portfolio-main/memory-game.png";
 import cosmos from "../../../../../assets/pages/portfolio/portfolio-main/cosmos.png";
 import megz from "../../../../../assets/pages/portfolio/portfolio-main/megz.png";
+import ledSvetlini from "../../../../../assets/pages/portfolio/portfolio-main/led-svetlini.png";
 import movieInHand from "../../../../../assets/pages/portfolio/portfolio-main/movie-in-hand.png";
 
 const PortfolioSection = () => {
@@ -17,8 +18,7 @@ const PortfolioSection = () => {
     {
       delay: 200,
       portfoliotUrl: "cosmos",
-      portfolioImgSrc: cosmos,
-      portfolioImgAlt: "cosmos.png",
+      portfolioImg: cosmos,
       portfolioTitle: "Cosmos",
       portfolioInfo:
         "HTML5, CSS3, SASS, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
@@ -26,17 +26,23 @@ const PortfolioSection = () => {
     {
       delay: 300,
       portfoliotUrl: "megz",
-      portfolioImgSrc: megz,
-      portfolioImgAlt: "megz.png",
+      portfolioImg: megz,
       portfolioTitle: "Megz",
       portfolioInfo:
         "HTML5, CSS3, SASS, SVG, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
     {
       delay: 400,
+      portfoliotUrl: "led-svetlini",
+      portfolioImg: ledSvetlini,
+      portfolioTitle: "Led Svetlini",
+      portfolioInfo:
+        "HTML5, CSS3, SASS, SVG, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
+    },
+    {
+      delay: 500,
       portfoliotUrl: "movie-in-hand",
-      portfolioImgSrc: movieInHand,
-      portfolioImgAlt: "movie-in-hand.png",
+      portfolioImg: movieInHand,
       portfolioTitle: "Movie in Hand",
       portfolioInfo:
         "HTML5, CSS3, SASS, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
@@ -47,35 +53,39 @@ const PortfolioSection = () => {
     {
       delay: 200,
       portfoliotUrl: "portfolio-react",
-      portfolioImgSrc: portfolioReact,
-      portfolioImgAlt: "portfolio-react.png",
+      portfolioImg: portfolioReact,
       portfolioTitle: "Portfolio - React JS",
       portfolioInfo:
-        "HTML5, CSS3, SASS, React JS, React Router, React Libraries, SVG, Webpack, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
+        "React JS, React Router, React Libraries, HTML5, CSS3, SASS, SVG, Webpack, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
     {
       delay: 300,
       portfoliotUrl: "portfolio-js",
-      portfolioImgSrc: portfolioJS,
-      portfolioImgAlt: "portfolio-js.png",
+      portfolioImg: portfolioJS,
       portfolioTitle: "Portfolio - JS",
       portfolioInfo:
         "HTML5, CSS3, SASS, SVG, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
     {
       delay: 400,
+      portfoliotUrl: "weather-app",
+      portfolioImg: weatherApp,
+      portfolioTitle: "Weather App",
+      portfolioInfo:
+        "React JS, React Libraries, Webpack, Fetch, HTML5, CSS3, SASS, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
+    },
+    {
+      delay: 500,
       portfoliotUrl: "little-barber",
-      portfolioImgSrc: littleBarber,
-      portfolioImgAlt: "little-barber.png",
+      portfolioImg: littleBarber,
       portfolioTitle: "Little BarberShop",
       portfolioInfo:
         "HTML5, CSS3, SASS, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
     {
-      delay: 500,
+      delay: 600,
       portfoliotUrl: "memory-game",
-      portfolioImgSrc: memoryGame,
-      portfolioImgAlt: "memory-game.png",
+      portfolioImg: memoryGame,
       portfolioTitle: "Memory Game",
       portfolioInfo:
         "HTML5, CSS3, SASS, SVG, JavaScript ES6, Asynchronous Operations, Sound Effects,, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
@@ -88,8 +98,7 @@ const PortfolioSection = () => {
         key={index}
         delay={element.delay}
         portfoliotUrl={element.portfoliotUrl}
-        portfolioImgSrc={element.portfolioImgSrc}
-        portfolioImgAlt={element.portfolioImgAlt}
+        portfolioImg={element.portfolioImg}
         portfolioTitle={element.portfolioTitle}
         portfolioInfo={element.portfolioInfo}
       />

@@ -14,7 +14,7 @@ const CurrentPortfolio = (props) => {
     >
       <div className="portfolio-box">
         <div className="portfolio">
-          <img src={props.portfolioImgSrc} alt={props.portfolioImgAlt}></img>
+          <img src={props.portfolioImg} alt={props.portfolioImg}></img>
           <figure>
             <figcaption>
               <h2 className="portfolio-title">

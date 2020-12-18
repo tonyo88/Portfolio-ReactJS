@@ -3,21 +3,21 @@ import { BrowserRouter } from "react-router-dom";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import Routes from "./routes/Routes";
 import PageLoader from "./pageLoader/PageLoader";
-
 import Nav from "./navigation/Nav";
-
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 
-import PortfolioReact from "./pages/portfolio/projects/portfolioReact/PortfolioReact";
-import PortfolioJs from "./pages/portfolio/projects/portfolioJS/PortfolioJs";
-import LittleBarber from "./pages/portfolio/projects/littleBarber/LittleBarber";
-import MemoryGame from "./pages/portfolio/projects/memoryGame/MemoryGame";
-import Cosmos from "./pages/portfolio/projects/cosmos/Cosmos";
-import Megz from "./pages/portfolio/projects/megz/Megz";
-import MovieInHand from "./pages/portfolio/projects/movieInHand/MovieInHand";
+import PortfolioReact from "./pages/projects/allProjects/portfolioReact/PortfolioReact";
+import PortfolioJs from "./pages/projects/allProjects/portfolioJS/PortfolioJs";
+import LittleBarber from "./pages/projects/allProjects/littleBarber/LittleBarber";
+import MemoryGame from "./pages/projects/allProjects/memoryGame/MemoryGame";
+import Cosmos from "./pages/projects/allProjects/cosmos/Cosmos";
+import Megz from "./pages/projects/allProjects/megz/Megz";
+import MovieInHand from "./pages/projects/allProjects/movieInHand/MovieInHand";
+import LedSvetlini from "./pages/projects/allProjects/ledSvetlini/LedSvetlini";
+import WeatherApp from "./pages/projects/allProjects/weatherApp/WeatherApp";
 
 import Footer from "./footer/Footer";
 
@@ -66,6 +66,14 @@ const App = () => {
     {
       path: "/pages/portfolio/movie-in-hand",
       component: MovieInHand,
+    },
+    {
+      path: "/pages/portfolio/led-svetlini",
+      component: LedSvetlini,
+    },
+    {
+      path: "/pages/portfolio/weather-app",
+      component: WeatherApp,
     },
   ];
 
