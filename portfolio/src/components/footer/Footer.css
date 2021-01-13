@@ -26,6 +26,9 @@
     width: 3.5rem;
     height: 3.5rem;
   }
+  #footer .copyright {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 414px) {

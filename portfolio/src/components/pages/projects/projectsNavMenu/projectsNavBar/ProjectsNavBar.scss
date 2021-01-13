@@ -1,0 +1,170 @@
+//Colors
+$base-color-one: #2d2d2d;
+$base-color-two: #fff;
+$project-nav-bg: $base-color-two;
+
+//Mixin
+@mixin activeProjectLink($background, $color, $box-shadow) {
+    background: $background;
+    color: $color;
+    box-shadow: 3px 2px $box-shadow;
+}
+
+//Breakpoints
+$breakpoint-middle-large: 960px;
+$breakpoint-middle-small: 540px;
+
+.projects-nav-bar {
+    width: 100%;
+    height: 2.5em;
+    background: $project-nav-bg;
+    position: fixed;
+    top: 5em;
+    transition: 0.35s;
+    border-top: 2px solid $base-color-one;
+    z-index: 999;
+
+    .projects-title {
+        float: left;
+        line-height: 2em;
+        padding-left: 3em;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .projects-menu-container {
+        float: right;
+        padding-right: 1.5em;
+
+        .projects-menu {
+            text-align: center;
+            line-height: 2em;
+
+            .project-list {
+                display: inline-block;
+                margin-left: 1em;
+
+                .project-link {
+                    font-size: 0.8rem;
+                    padding: 0.2em 0.8em;
+                    transition: ease-in-out 0.2s;
+
+                    &:hover {
+                        background: $base-color-one;
+                        color: $base-color-two;
+                    }
+                }
+
+                .active-project-link {
+                    @include activeProjectLink($base-color-one, $base-color-two, rgba(34, 34, 34, 0.5));
+                }
+            }
+        }
+    }
+
+    .mobile-projects-nav-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: 2px solid $base-color-one;
+        background: $base-color-two;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 40%;
+        left: -36px;
+        text-align: center;
+        z-index: 999;
+        cursor: pointer;
+        display: none;
+
+        i {
+            font-size: 1rem;
+            color: $base-color-one;
+            line-height: 30px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+//Breakpint Middle-Large
+
+@media screen and (max-width: $breakpoint-middle-large) {
+    .projects-nav-bar {
+        height: 100vh;
+        max-width: 300px;
+        border-top: none;
+        top: 5em;
+        right: -300px;
+        transition: 0.35s ease-in-out;
+
+        .projects-title {
+            float: none;
+            padding-left: 0;
+            padding-top: 1.5em;
+            text-align: center;
+            border-bottom: 1px solid $base-color-one;
+        }
+
+        .projects-menu-container {
+            background: $base-color-two;
+            float: none;
+            padding-right: 0;
+            margin-top: 1em;
+            width: 100%;
+
+            .projects-menu {
+                .project-list {
+                    display: block;
+                    margin-left: 0;
+
+                    .project-link {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .mobile-projects-nav-btn {
+            display: block;
+        }
+    }
+
+    .active-projects-nav-bar {
+        right: 0;
+    }
+}
+
+// Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoint-middle-small) {
+    .projects-nav-bar {
+        top: 3.5em;
+        max-width: 200px;
+        right: -200px;
+
+        .projects-title {
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        .projects-menu-container {
+            .projects-menu {
+                line-height: 1.6rem;
+
+                .project-list {
+                    .project-link {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .active-projects-nav-bar {
+        right: 0;
+    }
+}

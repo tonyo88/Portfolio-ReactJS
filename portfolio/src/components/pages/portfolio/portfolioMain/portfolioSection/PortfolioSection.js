@@ -14,7 +14,7 @@ import ledSvetlini from "../../../../../assets/pages/portfolio/portfolio-main/le
 import movieInHand from "../../../../../assets/pages/portfolio/portfolio-main/movie-in-hand.png";
 
 const PortfolioSection = () => {
-  const workingProjects = [
+  const workProjects = [
     {
       delay: 200,
       portfoliotUrl: "cosmos",
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
     },
   ];
 
-  const individualProjects = [
+  const personalProjects = [
     {
       delay: 200,
       portfoliotUrl: "portfolio-react",
@@ -109,11 +109,11 @@ const PortfolioSection = () => {
       <div className="wrapper">
         <SectionTitle titleName={"Work Projects"} />
         <div className="portfolio-container work-projects">
-          {generatePortfolios(workingProjects)}
+          {generatePortfolios(workProjects)}
         </div>
-        <SectionTitle titleName={"Individual Projects"} />
+        <SectionTitle titleName={"Personal Projects"} />
         <div className="portfolio-container">
-          {generatePortfolios(individualProjects)}
+          {generatePortfolios(personalProjects)}
         </div>
       </div>
     </section>

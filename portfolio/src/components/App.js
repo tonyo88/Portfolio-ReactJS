@@ -9,15 +9,16 @@ import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 
-import PortfolioReact from "./pages/projects/allProjects/portfolioReact/PortfolioReact";
-import PortfolioJs from "./pages/projects/allProjects/portfolioJS/PortfolioJs";
-import LittleBarber from "./pages/projects/allProjects/littleBarber/LittleBarber";
-import MemoryGame from "./pages/projects/allProjects/memoryGame/MemoryGame";
-import Cosmos from "./pages/projects/allProjects/cosmos/Cosmos";
-import Megz from "./pages/projects/allProjects/megz/Megz";
-import MovieInHand from "./pages/projects/allProjects/movieInHand/MovieInHand";
-import LedSvetlini from "./pages/projects/allProjects/ledSvetlini/LedSvetlini";
-import WeatherApp from "./pages/projects/allProjects/weatherApp/WeatherApp";
+import PortfolioReact from "./pages/projects/allProjects/personalProjects/portfolioReact/PortfolioReact";
+import PortfolioJs from "./pages/projects/allProjects/personalProjects/portfolioJS/PortfolioJs";
+import WeatherApp from "./pages/projects/allProjects/personalProjects/weatherApp/WeatherApp";
+import LittleBarber from "./pages/projects/allProjects/personalProjects/littleBarber/LittleBarber";
+import MemoryGame from "./pages/projects/allProjects/personalProjects/memoryGame/MemoryGame";
+
+import Cosmos from "./pages/projects/allProjects/workProjects/cosmos/Cosmos";
+import Megz from "./pages/projects/allProjects/workProjects/megz/Megz";
+import MovieInHand from "./pages/projects/allProjects/workProjects/movieInHand/MovieInHand";
+import LedSvetlini from "./pages/projects/allProjects/workProjects/ledSvetlini/LedSvetlini";
 
 import Footer from "./footer/Footer";
 
@@ -48,6 +49,10 @@ const App = () => {
       component: PortfolioJs,
     },
     {
+      path: "/pages/portfolio/weather-app",
+      component: WeatherApp,
+    },
+    {
       path: "/pages/portfolio/little-barber",
       component: LittleBarber,
     },
@@ -64,16 +69,12 @@ const App = () => {
       component: Megz,
     },
     {
-      path: "/pages/portfolio/movie-in-hand",
-      component: MovieInHand,
-    },
-    {
       path: "/pages/portfolio/led-svetlini",
       component: LedSvetlini,
     },
     {
-      path: "/pages/portfolio/weather-app",
-      component: WeatherApp,
+      path: "/pages/portfolio/movie-in-hand",
+      component: MovieInHand,
     },
   ];
 
