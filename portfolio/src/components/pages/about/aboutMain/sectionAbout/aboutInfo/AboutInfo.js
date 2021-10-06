@@ -1,6 +1,6 @@
 import React from "react";
 
-import resume from "../../../../../../assets/pages/about/about-main/about-section/resume/Anthony-Vanov-Resume.pdf";
+import resume from "../../../../../../assets/pages/about/about-main/about-section/resume/Tonyo-Vanov-CV.pdf";
 import spinner from "../../../../../../assets/pages/contact/3.gif";
 
 class AboutInfo extends React.Component {
