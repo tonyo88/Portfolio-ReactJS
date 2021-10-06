@@ -28,7 +28,7 @@
 }
 
 .logo-container .logo-link .logo-name .logo-name-container {
-  margin: 10px 0 0;
+  margin: 12px 0 0 5px;
 }
 
 .logo-container .logo-link .logo-name .logo-name-container h5 {
@@ -54,7 +54,7 @@
     color: #fff;
   }
   .logo-container .logo-link .logo-name .logo-name-container {
-    margin: 8px 0 0;
+    margin: 8px 0 0 3px;
   }
 }
 
