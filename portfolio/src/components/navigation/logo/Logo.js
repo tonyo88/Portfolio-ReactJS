@@ -12,8 +12,8 @@ const Logo = (props) => {
         </div>
         <div className={props.className}>
           <div className="logo-name-container">
-            <h5>Anthony Vanov</h5>
-            <p>Developer // Designer</p>
+            <h5>Tonyo Vanov</h5>
+            <p>Software Developer</p>
           </div>
         </div>
       </Link>
