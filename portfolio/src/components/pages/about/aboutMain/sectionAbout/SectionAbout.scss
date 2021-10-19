@@ -15,71 +15,126 @@ $breakpoin-middle-small: 540px;
     width: 100%;
 
     .about-section-container {
-        padding: 5em 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 auto;
+        padding: 5em 0 0;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // margin: 0 auto;
 
+        // .about-info-container {
+        //     .info-container {
+        //         color: $text-color;
+        //         text-align: justify;
+        //         padding: 4em;
+
+        //         .about-title {
+        //             font-size: 2.3rem;
+        //             display: inline-block;
+        //             border-bottom: 2px solid $border-color;
+        //             letter-spacing: 1px;
+        //             margin: 0 0 0.5em;
+        //         }
+
+        //         .about-info {
+        //             font-size: 1.1rem;
+        //         }
+
+        //         .resume-btn {
+        //             padding: 0.5em 1.5em;
+        //             color: $resume-btn-color;
+        //             background: $resume-btn-bg-color;
+        //             border-radius: 10px;
+        //             margin: 0.8em 0 0;
+        //             transition: 0.3s;
+        //             font-size: 0.9rem;
+        //             display: inline-block;
+
+        //             .spinner {
+        //                 width: 20px;
+        //                 height: 20px;
+        //                 float: left;
+        //             }
+
+        //             .download {
+        //                 float: right;
+        //             }
+
+        //             &:hover {
+        //                 background: $resume-btn-hover-bg-color;
+        //             }
+        //         }
+        //     }
+        // }
         .about-info-container {
-            .info-container {
-                color: $text-color;
-                text-align: justify;
-                padding: 4em;
-
-                .about-title {
-                    font-size: 2.3rem;
-                    display: inline-block;
-                    border-bottom: 2px solid $border-color;
-                    letter-spacing: 1px;
-                    margin: 0 0 0.5em;
-                }
-
-                .about-info {
-                    font-size: 1.1rem;
-                }
-
-                .resume-btn {
-                    padding: 0.5em 1.5em;
-                    color: $resume-btn-color;
-                    background: $resume-btn-bg-color;
-                    border-radius: 10px;
-                    margin: 0.8em 0 0;
-                    transition: 0.3s;
-                    font-size: 0.9rem;
-                    display: inline-block;
-
-                    .spinner {
-                        width: 20px;
-                        height: 20px;
-                        float: left;
-                    }
-
-                    .download {
-                        float: right;
-                    }
-
-                    &:hover {
-                        background: $resume-btn-hover-bg-color;
-                    }
-                }
-            }
-        }
-
-        .about-image-container {
             position: relative;
-            display: flex;
-            display: -moz-box;
-            justify-content: center;
-            align-items: center;
 
-            .about-image {
-                position: absolute;
+            .profile-wrapper {
+                max-width: 95%;
+                margin: 0 auto;
+            }
 
-                img {
-                    width: 100%;
+            .profile-background {
+                background-image: url("../../../../../assets/pages/about/about-main/about-section/profile-bg.png");
+                width: 100%;
+                height: 18em;
+
+                .profile-photo {
+                    position: absolute;
+                    width: 170px;
+                    height: 165px;
+                    border-radius: 50%;
+                    top: 13em;
+                    border: 3px solid #fff;
+                }
+            }
+
+            .profile-container {
+                margin-top: 6em;
+
+                .profile-title {
+                    font-size: 2rem;
+                }
+
+                .profile-sub-title {
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                }
+
+                .profile-location {
+                    font-size: 0.85rem;
+                }
+
+                .profile-info-container {
+
+                    .profile-info {
+                        padding: 1em 0 0;
+                        font-size: 1.01rem;
+                        text-align: left;
+                        letter-spacing: 0.03rem;
+
+
+                        &:first-child {
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
+
+        // .about-image-container {
+        //     position: relative;
+        //     display: flex;
+        //     display: -moz-box;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     .about-image {
+        //         position: absolute;
+
+        //         img {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
     }
 }
 
@@ -88,7 +143,7 @@ $breakpoin-middle-small: 540px;
 @media screen and (max-width: $breakpoint-browser) {
     #section-about {
         .about-section-container {
-            padding: 3em 0;
+            padding: 3em 0 0;
 
             .about-info-container {
                 .info-container {
@@ -118,21 +173,55 @@ $breakpoin-middle-small: 540px;
 @media screen and (max-width: $breakpoint-middle-large) {
     #section-about {
         .about-section-container {
-            padding: 2em 0;
+            padding: 2.5em 0 0;
 
             .about-info-container {
-                .info-container {
-                    padding: 1em;
+                .profile-background {
 
-                    .about-title {
-                        font-size: 1.8em;
+                    .profile-photo {
+                        position: absolute;
+                        width: 140px;
+                        height: 135px;
+                        top: 13em;
+                    }
+                }
+
+                .profile-container {
+                    margin-top: 3.2em;
+
+                    .profile-title {
+                        font-size: 1.8rem;
                     }
 
-                    .about-info {
+                    .profile-sub-title {
+                        font-size: 0.9rem;
+                    }
+
+                    .profile-location {
                         font-size: 0.8rem;
+                    }
+
+                    .profile-info-container {
+                        .profile-info {
+                            font-size: 0.9rem;
+                        }
                     }
                 }
             }
+
+            // .about-info-container {
+            //     .info-container {
+            //         padding: 1em;
+
+            //         .about-title {
+            //             font-size: 1.8em;
+            //         }
+
+            //         .about-info {
+            //             font-size: 0.8rem;
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -142,15 +231,54 @@ $breakpoin-middle-small: 540px;
 @media screen and (max-width: $breakpoint-iPad-less) {
     #section-about {
         .about-section-container {
-            grid-template-columns: repeat(1, 1fr);
+            .about-info-container {
+                .profile-background {
+                    height: 13em;
 
-            .about-image-container {
-                height: 400px;
+                    .profile-photo {
+                        position: absolute;
+                        width: 100px;
+                        height: 95px;
+                        top: 10em;
+                    }
+                }
 
-                .about-image {
-                    max-width: 450px;
+                .profile-container {
+                    margin-top: 3.2em;
+
+                    .profile-title {
+                        font-size: 1.4rem;
+                    }
+
+                    .profile-sub-title {
+                        font-size: 0.75rem;
+                    }
+
+                    .profile-location {
+                        font-size: 0.65rem;
+                        padding-bottom: 1em;
+                    }
+
+                    .profile-info-container {
+
+                        .profile-info {
+                            padding: 1em 0 0;
+                            font-size: 0.75rem;
+                            letter-spacing: 0.02rem;
+                        }
+                    }
                 }
             }
+
+            // grid-template-columns: repeat(1, 1fr);
+
+            // .about-image-container {
+            //     height: 400px;
+
+            //     .about-image {
+            //         max-width: 450px;
+            //     }
+            // }
         }
     }
 }
@@ -160,24 +288,30 @@ $breakpoin-middle-small: 540px;
 @media screen and (max-width: $breakpoin-middle-small) {
     #section-about {
         .about-section-container {
-            padding: 1em 0 0;
-
             .about-info-container {
-                .info-container {
-                    .resume-btn {
-                        padding: 0.4em 1.4em;
-                        font-size: 0.8rem;
+                .profile-container {
+                    .profile-location {
+                        padding-bottom: 1em;
                     }
                 }
             }
 
-            .about-image-container {
-                height: 300px;
+            // .about-info-container {
+            //     .info-container {
+            //         .resume-btn {
+            //             padding: 0.4em 1.4em;
+            //             font-size: 0.8rem;
+            //         }
+            //     }
+            // }
 
-                .about-image {
-                    max-width: 350px;
-                }
-            }
+            // .about-image-container {
+            //     height: 300px;
+
+            //     .about-image {
+            //         max-width: 350px;
+            //     }
+            // }
         }
     }
 }

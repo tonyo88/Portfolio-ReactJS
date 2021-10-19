@@ -5,7 +5,7 @@ $breakpoint-middle-small: 540px;
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    padding: 0 0 1.5em;
+    padding: 0 0 1.1em;
     letter-spacing: 1px;
 }
 
@@ -13,7 +13,8 @@ $breakpoint-middle-small: 540px;
 
 @media screen and (max-width: $breakpoint-middle-large) {
     .section-title {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
+        padding: 0 0 1em;
     }
 }
 
@@ -21,6 +22,7 @@ $breakpoint-middle-small: 540px;
 
 @media screen and (max-width: $breakpoint-middle-small) {
     .section-title {
-        font-size: 2rem;
+        font-size: 1.85rem;
+        padding: 0 0 0.8em;
     }
 }
