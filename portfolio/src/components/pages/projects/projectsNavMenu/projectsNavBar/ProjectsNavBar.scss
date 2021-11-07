@@ -27,7 +27,7 @@ $breakpoint-middle-small: 540px;
     .projects-title {
         float: left;
         line-height: 2em;
-        padding-left: 3em;
+        padding-left: 1.5em;
 
         h3 {
             font-size: 1.2rem;
@@ -101,7 +101,6 @@ $breakpoint-middle-small: 540px;
 
         .projects-title {
             float: none;
-            padding-left: 0;
             padding-top: 1.5em;
             text-align: center;
             border-bottom: 1px solid $base-color-one;

@@ -20,7 +20,8 @@
     "react-scroll-up-button": "^1.6.4",
     "react-simple-image-slider": "^2.2.0",
     "react-slideshow-image": "^3.5.1",
-    "styled-loaders-react": "^1.1.0"
+    "styled-loaders-react": "^1.1.0",
+    "tsparticles": "^1.36.0"
   },
   "scripts": {
     "start": "react-scripts start",

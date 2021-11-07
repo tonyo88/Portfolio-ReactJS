@@ -1,8 +1,6 @@
 import "./SectionAbout.css";
 import React from "react";
-import AboutInfo from "./linkedIn/AboutInfo";
-// import AboutInfo from "./aboutInfo/AboutInfo";
-// import AboutImage from "./aboutImage/AboutImage";
+import AboutInfo from "./aboutInfo/AboutInfo";
 
 const SectionAbout = () => {
   return (
@@ -10,8 +8,6 @@ const SectionAbout = () => {
       <div className="wrapper">
         <div className="about-section-container">
           <AboutInfo />
-          {/* <AboutInfo />
-          <AboutImage /> */}
         </div>
       </div>
     </section>

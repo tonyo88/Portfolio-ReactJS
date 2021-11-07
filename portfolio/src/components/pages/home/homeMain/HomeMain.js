@@ -15,7 +15,7 @@ const HomeMain = () => {
     <main id="home-main">
       <SectionWebSkills />
       <SectionContainer sectionClassName="responsive-section">
-        <ImageContainer image={phone} />
+        <ImageContainer image={phone} animate="fadeInLeft" />
         <InfoConatainer
           title="Responsive"
           info="My layouts will work on any device, big or small."
@@ -27,7 +27,7 @@ const HomeMain = () => {
           info="Everyone can write, but not everyone is a writer. What makes the
                 difference is the keen eye for detail and beauty."
         />
-        <ImageContainer image={laptop}>
+        <ImageContainer image={laptop} animate="fadeInRight">
           <img className="typing" src={typing} alt="typing.png" />
           <video className="video" autoPlay muted loop>
             <source src={video} type="video/mp4"></source>

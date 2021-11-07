@@ -15,7 +15,6 @@
   grid-row: auto;
   width: 4em;
   height: 4em;
-  margin-left: 20px;
 }
 
 .logo-container .logo-link .logo-image img {
@@ -28,7 +27,7 @@
 }
 
 .logo-container .logo-link .logo-name .logo-name-container {
-  margin: 12px 0 0 5px;
+  margin: 12px 0 0 0;
 }
 
 .logo-container .logo-link .logo-name .logo-name-container h5 {
@@ -48,13 +47,12 @@
   .logo-container .logo-link .logo-image {
     width: 3.5em;
     height: 3.5em;
-    margin-left: 25px;
   }
   .logo-container .logo-link .logo-name {
     color: #fff;
   }
   .logo-container .logo-link .logo-name .logo-name-container {
-    margin: 8px 0 0 3px;
+    margin: 8px 0 0 0;
   }
 }
 

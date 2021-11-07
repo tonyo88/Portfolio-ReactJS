@@ -13,7 +13,7 @@
 .projects-nav-bar .projects-title {
   float: left;
   line-height: 2em;
-  padding-left: 3em;
+  padding-left: 1.5em;
 }
 
 .projects-nav-bar .projects-title h3 {
@@ -91,7 +91,6 @@
   }
   .projects-nav-bar .projects-title {
     float: none;
-    padding-left: 0;
     padding-top: 1.5em;
     text-align: center;
     border-bottom: 1px solid #2d2d2d;

@@ -8,11 +8,7 @@ import ProjectFooter from "./projectFooter/ProjectFooter";
 const ProjectContent = (props) => {
   return (
     <section id={props.id} className="project-section">
-      <ScrollAnimation
-        animateIn="fadeInRight"
-        duration={1.2}
-        animateOnce={true}
-      >
+      <ScrollAnimation animateIn="fadeInLeft" duration={1.2} animateOnce={true}>
         <div className="wrapper">
           <div className="project-container">
             <ProjectHeader

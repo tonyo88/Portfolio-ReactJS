@@ -4,11 +4,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 const InfoConatainer = (props) => {
   return (
     <ScrollAnimation
-      className="info-container flex-middle"
       animateIn="fadeIn"
-      delay={300}
-      duration={0.3}
+      delay={500}
       animateOnce={true}
+      className="info-container flex-middle"
     >
       <div className="info-title">
         <h2 className="title">{props.title}</h2>

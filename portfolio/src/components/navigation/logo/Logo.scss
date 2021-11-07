@@ -18,7 +18,6 @@ $breakpoint-middle-small: 540px;
             grid-row: auto;
             width: 4em;
             height: 4em;
-            margin-left: 20px;
 
             img {
                 width: 100%;
@@ -30,7 +29,7 @@ $breakpoint-middle-small: 540px;
             grid-row: auto;
 
             .logo-name-container {
-                margin: 12px 0 0 5px;
+                margin: 12px 0 0 0;
 
                 h5 {
                     font-size: 0.85rem;
@@ -57,15 +56,13 @@ $breakpoint-middle-small: 540px;
             .logo-image {
                 width: 3.5em;
                 height: 3.5em;
-                margin-left: 25px;
-
             }
 
             .logo-name {
                 color: $fixed-logo-color;
 
                 .logo-name-container {
-                    margin: 8px 0 0 3px;
+                    margin: 8px 0 0 0;
                 }
             }
         }
