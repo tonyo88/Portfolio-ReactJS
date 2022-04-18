@@ -4,7 +4,6 @@ import CurrentPortfolio from "./currentPortfolio/CurrentPortfolio";
 import SectionTitle from "../../../sectionTitle/SectionTitle";
 
 import portfolioReact from "../../../../../assets/pages/portfolio/portfolio-main/portfolio-react.png";
-import portfolioJS from "../../../../../assets/pages/portfolio/portfolio-main/portfolio-js.png";
 import weatherApp from "../../../../../assets/pages/portfolio/portfolio-main/weather-app.png";
 import littleBarber from "../../../../../assets/pages/portfolio/portfolio-main/little-barber.png";
 import memoryGame from "../../../../../assets/pages/portfolio/portfolio-main/memory-game.png";
@@ -57,14 +56,6 @@ const PortfolioSection = () => {
       portfolioTitle: "Portfolio - React JS",
       portfolioInfo:
         "React JS, React Router, React Libraries, HTML5, CSS3, SASS, SVG, Webpack, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
-    },
-    {
-      delay: 300,
-      portfoliotUrl: "portfolio-js",
-      portfolioImg: portfolioJS,
-      portfolioTitle: "Portfolio - JS",
-      portfolioInfo:
-        "HTML5, CSS3, SASS, SVG, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
     {
       delay: 400,

@@ -1,0 +1,130 @@
+.experience-education-content {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2em 0;
+  background: #fff;
+  border-radius: 0.4em;
+  border: 1px solid #2c2c2c4d;
+}
+
+.experience-education-content .experience-education-container .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 1.5em;
+}
+
+.experience-education-content .experience-education-container .details .ref-logo {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.experience-education-content .experience-education-container .details .ref-logo .ref-img {
+  width: 100%;
+}
+
+.experience-education-content .experience-education-container .details .info {
+  border-bottom: 1px solid #2c2c2c4d;
+  padding: 0.3em 0;
+  width: 100%;
+  margin-left: 20px;
+  letter-spacing: 0.03rem;
+}
+
+.experience-education-content .experience-education-container .details .info p {
+  font-size: 0.72rem;
+}
+
+.experience-education-content .experience-education-container .details:hover .info {
+  text-decoration: underline;
+}
+
+.experience-education-content .experience-education-container .experience-education-details {
+  list-style-type: circle;
+  font-size: 0.85rem;
+  letter-spacing: 0.02rem;
+  padding: 1.5em 1em 1.5em 0;
+  margin-left: 8.6em;
+  border-bottom: 1px solid #2c2c2c4d;
+}
+
+.experience-education-content .experience-education-container .experience-education-details li {
+  padding-bottom: 2px;
+}
+
+.experience-education-content .experience-education-container .experience-education-details li:nth-last-of-type(1) {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .experience-education-content {
+    padding: 1.5em 0;
+  }
+  .experience-education-content .experience-education-container .details .info {
+    margin-left: 10px;
+  }
+  .experience-education-content .experience-education-container .details .info p {
+    font-size: 0.65rem;
+  }
+  .experience-education-content .experience-education-container .experience-education-details {
+    margin-left: 7.9em;
+    font-size: 0.83rem;
+  }
+  .experience-education-content .experience-education-container .experience-education-details li {
+    padding-bottom: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .experience-education-content .experience-education-container .details {
+    padding-left: 1.2em;
+  }
+  .experience-education-content .experience-education-container .details .info {
+    padding: 0.3em 0;
+  }
+  .experience-education-content .experience-education-container .details .info .position {
+    font-size: 0.96rem;
+  }
+  .experience-education-content .experience-education-container .details .info .name {
+    font-size: 0.9rem;
+  }
+  .experience-education-content .experience-education-container .experience-education-details {
+    font-size: 0.78rem;
+    padding: 1.2em 0.75em 1.2em 0;
+    margin-left: 7.9em;
+  }
+  .experience-education-content .experience-education-container .experience-education-details li {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .experience-education-content {
+    padding: 1.2em 0;
+  }
+  .experience-education-content .experience-education-container .details .ref-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .experience-education-content .experience-education-container .experience-education-details {
+    margin-left: 6.6em;
+    font-size: 0.74rem;
+    padding: 0.9em 0.65em 0.9em 0;
+  }
+}
+/*# sourceMappingURL=ExperienceEducationContent.css.map */

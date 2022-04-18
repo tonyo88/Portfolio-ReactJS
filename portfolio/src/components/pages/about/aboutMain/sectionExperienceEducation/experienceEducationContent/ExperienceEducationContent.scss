@@ -1,0 +1,165 @@
+$background: #fff;
+$border-color: #2c2c2c4d;
+$padding: 1.5em;
+
+//Breakpoints
+$breakpoint-browser: 1280px;
+$breakpoint-middle-large: 960px;
+$breakpoint-iPad-less: 767px;
+$breakpoin-middle-small: 540px;
+
+
+.experience-education-content {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 2em 0;
+    background: $background;
+    border-radius: 0.4em;
+    border: 1px solid $border-color;
+
+    .experience-education-container {
+        .details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: $padding;
+
+            .ref-logo {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .ref-img {
+                    width: 100%;
+                }
+            }
+
+            .info {
+                border-bottom: 1px solid $border-color;
+                padding: 0.3em 0;
+                width: 100%;
+                margin-left: 20px;
+                letter-spacing: 0.03rem;
+
+                p {
+                    font-size: 0.72rem;
+                }
+            }
+
+            &:hover {
+                .info {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .experience-education-details {
+            list-style-type: circle;
+            font-size: 0.85rem;
+            letter-spacing: 0.02rem;
+            padding: $padding 1em $padding 0;
+            margin-left: 8.6em;
+            border-bottom: 1px solid $border-color;
+
+            li {
+                padding-bottom: 2px;
+
+                &:nth-last-of-type(1) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Large
+
+@media screen and (max-width: $breakpoint-middle-large) {
+    .experience-education-content {
+        padding: 1.5em 0;
+
+        .experience-education-container {
+            .details {
+                .info {
+                    margin-left: 10px;
+
+                    p {
+                        font-size: 0.65rem;
+                    }
+                }
+            }
+
+            .experience-education-details {
+                margin-left: 7.9em;
+                font-size: 0.83rem;
+
+                li {
+                    padding-bottom: 1px;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint iPad-Less
+
+@media screen and (max-width: $breakpoint-iPad-less) {
+    $padding: 1.2em;
+
+    .experience-education-content {
+        .experience-education-container {
+            .details {
+                padding-left: $padding;
+
+                .info {
+                    padding: 0.3em 0;
+
+                    .position {
+                        font-size: 0.96rem;
+                    }
+
+                    .name {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .experience-education-details {
+                font-size: 0.78rem;
+                padding: $padding 0.75em $padding 0;
+                margin-left: 7.9em;
+
+                li {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//Breakpoint Middle-Small
+
+@media screen and (max-width: $breakpoin-middle-small) {
+    $padding: 0.9em;
+
+    .experience-education-content {
+        padding: 1.2em 0;
+
+        .experience-education-container {
+            .details {
+                .ref-logo {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .experience-education-details {
+                margin-left: 6.6em;
+                font-size: 0.74rem;
+                padding: $padding 0.65em $padding 0;
+            }
+        }
+    }
+}

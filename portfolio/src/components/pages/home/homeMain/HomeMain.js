@@ -6,8 +6,8 @@ import InfoConatainer from "./sectionContainer/infoContainer/InfoContainer";
 import ImageContainer from "./sectionContainer/imageContainer/ImageContainer";
 
 import phone from "../../../../assets/pages/home/home-main/section-website-skills/phone.png";
-import laptop from "../../../../assets/pages/home/home-main/section-video/laptop.png";
-import typing from "../../../../assets/pages/home/home-main/section-video/typing.png";
+import laptop from "../../../../assets/pages/home/home-main/section-video/laptop-two.png";
+import typing from "../../../../assets/pages/home/home-main/section-video/typing-two.png";
 import video from "../../../../assets/pages/home/home-main/section-video/video/typing.mp4";
 
 const HomeMain = () => {

@@ -19,6 +19,7 @@
   background-image: url("../../../../../assets/pages/about/about-main/about-section/profile-bg.png");
   width: 100%;
   height: 18em;
+  border-radius: 0.4em;
 }
 
 #section-about .about-section-container .about-info-container .profile-background .profile-photo {
@@ -92,7 +93,7 @@
     padding: 3em;
   }
   #section-about .about-section-container .about-info-container .info-container .about-title {
-    font-size: 2em;
+    font-size: 2rem;
   }
   #section-about .about-section-container .about-info-container .info-container .about-info {
     font-size: 1rem;

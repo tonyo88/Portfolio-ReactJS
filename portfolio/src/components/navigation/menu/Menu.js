@@ -42,7 +42,7 @@ const Menu = (props) => {
       socialIcon: "fa fa-facebook",
     },
     {
-      socialUrl: "https://www.linkedin.com/in/anthony-vanov/",
+      socialUrl: "https://www.linkedin.com/in/tonyo-vanov/",
       socialIcon: "fa fa-linkedin",
     },
     {
