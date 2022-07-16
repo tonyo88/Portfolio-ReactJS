@@ -1,51 +1,40 @@
 import "./ProjectsNavBar.css";
-import React from "react";
+import React, { useState } from "react";
 import ProjectsTitle from "./projectsTitle/ProjectsTittle";
 import ProjectsMenu from "./projectsMenu/ProjectsMenu";
 import ProjectsMobileMenuBtn from "./projectsMobileMenuBtn/ProjectsMobileMenuBtn";
 
-class ProjectsNavBar extends React.Component {
-  state = {
-    isSideMenuOpen: false,
+const ProjectsNavBar = (props) => {
+  const [sideMenu, setSideMenu] = useState(false);
+
+  const openSideMenu = () => {
+    setSideMenu(!sideMenu);
+  };
+  const closeSideMenu = () => {
+    setSideMenu(!sideMenu);
   };
 
-  openProjectsMenu = () => {
-    this.setState((prevState) => {
-      return {
-        isSideMenuOpen: !prevState.isSideMenuOpen,
-      };
-    });
-  };
-
-  closeProjectsMenu = () => {
-    this.setState({ isSideMenuOpen: false });
-  };
-
-  render() {
-    return (
-      <nav
-        className={
-          this.state.isSideMenuOpen
-            ? "projects-nav-bar active-projects-nav-bar"
-            : "projects-nav-bar"
-        }
-      >
-        <div className="wrapper">
-          <ProjectsTitle projectsTitle={this.props.projectsTitle} />
-          <ProjectsMenu
-            projectLinks={this.props.projectLinks}
-            closeSideMenu={this.closeProjectsMenu}
-          />
-          <ProjectsMobileMenuBtn
-            openSideMenu={this.openProjectsMenu}
-            className={
-              this.state.isSideMenuOpen ? "fa-arrow-right" : "fa-arrow-left"
-            }
-          />
-        </div>
-      </nav>
-    );
-  }
-}
+  return (
+    <nav
+      className={
+        sideMenu
+          ? "projects-nav-bar active-projects-nav-bar"
+          : "projects-nav-bar"
+      }
+    >
+      <div className="wrapper">
+        <ProjectsTitle projectsTitle={props.projectsTitle} />
+        <ProjectsMenu
+          projectLinks={props.projectLinks}
+          closeSideMenu={closeSideMenu}
+        />
+        <ProjectsMobileMenuBtn
+          openSideMenu={openSideMenu}
+          className={sideMenu ? "fa-arrow-right" : "fa-arrow-left"}
+        />
+      </div>
+    </nav>
+  );
+};
 
 export default ProjectsNavBar;

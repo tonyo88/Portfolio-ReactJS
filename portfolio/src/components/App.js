@@ -15,7 +15,7 @@ import LittleBarber from "./pages/projects/allProjects/personalProjects/littleBa
 import MemoryGame from "./pages/projects/allProjects/personalProjects/memoryGame/MemoryGame";
 
 import Cosmos from "./pages/projects/allProjects/workProjects/cosmos/Cosmos";
-import Megz from "./pages/projects/allProjects/workProjects/megz/Megz";
+import Iam from "./pages/projects/allProjects/workProjects/i-am/Iam";
 import MovieInHand from "./pages/projects/allProjects/workProjects/movieInHand/MovieInHand";
 import LedSvetlini from "./pages/projects/allProjects/workProjects/ledSvetlini/LedSvetlini";
 
@@ -32,12 +32,12 @@ const App = () => {
       component: About,
     },
     {
-      path: "/pages/portfolio",
-      component: Portfolio,
-    },
-    {
       path: "/pages/contact",
       component: Contact,
+    },
+    {
+      path: "/pages/portfolio",
+      component: Portfolio,
     },
     {
       path: "/pages/portfolio/portfolio-react",
@@ -60,8 +60,8 @@ const App = () => {
       component: Cosmos,
     },
     {
-      path: "/pages/portfolio/megz",
-      component: Megz,
+      path: "/pages/portfolio/i-am",
+      component: Iam,
     },
     {
       path: "/pages/portfolio/led-svetlini",
