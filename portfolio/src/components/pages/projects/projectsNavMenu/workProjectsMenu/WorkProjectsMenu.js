@@ -8,8 +8,8 @@ const WorkProjectsMenu = () => {
       projectLinkName: "Cosmos",
     },
     {
-      prejectUrl: "/pages/portfolio/megz",
-      projectLinkName: "Megz",
+      prejectUrl: "/pages/portfolio/i-am",
+      projectLinkName: "I-AM",
     },
     {
       prejectUrl: "/pages/portfolio/led-svetlini",

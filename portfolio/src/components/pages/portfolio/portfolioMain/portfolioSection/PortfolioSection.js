@@ -8,7 +8,7 @@ import weatherApp from "../../../../../assets/pages/portfolio/portfolio-main/wea
 import littleBarber from "../../../../../assets/pages/portfolio/portfolio-main/little-barber.png";
 import memoryGame from "../../../../../assets/pages/portfolio/portfolio-main/memory-game.png";
 import cosmos from "../../../../../assets/pages/portfolio/portfolio-main/cosmos.png";
-import megz from "../../../../../assets/pages/portfolio/portfolio-main/megz.png";
+import iAm from "../../../../../assets/pages/portfolio/portfolio-main/i-am.png";
 import ledSvetlini from "../../../../../assets/pages/portfolio/portfolio-main/led-svetlini.png";
 import movieInHand from "../../../../../assets/pages/portfolio/portfolio-main/movie-in-hand.png";
 
@@ -24,9 +24,9 @@ const PortfolioSection = () => {
     },
     {
       delay: 300,
-      portfoliotUrl: "megz",
-      portfolioImg: megz,
-      portfolioTitle: "Megz",
+      portfoliotUrl: "i-am",
+      portfolioImg: iAm,
+      portfolioTitle: "I-AM",
       portfolioInfo:
         "HTML5, CSS3, SASS, SVG, JavaScript ES6, jQuery, JavaScript Libraries, UI/UX Architecture, UI/UX Animations, Responsive Design, Visual Studio Code, Adobe Photoshop",
     },
