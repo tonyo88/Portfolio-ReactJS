@@ -1,81 +1,57 @@
 import "./Nav.css";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./logo/Logo";
 import ToggleButton from "./toggleButton/ToggleButton";
 import Menu from "./menu/Menu";
 
-class Nav extends React.Component {
-  state = {
-    scrolled: false,
-    isOpen: false,
+const Nav = () => {
+  const [menu, setMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const fixedNav = () => {
+    if (window.scrollY >= 100) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
   };
 
-  componentDidMount() {
-    window.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== true) {
-        this.setState({ scrolled: true });
-      } else {
-        this.setState({ scrolled: false });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll");
-  }
-
-  drawerClickHandle = () => {
-    this.setState((prevState) => {
-      return {
-        isOpen: !prevState.isOpen,
-      };
-    });
+  window.addEventListener("scroll", fixedNav);
+  const openMenu = () => {
+    setMenu(!menu);
   };
 
-  backDropClickHandler = () => {
-    this.setState({ isOpen: false });
+  const closeMenu = () => {
+    setMenu(false);
   };
 
-  render() {
-    return (
-      <nav
-        className={
-          this.state.scrolled ? "navigation active-fixed-nav" : "navigation"
-        }
-      >
-        <div className="wrapper">
-          <ToggleButton
-            className={this.state.isOpen ? "line active-toggle-btn" : "line"}
-            openClickHandler={this.drawerClickHandle}
-          />
-          <Logo
-            closeMenu={this.backDropClickHandler}
-            className={
-              this.state.scrolled ? "logo-name fixed-logo" : "logo-name"
-            }
-          />
-          <Menu
-            showNav={this.state.isOpen ? "main-nav show-nav" : "main-nav"}
-            mainLinkColor={
-              this.state.scrolled ? "main-link fixed-main-link" : "main-link"
-            }
-            mainLinkHover={
-              this.state.scrolled
-                ? "hover-effect fixed-hover-effect"
-                : "hover-effect"
-            }
-            activeClassName={
-              this.state.scrolled
-                ? "active-main-link fixed-active-main-link"
-                : "active-main-link"
-            }
-            closeMenu={this.backDropClickHandler}
-          />
-        </div>
-      </nav>
-    );
-  }
-}
+  return (
+    <nav className={scrolled ? "navigation active-fixed-nav" : "navigation"}>
+      <div className="wrapper">
+        <ToggleButton
+          className={menu ? "line active-toggle-btn" : "line"}
+          openMenu={openMenu}
+        />
+        <Logo
+          closeMenu={closeMenu}
+          className={scrolled ? "logo-name fixed-logo" : "logo-name"}
+        />
+        <Menu
+          showNav={menu ? "main-nav show-nav" : "main-nav"}
+          mainLinkColor={scrolled ? "main-link fixed-main-link" : "main-link"}
+          mainLinkHover={
+            scrolled ? "hover-effect fixed-hover-effect" : "hover-effect"
+          }
+          activeClassName={
+            scrolled
+              ? "active-main-link fixed-active-main-link"
+              : "active-main-link"
+          }
+          closeMenu={closeMenu}
+        />
+      </div>
+    </nav>
+  );
+};
 
 export default Nav;

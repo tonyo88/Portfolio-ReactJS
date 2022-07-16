@@ -8,10 +8,6 @@ const PersonalProjectsMenu = () => {
       projectLinkName: "Portfolio-React.JS",
     },
     {
-      prejectUrl: "/pages/portfolio/portfolio-js",
-      projectLinkName: "Portfolio-JS",
-    },
-    {
       prejectUrl: "/pages/portfolio/weather-app",
       projectLinkName: "Weather App",
     },
