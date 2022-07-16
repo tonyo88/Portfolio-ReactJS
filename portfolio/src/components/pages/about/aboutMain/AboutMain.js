@@ -1,6 +1,5 @@
 import React from "react";
 import SectionAbout from "./sectionAbout/SectionAbout";
-// import SectionExperience from "./sectionExperience/SectionExperience";
 import SectionExperience from "./sectionExperienceEducation/sectionExperience/SectionExperience";
 import SectionEducation from "./sectionExperienceEducation/sectionEducation/SectionEducation";
 import SectionCertificates from "./sectionCertificates/SectionCertificates";

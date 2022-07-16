@@ -10,7 +10,6 @@ import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 
 import PortfolioReact from "./pages/projects/allProjects/personalProjects/portfolioReact/PortfolioReact";
-import PortfolioJs from "./pages/projects/allProjects/personalProjects/portfolioJS/PortfolioJs";
 import WeatherApp from "./pages/projects/allProjects/personalProjects/weatherApp/WeatherApp";
 import LittleBarber from "./pages/projects/allProjects/personalProjects/littleBarber/LittleBarber";
 import MemoryGame from "./pages/projects/allProjects/personalProjects/memoryGame/MemoryGame";
@@ -43,10 +42,6 @@ const App = () => {
     {
       path: "/pages/portfolio/portfolio-react",
       component: PortfolioReact,
-    },
-    {
-      path: "/pages/portfolio/portfolio-js",
-      component: PortfolioJs,
     },
     {
       path: "/pages/portfolio/weather-app",
